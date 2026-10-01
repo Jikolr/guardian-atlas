@@ -23,6 +23,8 @@ main{max-width:1400px}#floor-controls{display:flex;gap:12px;flex-wrap:wrap;align
 .enemy-special-effect summary{color:var(--muted)}
 .enemy-healing{border-color:#478f92;border-left-color:#75d5ce;background:#75d5ce0a}
 .enemy-healing h4{color:#a4e5df}
+.enemy-target-priority{border-color:#477eac;border-left-color:#72b9ff;background:#72b9ff0a}
+.enemy-target-priority h4{color:#9dceff}
 .healing-targets{list-style:none;padding:0;margin:10px 0}
 .healing-targets li{display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-bottom:1px solid #478f9244;font-size:12px}
 .healing-targets strong{white-space:nowrap;font-variant-numeric:tabular-nums}
@@ -31,6 +33,8 @@ main{max-width:1400px}#floor-controls{display:flex;gap:12px;flex-wrap:wrap;align
 .enemy-body>a{display:inline-block;margin-top:12px;font-size:12px}
 .weapon-details>summary::before{content:'▸';color:var(--muted)}
 .weapon-details[open]>summary::before{content:'▾'}
+.weapon-details>summary>strong{min-width:0;overflow-wrap:anywhere}
+.weapon-details .weapon-crit{margin-left:auto;flex-shrink:0;white-space:nowrap;padding:3px 7px;border:1px solid #e9c65d55;border-radius:6px;background:#e9c65d0d;color:#e9c65d;font-size:11px;font-weight:600;letter-spacing:.03em}
 @media(min-width:851px) and (max-width:1150px){.formation-layout{grid-template-columns:260px minmax(0,1fr)}#enemies{grid-template-columns:1fr}}
 @media(max-width:850px){.formation-layout{grid-template-columns:1fr}}
 @media(max-width:650px){#enemies{grid-template-columns:1fr}#enemies .enemy{padding:16px}.enemy-header{min-height:0}}
