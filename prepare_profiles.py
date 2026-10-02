@@ -8,7 +8,7 @@ profiles={r['OriginId']:r for r in read(SRC/'heroprofile.json')};items=read(SRC/
 action_names={r['fields'].get('Name'):r for r in actions};groups=collections.defaultdict(list)
 for r in heroes:groups[r['fields'].get('OriginId',r['id'])].append(r)
 short_text={r['fields'].get('Text','').casefold():r['fields']['Text'] for r in text if len(r['fields'].get('Text',''))<70}
-manual={'demon_slayer':('Andras','User-confirmed identity; English biography'), 'bridge_messenger':('Seira','English biography and official release notes: https://gdtsglobal.zendesk.com/hc/en-us/articles/60233488458649-2026-07-21-PATCH-NOTE')}
+manual={'wyverns_purple':('Astoria','User-confirmed identity: wyverns_purple = Astoria'), 'demon_slayer':('Andras','User-confirmed identity; English biography'), 'bridge_messenger':('Seira','English biography and official release notes: https://gdtsglobal.zendesk.com/hc/en-us/articles/60233488458649-2026-07-21-PATCH-NOTE')}
 curated={r['internal']:r for r in read(BASE/'name-evidence.json')}
 text_by_id={str(r['id']):r for r in text}
 result=[];aliases={}
@@ -43,6 +43,14 @@ records=read(DATA/'visual/records.json')
 for r in records:
  if r['table']=='heroes' and str(r['id']) in aliases:r['displayName']=aliases[str(r['id'])]['name'];r['profileId']=aliases[str(r['id'])]['profileId']
 write(DATA/'visual/records.json',records)
+assets=read(DATA/'visual/assets.json')
+for asset in assets:
+ normalized=(asset.get('name','')+' '+asset.get('bundle','')).lower().replace('_','')
+ for internal,display in [('wyvernspurple','Astoria'),('bridgemessenger','Seira')]:
+  if internal in normalized:asset['aliases']=list(dict.fromkeys(asset.get('aliases',[])+[display]))
+ for record in asset.get('records',[]):
+  if record.get('table')=='heroes' and str(record['id']) in aliases:record['displayName']=aliases[str(record['id'])]['name']
+write(DATA/'visual/assets.json',assets)
 print('Profiles',len(result),'mapped',sum(bool(r['name']) for r in result),'biographies',sum(bool(r['biography']) for r in result),'bytes',out.stat().st_size)
 print([(r['internal'],r['name']) for r in result if r['name']])
 

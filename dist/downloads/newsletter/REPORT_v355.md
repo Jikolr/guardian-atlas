@@ -1,0 +1,970 @@
+# Guardian Tales — version comparison
+
+Previous snapshot: previous-version → New snapshot: new-version
+
+Generated: 2026-10-02T13:13:48.078614+00:00
+
+**Status: complete-with-gaps. Review only — no website update applied.**
+
+## Summary
+
+- modified: 114
+- unchanged: 17,016
+- removed: 1
+- added: 867
+
+## Coverage
+
+{
+  "previous": {
+    "failed": 3808,
+    "raw-only": 1593,
+    "decoded": 11693,
+    "opaque": 37
+  },
+  "new": {
+    "failed": 3816,
+    "raw-only": 1632,
+    "decoded": 12508,
+    "opaque": 41
+  }
+}
+
+Coverage warnings and decoding failures: 7624. See diagnostics.json. Opaque files are still included in raw comparisons.
+
+## Changes by category
+
+### APK resources
+
+- modified: apk/base/AndroidManifest.xml
+- modified: apk/base/assets/bin/Data/2d8485b320ceb493892751d8580afbf3
+- modified: apk/base/assets/bin/Data/326d0481b9b2c4851ab5aa4b4de8d4bd
+- modified: apk/base/assets/bin/Data/37e063d4a46044395b8a38c666d99cb5
+- modified: apk/base/assets/bin/Data/37e94698d9dcc467098da42229acef8f
+- modified: apk/base/assets/bin/Data/3973ff36c4ff64b389df2f7899f81465
+- modified: apk/base/assets/bin/Data/3cc336e467fbd4c1db8901c1ca8eb76e
+- modified: apk/base/assets/bin/Data/53ebe760c58604a0589d8d5888353e2c
+- modified: apk/base/assets/bin/Data/5c70cff6e2ac14281bc04e6c28366add
+- modified: apk/base/assets/bin/Data/73f89868596b14e32b4cbd6cabcd9a65
+- removed: apk/base/assets/bin/Data/8e70841960d6744b7b1a7f92fc12a4d4
+- modified: apk/base/assets/bin/Data/8f76733fc18ad4647824254dbe52bf63
+- modified: apk/base/assets/bin/Data/90f977d537f1344ccbdc470c49b4ddb9
+- added: apk/base/assets/bin/Data/91ea1fa393f4c47f39710152b5020fd7
+- modified: apk/base/assets/bin/Data/9955f71052f7c49c2acfd62a22436190
+- modified: apk/base/assets/bin/Data/boot.config
+- modified: apk/base/assets/bin/Data/c20969909e92a4ee29c6aba0099e31aa
+- modified: apk/base/assets/bin/Data/c4440df36f62841cfb4537a20c70a378
+- modified: apk/base/assets/bin/Data/c5223992b8ace41149bb37fb993f3dfa
+- modified: apk/base/assets/bin/Data/e273775a5ccb24a5daf9ef134baff0d1
+- modified: apk/base/assets/bin/Data/e34a310a381f04fedacbfb6a49f5d2ad
+- modified: apk/base/assets/bin/Data/globalgamemanagers
+- modified: apk/base/assets/bin/Data/unity_app_guid
+- modified: apk/base/assets/dexopt/baseline.prof
+- modified: apk/base/assets/dexopt/baseline.profm
+- modified: apk/base/assets/kakao_game_sdk_configuration.xml
+- modified: apk/base/resources.arsc
+- modified: apk/config.arm64_v8a/AndroidManifest.xml
+- modified: apk/config.arm64_v8a/META-INF/BNDLTOOL.RSA
+- modified: apk/config.arm64_v8a/META-INF/BNDLTOOL.SF
+- modified: apk/config.arm64_v8a/META-INF/MANIFEST.MF
+
+### Artwork & Unity assets
+
+- modified: apk/base/assets/AssetBundles/Android/Android (1 record/field changes)
+  - $/records-by-Id/CAB-e4ba7dbec84ca82e006b0387f14d1c10:2/payload_hash: "0d2d4d81e9e3dd05f074529cbfe64f76db0bdf79a057357761cbe6a8025cceff" → "648afde8ce3f3ea2ee424a46a82c54ecc5e3b9566ab52648e22ea7704f746ae3"
+- modified: apk/base/assets/AssetBundles/Android/spritesheets/items (6 record/field changes)
+  - $/records-by-Id/CAB-cfc345e69364d27770027fdaca7c8457:-5389234111220710235/fields/mSprites: [{"borderBottom": 0, "borderLeft": 0, "borderRight": 0, "borderTop": 0, "height": 35, "name": "abyss_sword", "paddingBottom": 25, "paddingLeft": 25, "paddingRight": 5, "paddingTop": 4, "width": 34, "x": 540, "y": 173}, {"borderBottom": 0, "borderLeft": 0, "borderRight": 0, "borderTop": 0, "height": … → [{"borderBottom": 0, "borderLeft": 0, "borderRight": 0, "borderTop": 0, "height": 35, "name": "abyss_sword", "paddingBottom": 25, "paddingLeft": 25, "paddingRight": 5, "paddingTop": 4, "width": 34, "x": 540, "y": 173}, {"borderBottom": 0, "borderLeft": 0, "borderRight": 0, "borderTop": 0, "height": …
+  - $/records-by-Id/CAB-cfc345e69364d27770027fdaca7c8457:-5389234111220710235/payload_hash: "83a55f841a9d6c8f74dca130ddebf7371152de95317385a7bcda1ba56b32da31" → "26c0f5311b9ecd569de92d88154b63ef9c73c36d2681ef8f8eb9753360ed9703"
+  - $/records-by-Id/CAB-cfc345e69364d27770027fdaca7c8457:5346923540771941153/fields/m_Script: "{\"frames\":{\"Brisingamen_necklace_accessory\":{\"frame\":{\"x\":1397,\"y\":429,\"w\":28,\"h\":29},\"rotated\":false,\"trimmed\":true,\"spriteSourceSize\":{\"x\":2,\"y\":2,\"w\":28,\"h\":29},\"sourceSize\":{\"w\":34,\"h\":34}},\"goddess_ring_accessory\":{\"frame\":{\"x\":1397,\"y\":429,\"w\":28,\"… → "{\"frames\":{\"Brisingamen_necklace_accessory\":{\"frame\":{\"x\":1397,\"y\":429,\"w\":28,\"h\":29},\"rotated\":false,\"trimmed\":true,\"spriteSourceSize\":{\"x\":2,\"y\":2,\"w\":28,\"h\":29},\"sourceSize\":{\"w\":34,\"h\":34}},\"goddess_ring_accessory\":{\"frame\":{\"x\":1397,\"y\":429,\"w\":28,\"…
+  - $/records-by-Id/CAB-cfc345e69364d27770027fdaca7c8457:5346923540771941153/payload_hash: "202efa641170e954e656355acaf4b51270ba57bf2e6b929a32795027e08cf7cb" → "e820fc7e694c8e6aeb50f4c9594ee41b1847cc9eb87208cf2752d34c263a307d"
+- modified: apk/base/res/mipmap-hdpi-v4/app_icon.png
+- modified: apk/base/res/mipmap-hdpi-v4/app_icon_round.png
+- modified: apk/base/res/mipmap-hdpi-v4/ic_launcher_background.png
+- modified: apk/base/res/mipmap-hdpi-v4/ic_launcher_foreground.png
+- modified: apk/base/res/mipmap-ldpi-v4/app_icon.png
+- modified: apk/base/res/mipmap-ldpi-v4/app_icon_round.png
+- modified: apk/base/res/mipmap-ldpi-v4/ic_launcher_background.png
+- modified: apk/base/res/mipmap-ldpi-v4/ic_launcher_foreground.png
+- modified: apk/base/res/mipmap-mdpi-v4/app_icon.png
+- modified: apk/base/res/mipmap-mdpi-v4/app_icon_round.png
+- modified: apk/base/res/mipmap-mdpi-v4/ic_launcher_background.png
+- modified: apk/base/res/mipmap-mdpi-v4/ic_launcher_foreground.png
+- modified: apk/base/res/mipmap-xhdpi-v4/app_icon.png
+- modified: apk/base/res/mipmap-xhdpi-v4/app_icon_round.png
+- modified: apk/base/res/mipmap-xhdpi-v4/ic_launcher_background.png
+- modified: apk/base/res/mipmap-xhdpi-v4/ic_launcher_foreground.png
+- modified: apk/base/res/mipmap-xxhdpi-v4/app_icon.png
+- modified: apk/base/res/mipmap-xxhdpi-v4/app_icon_round.png
+- modified: apk/base/res/mipmap-xxhdpi-v4/ic_launcher_background.png
+- modified: apk/base/res/mipmap-xxhdpi-v4/ic_launcher_foreground.png
+- modified: apk/base/res/mipmap-xxxhdpi-v4/app_icon.png
+- modified: apk/base/res/mipmap-xxxhdpi-v4/app_icon_round.png
+- modified: apk/base/res/mipmap-xxxhdpi-v4/ic_launcher_background.png
+- modified: apk/base/res/mipmap-xxxhdpi-v4/ic_launcher_foreground.png
+- modified: install/files/AssetBundles/Android/Android (1 record/field changes)
+  - $/records-by-Id/CAB-e4ba7dbec84ca82e006b0387f14d1c10:2/payload_hash: "807b8eb7d510d7d63b4669909119a40aabbbed7173577862284f63c1247850b1" → "d49deddf8066ebfa9e061f5f1c20e6207e8f2d1c2f94a56259738647c37199a7"
+- added: install/files/AssetBundles/Android/characters/wyverns_purple
+- added: install/files/AssetBundles/Android/characters/wyverns_purple_doll
+- added: install/files/AssetBundles/Android/characters/wyverns_purple_myth
+- added: install/files/AssetBundles/Android/effects/manual/wyvernspurple
+- added: install/files/AssetBundles/Android/illusts/wyverns_purple
+- added: install/files/AssetBundles/Android/illusts/wyverns_purple_myth
+- added: install/files/AssetBundles/Android/ondemand/memorial_carp_girl/characters/mm_cg_boss_dragon
+- added: install/files/AssetBundles/Android/ondemand/memorial_carp_girl/characters/mm_cg_boss_dragon.etag
+- added: install/files/AssetBundles/Android/ondemand/memorial_carp_girl/characters/mm_cg_carp_fish
+- added: install/files/AssetBundles/Android/ondemand/memorial_carp_girl/characters/mm_cg_carp_fish.etag
+- added: install/files/AssetBundles/Android/ondemand/memorial_carp_girl/characters/mm_cg_npc
+- added: install/files/AssetBundles/Android/ondemand/memorial_carp_girl/characters/mm_cg_npc.etag
+- added: install/files/AssetBundles/Android/ondemand/memorial_carp_girl/effects
+- added: install/files/AssetBundles/Android/ondemand/memorial_carp_girl/effects.etag
+- added: install/files/AssetBundles/Android/ondemand/memorial_carp_girl/theatres/dissolve
+- added: install/files/AssetBundles/Android/ondemand/memorial_carp_girl/theatres/dissolve.etag
+- added: install/files/AssetBundles/Android/ondemand/memorial_carp_girl/theatres/doodlejump
+- added: install/files/AssetBundles/Android/ondemand/memorial_carp_girl/theatres/doodlejump.etag
+- added: install/files/AssetBundles/Android/ondemand/memorial_carp_girl/tilesets
+- added: install/files/AssetBundles/Android/ondemand/memorial_carp_girl/tilesets.etag
+- modified: install/files/AssetBundles/Android/spritesheets/heroes (10 record/field changes)
+  - $/records-by-Id/CAB-1840de9c54410b0ebcce295bebfbc2d1:-4317009165699353383/fields/m_Script: "{\"frames\":{\"adela_noble\":{\"frame\":{\"x\":2,\"y\":1943,\"w\":100,\"h\":100},\"rotated\":false,\"trimmed\":false,\"spriteSourceSize\":{\"x\":0,\"y\":0,\"w\":100,\"h\":100},\"sourceSize\":{\"w\":100,\"h\":100}},\"adela_noble_myth\":{\"frame\":{\"x\":2,\"y\":1841,\"w\":100,\"h\":100},\"rotated\":… → "{\"frames\":{\"adela_noble\":{\"frame\":{\"x\":2,\"y\":1943,\"w\":100,\"h\":100},\"rotated\":false,\"trimmed\":false,\"spriteSourceSize\":{\"x\":0,\"y\":0,\"w\":100,\"h\":100},\"sourceSize\":{\"w\":100,\"h\":100}},\"adela_noble_myth\":{\"frame\":{\"x\":2,\"y\":1841,\"w\":100,\"h\":100},\"rotated\":…
+  - $/records-by-Id/CAB-1840de9c54410b0ebcce295bebfbc2d1:-4317009165699353383/payload_hash: "00540cb2d700f592522e07c8931411e2f3113a58b7939a68519690c77e37fd59" → "7b175f015c394c535f57847e5b4297fbf690e386fe5ed96c04c91d17ca29d35f"
+  - $/records-by-Id/CAB-1840de9c54410b0ebcce295bebfbc2d1:-7274358660717411348/fields/m_Script: "{\"frames\":{\"accident_hiker\":{\"frame\":{\"x\":1235,\"y\":293,\"w\":26,\"h\":37},\"rotated\":false,\"trimmed\":true,\"spriteSourceSize\":{\"x\":20,\"y\":24,\"w\":26,\"h\":37},\"sourceSize\":{\"w\":64,\"h\":64}},\"adela_noble_3\":{\"frame\":{\"x\":1070,\"y\":486,\"w\":33,\"h\":36},\"rotated\":fal… → "{\"frames\":{\"accident_hiker\":{\"frame\":{\"x\":1591,\"y\":805,\"w\":26,\"h\":37},\"rotated\":false,\"trimmed\":true,\"spriteSourceSize\":{\"x\":20,\"y\":24,\"w\":26,\"h\":37},\"sourceSize\":{\"w\":64,\"h\":64}},\"adela_noble_3\":{\"frame\":{\"x\":1226,\"y\":1508,\"w\":33,\"h\":36},\"rotated\":fa…
+  - $/records-by-Id/CAB-1840de9c54410b0ebcce295bebfbc2d1:-7274358660717411348/payload_hash: "d4eeb486d84753c2f58759abcdef525b0a52ef42d3f60f4765a0b52973d6742a" → "812c03f635a3b4be592061b4dacd1cb7f3922ee13ae5855e15e72c22d0340d00"
+- modified: install/files/AssetBundles/Android/spritesheets/items (6 record/field changes)
+  - $/records-by-Id/CAB-cfc345e69364d27770027fdaca7c8457:-5389234111220710235/fields/mSprites: [{"borderBottom": 0, "borderLeft": 0, "borderRight": 0, "borderTop": 0, "height": 35, "name": "abyss_sword", "paddingBottom": 25, "paddingLeft": 25, "paddingRight": 5, "paddingTop": 4, "width": 34, "x": 321, "y": 1368}, {"borderBottom": 0, "borderLeft": 0, "borderRight": 0, "borderTop": 0, "height":… → [{"borderBottom": 0, "borderLeft": 0, "borderRight": 0, "borderTop": 0, "height": 35, "name": "abyss_sword", "paddingBottom": 25, "paddingLeft": 25, "paddingRight": 5, "paddingTop": 4, "width": 34, "x": 1483, "y": 1452}, {"borderBottom": 0, "borderLeft": 0, "borderRight": 0, "borderTop": 0, "height"…
+  - $/records-by-Id/CAB-cfc345e69364d27770027fdaca7c8457:-5389234111220710235/payload_hash: "1f063b720712a30eb40ae627be80fe0ab3a71abcbc0779b9da1f70b0bc2473b5" → "67a5db4d643ca440e63308d4f3905a937ea3bd146eaf75ac42b9cccbd02d175f"
+  - $/records-by-Id/CAB-cfc345e69364d27770027fdaca7c8457:5346923540771941153/fields/m_Script: "{\"frames\":{\"Brisingamen_necklace_accessory\":{\"frame\":{\"x\":1213,\"y\":1086,\"w\":28,\"h\":29},\"rotated\":false,\"trimmed\":true,\"spriteSourceSize\":{\"x\":2,\"y\":2,\"w\":28,\"h\":29},\"sourceSize\":{\"w\":34,\"h\":34}},\"goddess_ring_accessory\":{\"frame\":{\"x\":1213,\"y\":1086,\"w\":28,… → "{\"frames\":{\"Brisingamen_necklace_accessory\":{\"frame\":{\"x\":2018,\"y\":1954,\"w\":28,\"h\":29},\"rotated\":false,\"trimmed\":true,\"spriteSourceSize\":{\"x\":2,\"y\":2,\"w\":28,\"h\":29},\"sourceSize\":{\"w\":34,\"h\":34}},\"goddess_ring_accessory\":{\"frame\":{\"x\":2018,\"y\":1954,\"w\":28,…
+  - $/records-by-Id/CAB-cfc345e69364d27770027fdaca7c8457:5346923540771941153/payload_hash: "d3ae5ec4283c88acc12245ada66bee4343117aaf5691825f4dfa29825f84547c" → "c708e38c26767819eb74289fba11d90f271e46211c99a79e12e88d9bf4ce3aca"
+- modified: install/files/assetbundle-version
+- added: install/files/media/gacha_machine/v3.54_giant_gacha/v3.54_giant_gacha_banner_enUS.png
+- added: install/files/media/guildraid/v2.43_raid_bg_36.png
+- added: install/files/media/guildraid/v3.26_raid_banner_108_panda_girl_enUS.png
+- added: install/files/media/hero-growth-event/v3.54_hero_growth_event_banner_enUS.png
+- added: install/files/media/hero-growth-event/v3.54_hero_growth_event_lobby_popup_enUS.png
+- added: install/files/media/pass/v3.54_banner_wyverns_purple_enUS.png
+- added: install/files/media/pass/v3.54_banner_wyverns_purple_pop_bg.png
+- added: install/files/media/pkgs/v3.55_pkgs_banner_anni3.png
+- added: install/files/media/pkgs/v3.55_pkgs_banner_sum1.png
+- added: install/files/media/pkgs/v3.55_pkgs_banner_sum2.png
+- added: install/files/media/pkgs/v3.55_pkgs_sum1.png
+- added: install/files/media/pkgs/v3.55_pkgs_sum2.png
+
+### Audio
+
+- modified: install/files/AssetBundles/Android/audio/sfx/sfxs3 (91 record/field changes)
+  - $/records-by-Id/CAB-4da4cab9fb89c8652f2ad6ca63b1eae2:-1035261945933413633/payload_hash: "4173de7d14a2c28d152fad96033906921bf0e9cef4f79d5705a7f6eecdf4d49a" → "7399726f755f82ef8b88c2a3f07c4293559953589ad3d57ca6cc5be30e5023b5"
+  - $/records-by-Id/CAB-4da4cab9fb89c8652f2ad6ca63b1eae2:-1433928622958134224/payload_hash: "d6b856eeaeb66747932c6e6328607ce8a8e108ac991630ae9eabc80f2de04171" → "d912415dae678589c9f8d7b99459bc199ad1e4e3dad259f0a6baa1de4047661e"
+  - $/records-by-Id/CAB-4da4cab9fb89c8652f2ad6ca63b1eae2:-1697052755414218354/payload_hash: "4b7c0ce2f2b0471a38d489605885c57a1e0669c11d1f3afa599b89b1be37cea4" → "9b864a1220d888743967557fd3de7fe7d3bcd3b76ba474180e59ca9da502e526"
+  - $/records-by-Id/CAB-4da4cab9fb89c8652f2ad6ca63b1eae2:-1852452021756246245/payload_hash: "eb130cfd08bb2cb3826831e7259aa920775ef6d8528f26b766d8de095c3ca9d7" → "ad92d32310587368259e6dc05646129d23a7d6febe000826f6935b87c1182f55"
+
+### Game tables
+
+- added: install/cache/UnityShaderCache/03f7a771783b3787c886b79c022f3582
+- added: install/cache/UnityShaderCache/30f1bffe15cfa50bb9b8e8375e5ceb94
+- added: install/cache/UnityShaderCache/537da10fa4b4687e81c28497f67688ca
+- added: install/cache/UnityShaderCache/54385854cbaf6d7da6c435070f596954
+- added: install/cache/UnityShaderCache/5438ed5a63b92c2759318c207d99d74c
+- added: install/cache/UnityShaderCache/55dc9fd11dcae1b293fd46f0239900ce
+- added: install/cache/UnityShaderCache/694ea6570bd7348552a553db2010f567
+- added: install/cache/UnityShaderCache/8b6778baf6cb27c24c0e06eaed718798
+- added: install/cache/UnityShaderCache/aa8a83ad028496754952ead506bbd673
+- added: install/cache/UnityShaderCache/affbf1a582c87a010e9fb9b2f454414c
+- added: install/cache/UnityShaderCache/c1dda47d92046544828f3e8b8578a2db
+- added: install/cache/UnityShaderCache/d3919ae4094122986ddf63b306690082
+- added: install/cache/UnityShaderCache/deaaaf98d0f2c4909aedb198851486b4
+- added: install/cache/UnityShaderCache/ea36f1ae2c9fed5db402b0659401361b
+- added: install/cache/UnityShaderCache/f06e963e00532a778836af735c38f5cd
+- added: install/cache/UnityShaderCache/fd12df72ce32e8b7ac2f7a710eaaefed
+- modified: install/cache/battleactions-bin (5 record/field changes)
+  - $/records-by-Name/GraphMyth:WyvernsPurple: "<absent>" → {"BaseDamageType": "Projectile", "BuffInfo": [{"BuffName": "critical_up_leader_default", "Content": "Default", "Level": 100}, {"BuffName": "critical_up_leader_coop", "Content": "CoopExpedition", "Level": 100}, {"BuffName": "critical_up_leader_bossrush", "Content": "BossRush", "Level": 100}, {"BuffNa…
+  - $/records-by-Name/GraphStamina:WyvernsPurple: "<absent>" → {"ActionDuration": 0.4, "BaseDamageType": "Projectile", "GraphName": "graph_hero/wyverns_purple:ManualWyvernsPurple", "Name": "GraphStamina:WyvernsPurple", "ShootTiming": 0.1, "SpeedScale": 0.7, "StaminaBreakModifier": 1.5, "StaminaPerAction": 20}
+  - $/records-by-Name/GraphSupport:BridgeMessenger/BaseDamageType: "Melee" → "Projectile"
+  - $/records-by-Name/GraphSupport:WyvernsPurple: "<absent>" → {"BaseDamageType": "Projectile", "Connect": "Aerial", "Duration": 1.2, "GraphName": "graph_hero/wyverns_purple:SupportWyvernsPurple", "HealRatio": 0.2, "MythOptionId": 20300701, "Name": "GraphSupport:WyvernsPurple", "Radius": 2, "TotalDpsMult": 3.5, "Trigger": "Down"}
+- modified: install/cache/heroes-bin (4 record/field changes)
+  - $/records-by-Id/20701: "<absent>" → {"AerialResistance": 0.7, "Atk": 1.442, "BattleClass": {"default": ["basket"]}, "BlessingLevelOptions": [[{"Level": 50, "OptionId": 36}, {"Level": 50, "OptionId": 38}], [{"Level": 120, "OptionId": 36}, {"Level": 120, "OptionId": 38}], [{"Level": 250, "OptionId": 36}, {"Level": 250, "OptionId": 38}]]…
+  - $/records-by-Id/701: "<absent>" → {"AerialResistance": 0.7, "Atk": 1.18496, "BattleClass": {"default": ["basket"]}, "BlessingLevelOptions": [[{"Level": 50, "OptionId": 36}, {"Level": 50, "OptionId": 38}], [{"Level": 120, "OptionId": 36}, {"Level": 120, "OptionId": 38}], [{"Level": 250, "OptionId": 36}, {"Level": 250, "OptionId": 38}…
+  - $/records-by-Id/702: "<absent>" → {"AerialResistance": 0.7, "Atk": 1.288, "BattleClass": {"default": ["basket"]}, "BlessingLevelOptions": [[{"Level": 50, "OptionId": 36}, {"Level": 50, "OptionId": 38}], [{"Level": 120, "OptionId": 36}, {"Level": 120, "OptionId": 38}], [{"Level": 250, "OptionId": 36}, {"Level": 250, "OptionId": 38}]]…
+  - $/records-by-Id/703: "<absent>" → {"AerialResistance": 0.7, "Atk": 1.4, "BattleClass": {"default": ["basket"]}, "BlessingLevelOptions": [[{"Level": 50, "OptionId": 36}, {"Level": 50, "OptionId": 38}], [{"Level": 120, "OptionId": 36}, {"Level": 120, "OptionId": 38}], [{"Level": 250, "OptionId": 36}, {"Level": 250, "OptionId": 38}]], …
+- modified: install/files/static_data/awakeningnodedata (2 record/field changes)
+  - $/NodeOptions: [{"Id": 10, "IsSuper": false, "OptionId": 36, "OptionLevel": 10}, {"Id": 11, "IsSuper": false, "OptionId": 36, "OptionLevel": 15}, {"Id": 12, "IsSuper": false, "OptionId": 36, "OptionLevel": 20}, {"Id": 13, "IsSuper": false, "OptionId": 36, "OptionLevel": 25}, {"Id": 14, "IsSuper": false, "OptionId"… → [{"Id": 10, "IsSuper": false, "OptionId": 36, "OptionLevel": 10}, {"Id": 11, "IsSuper": false, "OptionId": 36, "OptionLevel": 15}, {"Id": 12, "IsSuper": false, "OptionId": 36, "OptionLevel": 20}, {"Id": 13, "IsSuper": false, "OptionId": 36, "OptionLevel": 25}, {"Id": 14, "IsSuper": false, "OptionId"…
+  - $/ResourcesToOpenNode: [{"Gold": 4000, "Id": 20010, "Item1": 60010, "Item1Amount": 1, "Item2": -1, "Item2Amount": 0, "Item3": -1, "Item3Amount": 0, "Item4": -1, "Item4Amount": 0}, {"Gold": 8000, "Id": 20011, "Item1": 60010, "Item1Amount": 2, "Item2": 60011, "Item2Amount": 1, "Item3": -1, "Item3Amount": 0, "Item4": -1, "It… → [{"Gold": 4000, "Id": 20010, "Item1": 60010, "Item1Amount": 1, "Item2": -1, "Item2Amount": 0, "Item3": -1, "Item3Amount": 0, "Item4": -1, "Item4Amount": 0}, {"Gold": 8000, "Id": 20011, "Item1": 60010, "Item1Amount": 2, "Item2": 60011, "Item2Amount": 1, "Item3": -1, "Item3Amount": 0, "Item4": -1, "It…
+- modified: install/files/static_data/awakeningnodelayout (1 record/field changes)
+  - $/layout_wing_04: "<absent>" → [{"ConnectedNodes": [1, 2, 3, 4, 5, 6], "NodeIndex": 0, "NodeType": 2}, {"ConnectedNodes": [0, 6, 2, 22], "NodeIndex": 1, "NodeType": 1}, {"ConnectedNodes": [0, 1, 3], "NodeIndex": 2, "NodeType": 1}, {"ConnectedNodes": [0, 2, 4, 284], "NodeIndex": 3, "NodeType": 1}, {"ConnectedNodes": [0, 3, 5, 276]…
+- modified: install/files/static_data/awakeningnodelayout_client (1 record/field changes)
+  - $/layout_wing_04: "<absent>" → {"Circles": [{"AttachedNodes": [0, 1, 2, 3, 4, 5, 6], "ExpandedDir": 0, "ExpandedFrom": -1, "RelativeDepth": 0}, {"AttachedNodes": [7, 8, 9, 10, 11, 12, 13], "ExpandedDir": 6, "ExpandedFrom": 0, "RelativeDepth": 1}, {"AttachedNodes": [15, 16, 17, 18, 19, 20, 21], "ExpandedDir": 1, "ExpandedFrom": 0,…
+- modified: install/files/static_data/awakeningtreenodes (1 record/field changes)
+  - $/layout_wing_04_wyverns_purple: "<absent>" → [2000000000, 1090100001, 1090100002, 1090100003, 1090100004, 1090100005, 1090100006, 2000000007, 1090300008, 1090300009, 1090300010, 1090100011, 1090100012, 1090100013, 1090300014, 2000000015, 1090100016, 1090100017, 1090100018, 1090300019, 1090300020, 1090300021, 1090300022, 2000000023, 1190310024,…
+- modified: install/files/static_data/battleactions (5 record/field changes)
+  - $/records-by-Name/GraphMyth:WyvernsPurple: "<absent>" → {"BaseDamageType": "Projectile", "BuffInfo": [{"BuffName": "critical_up_leader_default", "Content": "Default", "Level": 100}, {"BuffName": "critical_up_leader_coop", "Content": "CoopExpedition", "Level": 100}, {"BuffName": "critical_up_leader_bossrush", "Content": "BossRush", "Level": 100}, {"BuffNa…
+  - $/records-by-Name/GraphStamina:WyvernsPurple: "<absent>" → {"ActionDuration": 0.4, "BaseDamageType": "Projectile", "GraphName": "graph_hero/wyverns_purple:ManualWyvernsPurple", "Name": "GraphStamina:WyvernsPurple", "ShootTiming": 0.1, "SpeedScale": 0.7, "StaminaBreakModifier": 1.5, "StaminaPerAction": 20}
+  - $/records-by-Name/GraphSupport:BridgeMessenger/BaseDamageType: "Melee" → "Projectile"
+  - $/records-by-Name/GraphSupport:WyvernsPurple: "<absent>" → {"BaseDamageType": "Projectile", "Connect": "Aerial", "Duration": 1.2, "GraphName": "graph_hero/wyverns_purple:SupportWyvernsPurple", "HealRatio": 0.2, "MythOptionId": 20300701, "Name": "GraphSupport:WyvernsPurple", "Radius": 2, "TotalDpsMult": 3.5, "Trigger": "Down"}
+- modified: install/files/static_data/battleactions-bin (5 record/field changes)
+  - $/records-by-Name/GraphMyth:WyvernsPurple: "<absent>" → {"BaseDamageType": "Projectile", "BuffInfo": [{"BuffName": "critical_up_leader_default", "Content": "Default", "Level": 100}, {"BuffName": "critical_up_leader_coop", "Content": "CoopExpedition", "Level": 100}, {"BuffName": "critical_up_leader_bossrush", "Content": "BossRush", "Level": 100}, {"BuffNa…
+  - $/records-by-Name/GraphStamina:WyvernsPurple: "<absent>" → {"ActionDuration": 0.4, "BaseDamageType": "Projectile", "GraphName": "graph_hero/wyverns_purple:ManualWyvernsPurple", "Name": "GraphStamina:WyvernsPurple", "ShootTiming": 0.1, "SpeedScale": 0.7, "StaminaBreakModifier": 1.5, "StaminaPerAction": 20}
+  - $/records-by-Name/GraphSupport:BridgeMessenger/BaseDamageType: "Melee" → "Projectile"
+  - $/records-by-Name/GraphSupport:WyvernsPurple: "<absent>" → {"BaseDamageType": "Projectile", "Connect": "Aerial", "Duration": 1.2, "GraphName": "graph_hero/wyverns_purple:SupportWyvernsPurple", "HealRatio": 0.2, "MythOptionId": 20300701, "Name": "GraphSupport:WyvernsPurple", "Radius": 2, "TotalDpsMult": 3.5, "Trigger": "Down"}
+- modified: install/files/static_data/battleais (1 record/field changes)
+  - $: [{"MaximumEngagerCount": 50, "Name": "Following"}, {"FollowTime": 5, "MaximumEngagerCount": 50, "Name": "Following:Follow5s", "ThreatenTime": 2}, {"BackMoveDuration": 0, "IdleTime": 1, "Name": "Following:Fighter", "TargetSearchType": "Remote", "ThreatenTime": 0}, {"FollowTime": 5, "MaximumEngagerCou… → [{"MaximumEngagerCount": 50, "Name": "Following"}, {"FollowTime": 5, "MaximumEngagerCount": 50, "Name": "Following:Follow5s", "ThreatenTime": 2}, {"BackMoveDuration": 0, "IdleTime": 1, "Name": "Following:Fighter", "TargetSearchType": "Remote", "ThreatenTime": 0}, {"FollowTime": 5, "MaximumEngagerCou…
+- modified: install/files/static_data/battlestyles (1 record/field changes)
+  - $/BattleStyles: [{"Ai": null, "AttackTypes": null, "BattleActions": null, "Class": null, "ClassBattleActions": null, "CustomDamaged": null, "CustomIdle": null, "CustomRun": null, "CustomWalk": null, "ManualBattleActions": null, "Name": "empty_hand", "UseSuper": true, "Weapon1": "none", "Weapon2": "none"}, {"Ai": "P… → [{"Ai": null, "AttackTypes": null, "BattleActions": null, "Class": null, "ClassBattleActions": null, "CustomDamaged": null, "CustomIdle": null, "CustomRun": null, "CustomWalk": null, "ManualBattleActions": null, "Name": "empty_hand", "UseSuper": true, "Weapon1": "none", "Weapon2": "none"}, {"Ai": "P…
+- modified: install/files/static_data/buffs (9 record/field changes)
+  - $/records-by-Id/23107010: "<absent>" → {"ApplyLowerLimit": true, "AttackScaleBase": -0.15, "BuffGroup": "buff_wyverns_purple_myth_cwp_option_0", "ClassName": "TotalAttackScale", "Duration": 3, "Id": 23107010, "Name": "buff_wyverns_purple_myth_cwp_option_0"}
+  - $/records-by-Id/23107011: "<absent>" → {"BuffGroup": "buff_wyverns_purple_myth_cwp_option_1", "ClassName": "CriticalMultiplierScale", "CriticalScaleBase": 0.55, "Duration": 6, "Id": 23107011, "Name": "buff_wyverns_purple_myth_cwp_option_1"}
+  - $/records-by-Id/23207010: "<absent>" → {"AttackScaleBase": 0.4, "BuffGroup": "buff_wyverns_purple_myth_special_0", "ClassName": "SuperSkillScale", "Duration": 8, "Id": 23207010, "Name": "buff_wyverns_purple_myth_special_0"}
+  - $/records-by-Id/23207011: "<absent>" → {"BuffGroup": "buff_wyverns_purple_myth_special_1", "ClassName": "Critical", "CriticalBase": 20, "Duration": 8, "Id": 23207011, "Name": "buff_wyverns_purple_myth_special_1"}
+- modified: install/files/static_data/charactertreeconfig (1 record/field changes)
+  - $: [{"AwakeningTreeName": "layout001_ascent_knight", "OriginId": 1, "SpecialNodes": [990, 20, 20, 111, 61, 70, 10, 31, 33, 992, 993, 71, 42, 72, 14, 13, 62, 991, 22, 13, 24, 114, 994, 993, 114, 25, 35, 25, 35, 16, 995, 996, 997, 998, 999], "TreeLayoutName": "layout001_ascent"}, {"AwakeningTreeName": "l… → [{"AwakeningTreeName": "layout001_ascent_knight", "OriginId": 1, "SpecialNodes": [990, 20, 20, 111, 61, 70, 10, 31, 33, 992, 993, 71, 42, 72, 14, 13, 62, 991, 22, 13, 24, 114, 994, 993, 114, 25, 35, 25, 35, 16, 995, 996, 997, 998, 999], "TreeLayoutName": "layout001_ascent"}, {"AwakeningTreeName": "l…
+- modified: install/files/static_data/dailymissionadditionalevent (1 record/field changes)
+  - $/Event/records-by-Id/3: "<absent>" → {"Id": 3, "RewardSet": [1, 2], "SeasonId": 18000003, "SpeechesAllcleard": ["daily_mission_princess_speeches_all_cleared_5th_event_1", "daily_mission_princess_speeches_all_cleared_4th_event_2"], "SpeechesCleared": ["daily_mission_princess_speeches_cleared_4th_event_1", "daily_mission_princess_speeche…
+- modified: install/files/static_data/exps2 (2 record/field changes)
+  - $/LevelExps: [{"ArenaMaxDmg": 4645509, "ConquestTotalDmg": 13330873, "DropExps": 75, "DropGold": 85, "ExpUnit": 10, "Exps": 37, "Level": 0, "RaidTotalDmg": 9164975, "ScarecrowTotalDmg": 21278175, "TotalExps": 37}, {"ArenaMaxDmg": 4738419, "ConquestTotalDmg": 13597490, "DropExps": 79, "DropGold": 87, "ExpUnit": 2… → [{"ArenaMaxDmg": 4645509, "ConquestTotalDmg": 13330873, "DropExps": 75, "DropGold": 85, "ExpUnit": 10, "Exps": 37, "Level": 0, "RaidTotalDmg": 9164975, "ScarecrowTotalDmg": 25959375, "TotalExps": 37}, {"ArenaMaxDmg": 4738419, "ConquestTotalDmg": 13597490, "DropExps": 79, "DropGold": 87, "ExpUnit": 2…
+  - $/LevelExps.Kong: [{"ArenaMaxDmg": 4645509, "ConquestTotalDmg": 13330873, "DropExps": 75, "DropGold": 85, "ExpUnit": 10, "Exps": 37, "Level": 0, "RaidTotalDmg": 9164975, "ScarecrowTotalDmg": 21278175, "TotalExps": 37}, {"ArenaMaxDmg": 4738419, "ConquestTotalDmg": 13597490, "DropExps": 79, "DropGold": 87, "ExpUnit": 2… → [{"ArenaMaxDmg": 4645509, "ConquestTotalDmg": 13330873, "DropExps": 75, "DropGold": 85, "ExpUnit": 10, "Exps": 37, "Level": 0, "RaidTotalDmg": 9164975, "ScarecrowTotalDmg": 25959375, "TotalExps": 37}, {"ArenaMaxDmg": 4738419, "ConquestTotalDmg": 13597490, "DropExps": 79, "DropGold": 87, "ExpUnit": 2…
+- modified: install/files/static_data/festivalpass (2 record/field changes)
+  - $/Seasons/records-by-Id/38: "<absent>" → {"Id": 38, "MissionSet": 1, "PromotionReward": [10, 1, 20, 5, 9, 14, 19], "RewardSet": 1, "SeasonDateId": 15000038, "ShopSet": 1}
+  - $/Seasons/records-by-Id/39: "<absent>" → {"Id": 39, "MissionSet": 1, "PromotionReward": [10, 1, 20, 5, 9, 14, 19], "RewardSet": 1, "SeasonDateId": 15000039, "ShopSet": 2}
+- modified: install/files/static_data/guildpunchking (2 record/field changes)
+  - $/Seasons/records-by-Id/36: "<absent>" → {"Background": "{\"enUS\":\"media/guildpunchking/guild_punchking_bg_00.jpg\",\"koKR\":\"media/guildpunchking/guild_punchking_bg_00.jpg\",\"deDE\":\"media/guildpunchking/guild_punchking_bg_00.jpg\",\"esES\":\"media/guildpunchking/guild_punchking_bg_00.jpg\",\"frFR\":\"media/guildpunchking/guild_punch…
+  - $/Shops: [{"Coins": 1, "MaxPurchase": 3, "PunchkingId": 1, "Rewards": [{"Amount": 1, "ItemId": 96070}], "ShopId": 1}, {"Coins": 2, "MaxPurchase": 3, "PunchkingId": 1, "Rewards": [{"Amount": 100, "ItemId": 70003}], "ShopId": 2}, {"Coins": 3, "MaxPurchase": 4, "PunchkingId": 1, "Rewards": [{"Amount": 1, "ItemI… → [{"Coins": 1, "MaxPurchase": 3, "PunchkingId": 1, "Rewards": [{"Amount": 1, "ItemId": 96070}], "ShopId": 1}, {"Coins": 2, "MaxPurchase": 3, "PunchkingId": 1, "Rewards": [{"Amount": 100, "ItemId": 70003}], "ShopId": 2}, {"Coins": 3, "MaxPurchase": 4, "PunchkingId": 1, "Rewards": [{"Amount": 1, "ItemI…
+- modified: install/files/static_data/guildraid2 (3 record/field changes)
+  - $/Boss: [{"Id": 1790192, "SetId": 1, "Slot": 1}, {"Id": 1790051, "SetId": 1, "Slot": 2}, {"Id": 1790035, "SetId": 1, "Slot": 3}, {"Id": 1790004, "SetId": 1, "Slot": 4}, {"Id": 1790181, "SetId": 2, "Slot": 1}, {"Id": 1790040, "SetId": 2, "Slot": 2}, {"Id": 1790073, "SetId": 2, "Slot": 3}, {"Id": 1790065, "Se… → [{"Id": 1790192, "SetId": 1, "Slot": 1}, {"Id": 1790051, "SetId": 1, "Slot": 2}, {"Id": 1790035, "SetId": 1, "Slot": 3}, {"Id": 1790004, "SetId": 1, "Slot": 4}, {"Id": 1790181, "SetId": 2, "Slot": 1}, {"Id": 1790040, "SetId": 2, "Slot": 2}, {"Id": 1790073, "SetId": 2, "Slot": 3}, {"Id": 1790065, "Se…
+  - $/Seasons/records-by-Id/44: "<absent>" → {"Background": "{\"enUS\":\"media/guildraid/v2.55_raid_bg_43.png\"}", "BackgroundPosition": 50, "Banner": "{\"enUS\":\"media/guildraid/v3.54_raid_banner_133_wyverns_purple_enUS.png\",\"koKR\":\"media/guildraid/v3.54_raid_banner_133_wyverns_purple_koKR.png\",\"deDE\":\"media/guildraid/v3.54_raid_bann…
+  - $/Seasons.Kong/records-by-Id/1039: "<absent>" → {"Background": "{\"jaJP\":\"media/guildraid/v2.55_raid_bg_43.png\"}", "BackgroundPosition": 50, "Banner": "{\"jaJP\":\"media/guildraid/v3.54_raid_banner_133_wyverns_purple_jaJP.png\"}", "BossSet": 40, "ButtonPosition1": [-40, 80], "ButtonPosition2": [-460, -80], "ButtonPosition3": [340, -30], "Butto…
+- modified: install/files/static_data/heavenholdvillagerreaction (12 record/field changes)
+  - $/records-by-Id/70101: "<absent>" → {"Animation": "idle", "Direction": "down", "Emoticon": null, "EmoticonTime": null, "Emotion": "idle", "EndType": "Time", "HeroId": 701, "Id": 70101, "NextAction": 0, "PType": "Villager", "SpeechText": "Voice_wyverns_purple_1_TouchReactionGood1", "StartType": "Good", "Voice": "TouchReactionGood1", "W…
+  - $/records-by-Id/70102: "<absent>" → {"Animation": "idle", "Direction": "down", "Emoticon": null, "EmoticonTime": null, "Emotion": "idle", "EndType": "Time", "HeroId": 701, "Id": 70102, "NextAction": 0, "PType": "Villager", "SpeechText": "Voice_wyverns_purple_1_TouchReactionGood2", "StartType": "Good", "Voice": "TouchReactionGood2", "W…
+  - $/records-by-Id/70103: "<absent>" → {"Animation": "idle", "Direction": "down", "Emoticon": null, "EmoticonTime": null, "Emotion": "idle", "EndType": "Time", "HeroId": 701, "Id": 70103, "NextAction": 0, "PType": "Villager", "SpeechText": "Voice_wyverns_purple_1_TouchReactionBad1", "StartType": "Bad", "Voice": "TouchReactionBad1", "Wait…
+  - $/records-by-Id/70104: "<absent>" → {"Animation": "idle", "Direction": "down", "Emoticon": null, "EmoticonTime": null, "Emotion": "idle", "EndType": "Time", "HeroId": 701, "Id": 70104, "NextAction": 0, "PType": "Villager", "SpeechText": "Voice_wyverns_purple_1_TouchReactionBad2", "StartType": "Bad", "Voice": "TouchReactionBad2", "Wait…
+- modified: install/files/static_data/heroes (4 record/field changes)
+  - $/records-by-Id/20701: "<absent>" → {"AerialResistance": 0.7, "Atk": 1.442, "BattleClass": {"default": ["basket"]}, "BlessingLevelOptions": [[{"Level": 50, "OptionId": 36}, {"Level": 50, "OptionId": 38}], [{"Level": 120, "OptionId": 36}, {"Level": 120, "OptionId": 38}], [{"Level": 250, "OptionId": 36}, {"Level": 250, "OptionId": 38}]]…
+  - $/records-by-Id/701: "<absent>" → {"AerialResistance": 0.7, "Atk": 1.18496, "BattleClass": {"default": ["basket"]}, "BlessingLevelOptions": [[{"Level": 50, "OptionId": 36}, {"Level": 50, "OptionId": 38}], [{"Level": 120, "OptionId": 36}, {"Level": 120, "OptionId": 38}], [{"Level": 250, "OptionId": 36}, {"Level": 250, "OptionId": 38}…
+  - $/records-by-Id/702: "<absent>" → {"AerialResistance": 0.7, "Atk": 1.288, "BattleClass": {"default": ["basket"]}, "BlessingLevelOptions": [[{"Level": 50, "OptionId": 36}, {"Level": 50, "OptionId": 38}], [{"Level": 120, "OptionId": 36}, {"Level": 120, "OptionId": 38}], [{"Level": 250, "OptionId": 36}, {"Level": 250, "OptionId": 38}]]…
+  - $/records-by-Id/703: "<absent>" → {"AerialResistance": 0.7, "Atk": 1.4, "BattleClass": {"default": ["basket"]}, "BlessingLevelOptions": [[{"Level": 50, "OptionId": 36}, {"Level": 50, "OptionId": 38}], [{"Level": 120, "OptionId": 36}, {"Level": 120, "OptionId": 38}], [{"Level": 250, "OptionId": 36}, {"Level": 250, "OptionId": 38}]], …
+- modified: install/files/static_data/heroes-bin (4 record/field changes)
+  - $/records-by-Id/20701: "<absent>" → {"AerialResistance": 0.7, "Atk": 1.442, "BattleClass": {"default": ["basket"]}, "BlessingLevelOptions": [[{"Level": 50, "OptionId": 36}, {"Level": 50, "OptionId": 38}], [{"Level": 120, "OptionId": 36}, {"Level": 120, "OptionId": 38}], [{"Level": 250, "OptionId": 36}, {"Level": 250, "OptionId": 38}]]…
+  - $/records-by-Id/701: "<absent>" → {"AerialResistance": 0.7, "Atk": 1.18496, "BattleClass": {"default": ["basket"]}, "BlessingLevelOptions": [[{"Level": 50, "OptionId": 36}, {"Level": 50, "OptionId": 38}], [{"Level": 120, "OptionId": 36}, {"Level": 120, "OptionId": 38}], [{"Level": 250, "OptionId": 36}, {"Level": 250, "OptionId": 38}…
+  - $/records-by-Id/702: "<absent>" → {"AerialResistance": 0.7, "Atk": 1.288, "BattleClass": {"default": ["basket"]}, "BlessingLevelOptions": [[{"Level": 50, "OptionId": 36}, {"Level": 50, "OptionId": 38}], [{"Level": 120, "OptionId": 36}, {"Level": 120, "OptionId": 38}], [{"Level": 250, "OptionId": 36}, {"Level": 250, "OptionId": 38}]]…
+  - $/records-by-Id/703: "<absent>" → {"AerialResistance": 0.7, "Atk": 1.4, "BattleClass": {"default": ["basket"]}, "BlessingLevelOptions": [[{"Level": 50, "OptionId": 36}, {"Level": 50, "OptionId": 38}], [{"Level": 120, "OptionId": 36}, {"Level": 120, "OptionId": 38}], [{"Level": 250, "OptionId": 36}, {"Level": 250, "OptionId": 38}]], …
+- modified: install/files/static_data/heroprofile (1 record/field changes)
+  - $: [{"Age": [20], "Height": [162], "HideUntilClear": -1, "OriginId": 1, "Story": "profile_knight_female_story", "Tribe": ["profile_tribe_human"], "Weight": [50]}, {"Age": [20], "Height": [165], "HideUntilClear": -1, "OriginId": 2, "Story": "profile_knight_male_story", "Tribe": ["profile_tribe_human"], … → [{"Age": [20], "Height": [162], "HideUntilClear": -1, "OriginId": 1, "Story": "profile_knight_female_story", "Tribe": ["profile_tribe_human"], "Weight": [50]}, {"Age": [20], "Height": [165], "HideUntilClear": -1, "OriginId": 2, "Story": "profile_knight_male_story", "Tribe": ["profile_tribe_human"], …
+- modified: install/files/static_data/items (14 record/field changes)
+  - $/records-by-Id/10542/DateFrom: "<absent>" → {"Kong": "2026-09-30T14:10:00+09"}
+  - $/records-by-Id/10542/VersionFrom/Kong: "v9.99" → "v3.53"
+  - $/records-by-Id/10543/VersionFrom/Kong: "v9.99" → "v3.53"
+  - $/records-by-Id/10544/VersionFrom/Kong: "v9.99" → "v3.53"
+- modified: install/files/static_data/knowledgecollection (12 record/field changes)
+  - $/Collection/records-by-Id/10060/DateFrom: "<absent>" → {"Kong": "2026-09-30T14:10:00+09"}
+  - $/Collection/records-by-Id/10060/VersionFrom/Kong: "v9.99" → "v3.53"
+  - $/Collection/records-by-Id/3039: "<absent>" → {"Id": 3039, "ItemId": [9050595], "ItemLevel": [59], "Level": 10, "Name": "collection_cwp_wyvernspurple_myth", "OptionId": 36, "TypeId": 1, "VersionFrom": {"KakaoGlobal": "v3.55", "KakaoKorea": "v3.55", "Switch": "v9.99"}}
+  - $/Collection/records-by-Id/446: "<absent>" → {"Id": 446, "ItemId": [9050594], "ItemLevel": [0], "Level": 10, "Name": "collection_cwp_wyvernspurple", "OptionId": 36, "TypeId": 1, "VersionFrom": {"KakaoGlobal": "v3.55", "KakaoKorea": "v3.55", "Switch": "v9.99"}}
+- modified: install/files/static_data/liveevent (2 record/field changes)
+  - $/AttendanceDayRewards: [{"Day": 1, "EventId": 5, "Rewards": [{"Amount": 50, "ItemId": 70003}]}, {"Day": 2, "EventId": 5, "Rewards": [{"Amount": 100, "ItemId": 70003}]}, {"Day": 3, "EventId": 5, "Rewards": [{"Amount": 200, "ItemId": 70003}]}, {"Day": 4, "EventId": 5, "Rewards": [{"Amount": 300, "ItemId": 70003}]}, {"Day": … → [{"Day": 1, "EventId": 5, "Rewards": [{"Amount": 50, "ItemId": 70003}]}, {"Day": 2, "EventId": 5, "Rewards": [{"Amount": 100, "ItemId": 70003}]}, {"Day": 3, "EventId": 5, "Rewards": [{"Amount": 200, "ItemId": 70003}]}, {"Day": 4, "EventId": 5, "Rewards": [{"Amount": 300, "ItemId": 70003}]}, {"Day": …
+  - $/AttendanceEvents/records-by-Id/230: "<absent>" → {"Background": "{\"enUS\":\"media/attendance/v3.54_wyverns_purple_anniversary_attendance.png\"}", "Banner": null, "Days": 28, "Id": 230, "Name": "year_5_anniversary_jp", "SeasonId": 6000227, "Target": "All", "ValidWIthinDays": 30}
+- modified: install/files/static_data/objectpoolspec (1 record/field changes)
+  - $: [{"AssetBundleName": "audio/mixers", "AssetName": "Sfx Source", "DisposingType": "None", "InitialSize": 12, "MaxSize": 12, "OnDemand": false, "PresetName": "Sfx Source", "RedundantWindow": 0}, {"AssetBundleName": "audio/mixers", "AssetName": "Voice Source", "DisposingType": "None", "InitialSize": 3,… → [{"AssetBundleName": "audio/mixers", "AssetName": "Sfx Source", "DisposingType": "None", "InitialSize": 12, "MaxSize": 12, "OnDemand": false, "PresetName": "Sfx Source", "RedundantWindow": 0}, {"AssetBundleName": "audio/mixers", "AssetName": "Voice Source", "DisposingType": "None", "InitialSize": 3,…
+- modified: install/files/static_data/options (10 record/field changes)
+  - $/records-by-Id/20300701: "<absent>" → {"AwakenTitle": "wyverns_purple_myth_support_option_awaken", "Class": "BattleActionParameter", "DescParam": ["TotalDpsMult", "HealRatio"], "DescParamType": ["percent", "percent"], "HealRatio": 0.2, "Id": 20300701, "IsReplaceDesc": true, "IsVisible": false, "Name": "wyverns_purple_myth_support_option…
+  - $/records-by-Id/20310701: "<absent>" → {"AwakenTitle": "wyverns_purple_myth_cwp_option_awaken", "Class": "BattleActionParameter", "CritMultBuffName": "buff_wyverns_purple_myth_cwp_option_1", "DamageBoost": 0.2, "DeBuffName": "buff_wyverns_purple_myth_cwp_option_0", "DescParam": ["DeBuffName:Duration", "DeBuffName:AttackScaleBase", "CritM…
+  - $/records-by-Id/20320701: "<absent>" → {"AwakenTitle": "wyverns_purple_myth_special_option_awaken", "Class": "BattleActionParameter", "CritBuffName": "buff_wyverns_purple_myth_special_1", "DescParam": ["SupportShieldRatio", "ShieldRatio", "SuperSkillBuffName:Duration", "SuperSkillBuffName:AttackScaleBase", "CritBuffName:Duration", "CritB…
+  - $/records-by-Id/20340701: "<absent>" → {"AwakenTitle": "wyverns_purple_myth_cwp_awaken", "Class": "BattleActionParameter", "DescParam": ["OverrideModifierBase"], "DescParamType": ["percent"], "Id": 20340701, "IsVisible": false, "ModifierBase": 1.35, "Name": "wyverns_purple_myth_cwp", "OverrideModifierBase": 2.6}
+- modified: install/files/static_data/pass2 (71 record/field changes)
+  - $/Missions/records-by-Id/1864: "<absent>" → {"AnalyticsName": "s3_pass_num56_weekly_1", "GroupId": 1864, "Id": 1864, "Key": 320041001, "Order": -1, "PassExperience": 400, "PassSeasonId": 56, "ResetType": "Weekly", "SeasonDateId": 5007001, "Type": "CoopExpeditionStageClear", "Value": 1}
+  - $/Missions/records-by-Id/1865: "<absent>" → {"AnalyticsName": "s3_pass_num56_weekly_2", "GroupId": 1865, "Id": 1865, "Order": -1, "PassExperience": 400, "PassSeasonId": 56, "ResetType": "Weekly", "SeasonDateId": 5007001, "Type": "RealtimePvPStart", "Value": 10}
+  - $/Missions/records-by-Id/1866: "<absent>" → {"AnalyticsName": "s3_pass_num56_weekly_3", "GroupId": 1865, "Id": 1866, "Order": -1, "PassExperience": 400, "PassSeasonId": 56, "ResetType": "Weekly", "SeasonDateId": 5007001, "Type": "RealtimePvPStart", "Value": 20}
+  - $/Missions/records-by-Id/1867: "<absent>" → {"AnalyticsName": "s3_pass_num56_weekly_4", "GroupId": 1867, "Id": 1867, "Order": -1, "PassExperience": 400, "PassSeasonId": 56, "ResetType": "Weekly", "SeasonDateId": 5007001, "Type": "GuildContentStart", "Value": 3}
+- modified: install/files/static_data/projectiles (6 record/field changes)
+  - $/records-by-Name/wyverns_purple_manual_proj_1: "<absent>" → {"Accel": 0, "AllyHitType": "none", "AtkModifier": 0, "Directional": true, "EnemyHitType": "damage", "Exploding": false, "HitBoxHeight": 0.8, "HitBoxWidth": 0.8, "InstantiationType": "UnityObjectPool", "Lifetime": 0.3, "Name": "wyverns_purple_manual_proj_1", "P2w": 1, "PenetrateType": "None", "Prese…
+  - $/records-by-Name/wyverns_purple_manual_proj_2: "<absent>" → {"Accel": 0, "AllyHitType": "none", "AtkModifier": 0, "Directional": true, "EnemyHitType": "damage", "Exploding": false, "HitBoxHeight": 0.8, "HitBoxWidth": 0.8, "InstantiationType": "UnityObjectPool", "Lifetime": 0.3, "Name": "wyverns_purple_manual_proj_2", "P2w": 1, "PenetrateType": "None", "Prese…
+  - $/records-by-Name/wyverns_purple_manual_proj_break: "<absent>" → {"Accel": 0, "AllyHitType": "none", "AtkModifier": 0, "Directional": true, "EnemyHitType": "damage", "Exploding": false, "HitBoxHeight": 0.9, "HitBoxWidth": 0.9, "InstantiationType": "UnityObjectPool", "Lifetime": 0.3, "Name": "wyverns_purple_manual_proj_break", "P2w": 1, "PenetrateType": "None", "P…
+  - $/records-by-Name/wyverns_purple_manual_proj_break_myth: "<absent>" → {"Accel": 0, "AllyHitType": "none", "AtkModifier": 0, "Directional": true, "EnemyHitType": "damage", "Exploding": false, "HitBoxHeight": 1.1, "HitBoxWidth": 1.1, "InstantiationType": "UnityObjectPool", "Lifetime": 0.3, "Name": "wyverns_purple_manual_proj_break_myth", "P2w": 1, "PenetrateType": "None…
+- modified: install/files/static_data/s3gachaevents (23 record/field changes)
+  - $/GiantGachaMachineDrawRewards: [{"CapsuleId": 10101, "EventId": 1, "MachineId": 1, "Probability": 0.005, "Rewards": [{"Amount": 30, "ItemId": 70009}]}, {"CapsuleId": 10102, "EventId": 1, "MachineId": 1, "Probability": 0.02, "Rewards": [{"Amount": 15, "ItemId": 70009}]}, {"CapsuleId": 10103, "EventId": 1, "MachineId": 1, "Probabil… → [{"CapsuleId": 10101, "EventId": 1, "MachineId": 1, "Probability": 0.005, "Rewards": [{"Amount": 30, "ItemId": 70009}]}, {"CapsuleId": 10102, "EventId": 1, "MachineId": 1, "Probability": 0.02, "Rewards": [{"Amount": 15, "ItemId": 70009}]}, {"CapsuleId": 10103, "EventId": 1, "MachineId": 1, "Probabil…
+  - $/GiantGachaMachineEvents/records-by-Id/17: "<absent>" → {"Banner": "{\"enUS\":\"media/gacha_machine/v3.54_giant_gacha/v3.54_giant_gacha_banner_enUS.png\",\"koKR\":\"media/gacha_machine/v3.54_giant_gacha/v3.54_giant_gacha_banner_koKR.png\",\"zhCN\":\"media/gacha_machine/v3.54_giant_gacha/v3.54_giant_gacha_banner_zhCN.png\",\"zhTW\":\"media/gacha_machine/v…
+  - $/GiantGachaMachineGiveawayRewards: [{"EventId": 1, "GiveawayId": 1001, "Price": 80, "PurchasableCount": 1, "Rewards": [{"Amount": 1, "ItemId": 120004}]}, {"EventId": 1, "GiveawayId": 1002, "Price": 30, "PurchasableCount": 1, "Rewards": [{"Amount": 1, "ItemId": 90010}]}, {"EventId": 1, "GiveawayId": 1003, "Price": 40, "PurchasableCoun… → [{"EventId": 1, "GiveawayId": 1001, "Price": 80, "PurchasableCount": 1, "Rewards": [{"Amount": 1, "ItemId": 120004}]}, {"EventId": 1, "GiveawayId": 1002, "Price": 30, "PurchasableCount": 1, "Rewards": [{"Amount": 1, "ItemId": 90010}]}, {"EventId": 1, "GiveawayId": 1003, "Price": 40, "PurchasableCoun…
+  - $/Missions/records-by-Id/40369: "<absent>" → {"AnalyticsName": "event_giantgacha_v27_ReceiveGift_1_daily", "EventId": 17, "EventType": "Gacha", "GroupId": 40369, "Id": 40369, "Order": 1, "ResetType": "Daily", "RewardPoint": 1, "Type": "ReceiveGift", "Value": 1}
+- modified: install/files/static_data/s3herogrowthevent (33 record/field changes)
+  - $/Missions/records-by-Id/50/AnalyticsName: "AwakeningNodeCount_695_203" → "AwakeningNodeCount_695_201"
+  - $/Missions/records-by-Id/50/Value: 203 → 201
+  - $/Missions/records-by-Id/62: "<absent>" → {"AnalyticsName": "LevelUp_701_1", "EventId": 10003, "GroupId": 62, "Id": 62, "Key": 701, "Order": 1, "Rewards": [{"Amount": 80, "ItemId": 80701}], "Type": "LevelUp", "Value": 1}
+  - $/Missions/records-by-Id/63: "<absent>" → {"AnalyticsName": "Evolve_701_4", "EventId": 10003, "GroupId": 63, "Id": 63, "Key": 701, "Order": 2, "Rewards": [{"Amount": 160, "ItemId": 80701}], "Type": "Evolve", "Value": 4}
+- modified: install/files/static_data/seasondate (15 record/field changes)
+  - $/EventPeriod/records-by-Id/15000038: "<absent>" → {"From": {"BiliBili": "2021-01-15T14:10:00+09", "KakaoGlobal": "2021-01-03T14:10:00+09", "KakaoKorea": "2021-01-03T14:10:00+09", "Kong": "2026-09-30T14:10:00+09", "Switch": "2021-01-15T14:10:00+09", "Test": "2025-10-30T14:00:00+09"}, "Id": 15000038, "RewardUntil": {"BiliBili": "2021-01-17T13:59:59+0…
+  - $/EventPeriod/records-by-Id/15000039: "<absent>" → {"From": {"BiliBili": "2021-01-15T14:10:00+09", "KakaoGlobal": "2026-10-13T14:10:00+09", "KakaoKorea": "2026-10-01T10:10:00+09", "Kong": "2021-01-03T14:10:00+09", "Switch": "2021-01-15T14:10:00+09", "Test": "2026-04-15T14:00:00+09"}, "Id": 15000039, "RewardUntil": {"BiliBili": "2021-01-17T13:59:59+0…
+  - $/EventPeriod/records-by-Id/18000003: "<absent>" → {"From": {"BiliBili": "2021-01-01T00:00:00+09", "KakaoGlobal": "2021-01-01T00:00:00+09", "KakaoKorea": "2021-01-01T00:00:00+09", "Kong": "2026-10-01T04:00:00+09", "Switch": "2021-01-01T00:00:00+09", "Test": "2021-01-01T00:00:00+09"}, "Id": 18000003, "To": {"BiliBili": "2021-01-02T00:00:00+09", "Kaka…
+  - $/EventPeriod/records-by-Id/2000389: "<absent>" → {"From": {"BiliBili": "2020-01-01T00:00:00+09", "KakaoGlobal": "2026-10-13T14:10:00+09", "KakaoKorea": "2026-10-01T10:00:00+09", "Kong": "2026-09-30T14:10:00+09", "Switch": "2020-01-01T00:00:00+09", "Test": "2020-01-01T00:00:00+09"}, "Id": 2000389, "RewardUntil": {"BiliBili": "2020-01-01T00:00:05+09…
+- modified: install/files/static_data/shop_category (2 record/field changes)
+  - $/records-by-Id/32/DateFrom/Kong: "2025-10-01T14:00:00+09" → "2026-09-30T14:00:00+09"
+  - $/records-by-Id/32/DateTo/Kong: "2025-10-15T13:59:59+09" → "2026-10-14T13:59:59+09"
+
+### Localization
+
+- modified: install/cache/strings-bin-enUS (168955 record/field changes)
+  - $/records-by-Id/10000/Text: "Lv.40 Event Rift" → "Colosseum Season Reward"
+  - $/records-by-Id/100000/Text: "There’s no such thing as enough sugar." → "…What are you looking at?"
+  - $/records-by-Id/100001/Text: "…" → "I was a Corps commander, a quite competent one too."
+  - $/records-by-Id/100002/Text: "…Pff." → "…Just trust me, this is the best option right now."
+- modified: install/files/static_data/strings-bin-enUS (168955 record/field changes)
+  - $/records-by-Id/10000/Text: "Lv.40 Event Rift" → "Colosseum Season Reward"
+  - $/records-by-Id/100000/Text: "There’s no such thing as enough sugar." → "…What are you looking at?"
+  - $/records-by-Id/100001/Text: "…" → "I was a Corps commander, a quite competent one too."
+  - $/records-by-Id/100002/Text: "…Pff." → "…Just trust me, this is the best option right now."
+- modified: install/files/static_data/strings-bin-enUS.etag
+
+### Other files
+
+- modified: install/files/Android.checksum
+- modified: install/files/Android.index
+- modified: install/files/Android.index.etag
+- added: install/files/Unity/09d332de-f846-41f9-9626-005828d3fdb5/Analytics/ArchivedEvents/179094160900003.bbc662d1/c
+- added: install/files/Unity/09d332de-f846-41f9-9626-005828d3fdb5/Analytics/ArchivedEvents/179094160900003.bbc662d1/e
+- added: install/files/Unity/09d332de-f846-41f9-9626-005828d3fdb5/Analytics/ArchivedEvents/179094160900003.bbc662d1/g
+- added: install/files/Unity/09d332de-f846-41f9-9626-005828d3fdb5/Analytics/ArchivedEvents/179094160900003.bbc662d1/s
+- added: install/files/Unity/09d332de-f846-41f9-9626-005828d3fdb5/Analytics/ArchivedEvents/179094160900004.bbc662d1/c
+- added: install/files/Unity/09d332de-f846-41f9-9626-005828d3fdb5/Analytics/ArchivedEvents/179094160900004.bbc662d1/e
+- added: install/files/Unity/09d332de-f846-41f9-9626-005828d3fdb5/Analytics/ArchivedEvents/179094160900004.bbc662d1/g
+- added: install/files/Unity/09d332de-f846-41f9-9626-005828d3fdb5/Analytics/ArchivedEvents/179094160900004.bbc662d1/s
+- modified: install/files/Unity/09d332de-f846-41f9-9626-005828d3fdb5/Analytics/values
+- added: install/files/il2cpp/Resources/System.Data.dll-resources.dat
+- added: install/files/il2cpp/Resources/System.Drawing.dll-resources.dat
+- added: install/files/il2cpp/Resources/System.IO.Hashing.dll-resources.dat
+- added: install/files/il2cpp/unity.ver
+- added: install/files/media/gacha_machine/v3.54_giant_gacha/v3.54_giant_gacha_banner_enUS.png.etag
+- added: install/files/media/guildraid/v2.43_raid_bg_36.png.etag
+- added: install/files/media/guildraid/v3.26_raid_banner_108_panda_girl_enUS.png.etag
+- added: install/files/media/hero-growth-event/v3.54_hero_growth_event_banner_enUS.png.etag
+- added: install/files/media/hero-growth-event/v3.54_hero_growth_event_lobby_popup_enUS.png.etag
+- modified: install/files/media/index
+- modified: install/files/media/index.etag
+- added: install/files/media/myth/wyverns_purple_myth.h265.mp4
+- added: install/files/media/myth/wyverns_purple_myth.h265.mp4.etag
+- added: install/files/media/pass/v3.54_banner_wyverns_purple_enUS.png.etag
+- added: install/files/media/pass/v3.54_banner_wyverns_purple_pop_bg.png.etag
+- added: install/files/media/pkgs/v3.55_pkgs_banner_anni3.png.etag
+- added: install/files/media/pkgs/v3.55_pkgs_banner_sum1.png.etag
+- added: install/files/media/pkgs/v3.55_pkgs_banner_sum2.png.etag
+- added: install/files/media/pkgs/v3.55_pkgs_sum1.png.etag
+- added: install/files/media/pkgs/v3.55_pkgs_sum2.png.etag
+- added: install/files/media/summon/v3.53_20260923_hero_w4p9.h265.mp4
+- added: install/files/media/summon/v3.53_20260923_hero_w4p9.h265.mp4.etag
+- added: install/files/media/summon/v3.53_20260923_item_w4p9.h265.mp4
+- added: install/files/media/summon/v3.53_20260923_item_w4p9.h265.mp4.etag
+- modified: install/files/minimap/1ada214/raid_guild_30.bytes
+- modified: install/files/patch-index
+- modified: install/files/patch-index.etag
+
+### Scripts & executable code
+
+- modified: apk/base/assets/.80916b4b7cf0e00bb6c5c433973c9839.dex
+- modified: apk/base/assets/GameScript/base/battle_init.lua
+- modified: apk/base/assets/bin/Data/Managed/Resources/mscorlib.dll-resources.dat
+- modified: apk/base/classes.dex
+- modified: apk/base/classes2.dex
+- modified: apk/base/classes3.dex
+- modified: apk/base/classes4.dex
+- modified: apk/config.arm64_v8a/lib/arm64-v8a/libdxbase.so
+- modified: apk/config.arm64_v8a/lib/arm64-v8a/libil2cpp.so
+- added: install/files/AssetBundles/Android/graph_hero/wyverns_purple
+- added: install/files/GameScript/Template/GimmickTemplate.encrypted
+- added: install/files/GameScript/Template/QuestEventControllerTemplate.encrypted
+- added: install/files/GameScript/Template/QuestNew/Controller.encrypted
+- added: install/files/GameScript/Template/QuestNew/Section.encrypted
+- added: install/files/GameScript/Template/QuestSectionTemplate.encrypted
+- added: install/files/GameScript/Template/StageEventControllerTemplate.encrypted
+- added: install/files/GameScript/Test/Test.encrypted
+- added: install/files/GameScript/Theatres/AfterWorldEvidence.encrypted
+- added: install/files/GameScript/Theatres/CarmenStreaming.encrypted
+- modified: install/files/GameScript/base/battle_init.encrypted
+- added: install/files/GameScript/stageeventcontrollers/AfterWorld1At1.encrypted
+- added: install/files/GameScript/stageeventcontrollers/AfterWorld1At2.encrypted
+- added: install/files/GameScript/stageeventcontrollers/AfterWorld1At3.encrypted
+- added: install/files/GameScript/stageeventcontrollers/AfterWorld1At4.encrypted
+- added: install/files/GameScript/stageeventcontrollers/AfterWorldChallangeShooting.encrypted
+- added: install/files/GameScript/stageeventcontrollers/AfterWorldChallengeAreaBattleController.encrypted
+- added: install/files/GameScript/stageeventcontrollers/AfterWorldChallengeHotSpringExorcism.encrypted
+- added: install/files/GameScript/stageeventcontrollers/AfterWorldChallengePointKeeperController.encrypted
+- added: install/files/GameScript/stageeventcontrollers/AfterWorldChallengePointKeeperData.encrypted
+- added: install/files/GameScript/stageeventcontrollers/AfterWorldConveyorBelt.encrypted
+- added: install/files/GameScript/stageeventcontrollers/AfterWorldHotSpring.encrypted
+- added: install/files/GameScript/stageeventcontrollers/AfterWorldSisyphusSNS.encrypted
+- added: install/files/GameScript/stageeventcontrollers/BattleBall/Stage.encrypted
+- added: install/files/GameScript/stageeventcontrollers/BetaWeaponManager.encrypted
+- added: install/files/GameScript/stageeventcontrollers/BloodBeadController.encrypted
+- added: install/files/GameScript/stageeventcontrollers/BloodBeadControllerData.encrypted
+- added: install/files/GameScript/stageeventcontrollers/Blossom/ChallengeEcho/ChallengeEchoManager.encrypted
+- added: install/files/GameScript/stageeventcontrollers/Blossom/ChallengeEcho/Constants.encrypted
+- added: install/files/GameScript/stageeventcontrollers/Blossom/RegisterNoAssassination.encrypted
+- added: install/files/GameScript/stageeventcontrollers/Blossom/RegisterNoAssassinationData.encrypted
+- added: install/files/GameScript/stageeventcontrollers/Blossom/Stage1.encrypted
+- added: install/files/GameScript/stageeventcontrollers/Blossom/Stage2.encrypted
+- added: install/files/GameScript/stageeventcontrollers/BossAmmiEmpController.encrypted
+- added: install/files/GameScript/stageeventcontrollers/BossAuraMinionController.encrypted
+- added: install/files/GameScript/stageeventcontrollers/BossAuraMinionControllerData.encrypted
+- added: install/files/GameScript/stageeventcontrollers/BossDreamerStageController.encrypted
+- added: install/files/GameScript/stageeventcontrollers/BossFakeGuardianChangeController.encrypted
+- added: install/files/GameScript/stageeventcontrollers/BossSpeechManager.encrypted
+- added: install/files/GameScript/stageeventcontrollers/BrandNewTestament.encrypted
+- added: install/files/GameScript/stageeventcontrollers/BridgeStory/Epilogue/Stage.encrypted
+- added: install/files/GameScript/stageeventcontrollers/BridgeStory/Pepper/Stage.encrypted
+- added: install/files/GameScript/stageeventcontrollers/BridgeStory/Seira/Stage.encrypted
+- added: install/files/GameScript/stageeventcontrollers/BridgeStory/V_driver/Stage.encrypted
+- added: install/files/GameScript/stageeventcontrollers/BuildingTransparent.encrypted
+- added: install/files/GameScript/stageeventcontrollers/BuildingTransparentData.encrypted
+- added: install/files/GameScript/stageeventcontrollers/BurywoodGotTalent.encrypted
+- added: install/files/GameScript/stageeventcontrollers/ByeGuardianWolf.encrypted
+- added: install/files/GameScript/stageeventcontrollers/CEStageBose.encrypted
+- added: install/files/GameScript/stageeventcontrollers/CEStageDefense.encrypted
+- added: install/files/GameScript/stageeventcontrollers/Cafe1At1.encrypted
+- added: install/files/GameScript/stageeventcontrollers/Cafe1At2.encrypted
+- added: install/files/GameScript/stageeventcontrollers/Cafe1At3.encrypted
+- added: install/files/GameScript/stageeventcontrollers/Cafe1At4.encrypted
+- added: install/files/GameScript/stageeventcontrollers/Cafe1At5.encrypted
+- added: install/files/GameScript/stageeventcontrollers/CafeChallengeBuffController.encrypted
+- added: install/files/GameScript/stageeventcontrollers/CafeChallengeBugFix.encrypted
+- added: install/files/GameScript/stageeventcontrollers/CafeChallengePapermaskController.encrypted
+- added: install/files/GameScript/stageeventcontrollers/CafeFoodie.encrypted
+- added: install/files/GameScript/stageeventcontrollers/CaveBgmManager.encrypted
+- added: install/files/GameScript/stageeventcontrollers/ChallengeTintController.encrypted
+- added: install/files/GameScript/stageeventcontrollers/CharacterTestMapController.encrypted
+- added: install/files/GameScript/stageeventcontrollers/ChasingPortalController.encrypted
+- added: install/files/GameScript/stageeventcontrollers/ChasingPortalData.encrypted
+- added: install/files/GameScript/stageeventcontrollers/Christmas1At1.encrypted
+- added: install/files/GameScript/stageeventcontrollers/Christmas1At2.encrypted
+- added: install/files/GameScript/stageeventcontrollers/Christmas1At3.encrypted
+- added: install/files/GameScript/stageeventcontrollers/Christmas1At5.encrypted
+- added: install/files/GameScript/stageeventcontrollers/Christmas1At6.encrypted
+- added: install/files/GameScript/stageeventcontrollers/CivilWar1.encrypted
+- added: install/files/GameScript/stageeventcontrollers/CivilWar2.encrypted
+- added: install/files/GameScript/stageeventcontrollers/CivilWar3.encrypted
+- added: install/files/GameScript/stageeventcontrollers/CivilWar4.encrypted
+- added: install/files/GameScript/stageeventcontrollers/CivilWar5.encrypted
+- added: install/files/GameScript/stageeventcontrollers/CivilWar6.encrypted
+- added: install/files/GameScript/stageeventcontrollers/CivilWarGimmickTableUIController.encrypted
+- added: install/files/GameScript/stageeventcontrollers/CivilWarInfectionController.encrypted
+- added: install/files/GameScript/stageeventcontrollers/CivilWarSubStageDemonShire.encrypted
+- added: install/files/GameScript/stageeventcontrollers/CivilWarSubStageHeavenhold.encrypted
+- added: install/files/GameScript/stageeventcontrollers/CivilWarSubStageLana.encrypted
+- added: install/files/GameScript/stageeventcontrollers/CivilWarWindPotController.encrypted
+- added: install/files/GameScript/stageeventcontrollers/Clevatess/Stage.encrypted
+- added: install/files/GameScript/stageeventcontrollers/ClevatessShadowCloneController.encrypted
+- added: install/files/GameScript/stageeventcontrollers/ClevatessShadowCloneControllerData.encrypted
+- added: install/files/GameScript/stageeventcontrollers/CoExpeditionWindPathController.encrypted
+- added: install/files/GameScript/stageeventcontrollers/CollectTrashToPass.encrypted
+- added: install/files/GameScript/stageeventcontrollers/Colosseum.encrypted
+- added: install/files/GameScript/stageeventcontrollers/ContinuousBattleController.encrypted
+- added: install/files/GameScript/stageeventcontrollers/ConveyorBeltConstants.encrypted
+- added: install/files/GameScript/stageeventcontrollers/ConveyorBeltManager.encrypted
+- added: install/files/GameScript/stageeventcontrollers/CoopDefense.encrypted
+- added: install/files/GameScript/stageeventcontrollers/CoopExpeditionBattle1At1.encrypted
+- added: install/files/GameScript/stageeventcontrollers/CoopExpeditionBattle1At2.encrypted
+- added: install/files/GameScript/stageeventcontrollers/CoopExpeditionBattle2At1.encrypted
+- added: install/files/GameScript/stageeventcontrollers/CoopExpeditionBattle2At2.encrypted
+- added: install/files/GameScript/stageeventcontrollers/CoopExpeditionBattle2At3.encrypted
+- added: install/files/GameScript/stageeventcontrollers/CoopExpeditionBattle3At1.encrypted
+- added: install/files/GameScript/stageeventcontrollers/CoopExpeditionBattle3At3.encrypted
+- added: install/files/GameScript/stageeventcontrollers/CoopExpeditionBossData.encrypted
+- added: install/files/GameScript/stageeventcontrollers/CoopExpeditionFanTotemController.encrypted
+- added: install/files/GameScript/stageeventcontrollers/CoopExpeditionMagatamaController.encrypted
+- added: install/files/GameScript/stageeventcontrollers/CoopExpeditionMagatamaData.encrypted
+- added: install/files/GameScript/stageeventcontrollers/CoopExpeditionNpcController.encrypted
+- added: install/files/GameScript/stageeventcontrollers/CoopExpeditionSayaStoneController.encrypted
+- added: install/files/GameScript/stageeventcontrollers/CoopExpeditionSayaStoneData.encrypted
+- added: install/files/GameScript/stageeventcontrollers/CoopExpeditionStormCurtainController.encrypted
+- added: install/files/GameScript/stageeventcontrollers/CoopExpeditionYakshaGroggyController.encrypted
+- added: install/files/GameScript/stageeventcontrollers/CoopExpeditionYakshaGroggyData.encrypted
+- added: install/files/GameScript/stageeventcontrollers/CoopExpeditionYakshaSummonSwordController.encrypted
+- added: install/files/GameScript/stageeventcontrollers/CoopExpeditionYakshaSummonSwordData.encrypted
+- added: install/files/GameScript/stageeventcontrollers/CpuTest.encrypted
+- added: install/files/GameScript/stageeventcontrollers/DeathMatch.encrypted
+- added: install/files/GameScript/stageeventcontrollers/DefenseGame.encrypted
+- added: install/files/GameScript/stageeventcontrollers/DemonGodGimmickController.encrypted
+- added: install/files/GameScript/stageeventcontrollers/DemonShire1At1.encrypted
+- added: install/files/GameScript/stageeventcontrollers/DemonShire1At2.encrypted
+- added: install/files/GameScript/stageeventcontrollers/DemonShire1At3.encrypted
+- added: install/files/GameScript/stageeventcontrollers/DemonShire2At1.encrypted
+- added: install/files/GameScript/stageeventcontrollers/DemonShire2At3.encrypted
+- added: install/files/GameScript/stageeventcontrollers/DemonShire2At4.encrypted
+- added: install/files/GameScript/stageeventcontrollers/DemonShire3At1.encrypted
+- added: install/files/GameScript/stageeventcontrollers/DemonShire3At3.encrypted
+- added: install/files/GameScript/stageeventcontrollers/DemonShire3At5.encrypted
+- added: install/files/GameScript/stageeventcontrollers/DemonShire4At1.encrypted
+- added: install/files/GameScript/stageeventcontrollers/DemonShire4At2.encrypted
+- added: install/files/GameScript/stageeventcontrollers/DemonShire4At3.encrypted
+- added: install/files/GameScript/stageeventcontrollers/DemonShire4At4.encrypted
+- added: install/files/GameScript/stageeventcontrollers/DemonShire4At5.encrypted
+- added: install/files/GameScript/stageeventcontrollers/DemonShireBgmSystem.encrypted
+- added: install/files/GameScript/stageeventcontrollers/DemonShirePassage1.encrypted
+- added: install/files/GameScript/stageeventcontrollers/DemonShirePassage3.encrypted
+- added: install/files/GameScript/stageeventcontrollers/DemonShirePyramidNpc.encrypted
+- added: install/files/GameScript/stageeventcontrollers/DemonShireSquareEpilogue.encrypted
+- added: install/files/GameScript/stageeventcontrollers/DemonShireSquareNPC.encrypted
+- added: install/files/GameScript/stageeventcontrollers/DemonWorldBankVendingMachine.encrypted
+- added: install/files/GameScript/stageeventcontrollers/DemonWorldBasicSystem.encrypted
+- added: install/files/GameScript/stageeventcontrollers/DemonWorldBgmSystem.encrypted
+- added: install/files/GameScript/stageeventcontrollers/DemonWorldBuildingTransparent.encrypted
+- added: install/files/GameScript/stageeventcontrollers/DemonWorldCar.encrypted
+- added: install/files/GameScript/stageeventcontrollers/DemonWorldCivilian.encrypted
+- added: install/files/GameScript/stageeventcontrollers/DemonWorldConvenienceStore.encrypted
+- added: install/files/GameScript/stageeventcontrollers/DemonWorldConvenienceStoreData.encrypted
+- added: install/files/GameScript/stageeventcontrollers/DemonWorldDollar.encrypted
+- added: install/files/GameScript/stageeventcontrollers/DemonWorldMainPartA1At1.encrypted
+- added: install/files/GameScript/stageeventcontrollers/DemonWorldMainPartA1At2.encrypted
+- added: install/files/GameScript/stageeventcontrollers/DemonWorldMainPartA1At3.encrypted
+- added: install/files/GameScript/stageeventcontrollers/DemonWorldMainPartA1At4.encrypted
+- added: install/files/GameScript/stageeventcontrollers/DemonWorldMainPartAPassage1.encrypted
+- added: install/files/GameScript/stageeventcontrollers/DemonWorldMainPartAPassage2.encrypted
+- added: install/files/GameScript/stageeventcontrollers/DemonWorldNotoriety.encrypted
+- added: install/files/GameScript/stageeventcontrollers/DemonWorldPhoneBox.encrypted
+- added: install/files/GameScript/stageeventcontrollers/DemonWorldSubStageMoneyBank.encrypted
+- added: install/files/GameScript/stageeventcontrollers/DemonWorldTroubleShooter.encrypted
+- added: install/files/GameScript/stageeventcontrollers/DesignerTest.encrypted
+- added: install/files/GameScript/stageeventcontrollers/DreamVillage/CyborgFighter/SubStage.encrypted
+- added: install/files/GameScript/stageeventcontrollers/DreamVillage/LightGimmick/Controller.encrypted
+- added: install/files/GameScript/stageeventcontrollers/DreamVillage/NightAtTheMuseum/Substage.encrypted
+- added: install/files/GameScript/stageeventcontrollers/DreamVillage/SealedCave/Substage.encrypted
+- added: install/files/GameScript/stageeventcontrollers/DreamVillage/ShadowHouse/Substage.encrypted
+- added: install/files/GameScript/stageeventcontrollers/DreamVillage/Stage1.encrypted
+- added: install/files/GameScript/stageeventcontrollers/DreamVillage/Stage2.encrypted
+- added: install/files/GameScript/stageeventcontrollers/DreamVillage/Stage3.encrypted
+- added: install/files/GameScript/stageeventcontrollers/DreamVillage/Stage4.encrypted
+- added: install/files/GameScript/stageeventcontrollers/DreamVillage/Stage5.encrypted
+- added: install/files/GameScript/stageeventcontrollers/DreamVillage/Stage6.encrypted
+- added: install/files/GameScript/stageeventcontrollers/DreamVillage/TimeConversion/Constant.encrypted
+- added: install/files/GameScript/stageeventcontrollers/DreamVillage/TimeConversion/ElementController.encrypted
+- added: install/files/GameScript/stageeventcontrollers/DreamVillage/TimeConversion/TimeConversionManager.encrypted
+- added: install/files/GameScript/stageeventcontrollers/EasyForest1At1.encrypted
+- added: install/files/GameScript/stageeventcontrollers/EnergyballShootingGame.encrypted
+- added: install/files/GameScript/stageeventcontrollers/EventExpedition.encrypted
+- added: install/files/GameScript/stageeventcontrollers/ExaltingGnome.encrypted
+- added: install/files/GameScript/stageeventcontrollers/Expedition.encrypted
+- added: install/files/GameScript/stageeventcontrollers/ExpeditionAddon/CoopBossPan.encrypted
+- added: install/files/GameScript/stageeventcontrollers/ExpeditionAddon/CoopBossSelector.encrypted
+- added: install/files/GameScript/stageeventcontrollers/ExpeditionAddon/CoopBossSnake.encrypted
+- added: install/files/GameScript/stageeventcontrollers/ExpeditionAddon/CoopBossYaksha.encrypted
+- added: install/files/GameScript/stageeventcontrollers/ExpeditionAddon/ExpeditionArachne.encrypted
+- added: install/files/GameScript/stageeventcontrollers/ExpeditionAddon/ExpeditionBalock.encrypted
+- added: install/files/GameScript/stageeventcontrollers/ExpeditionAddon/ExpeditionClara.encrypted
+- added: install/files/GameScript/stageeventcontrollers/ExpeditionAddon/ExpeditionIceDragon.encrypted
+- added: install/files/GameScript/stageeventcontrollers/ExpeditionBeadController.encrypted
+- added: install/files/GameScript/stageeventcontrollers/ExpeditionBeadControllerData.encrypted
+- added: install/files/GameScript/stageeventcontrollers/ExpeditionBoss.encrypted
+- added: install/files/GameScript/stageeventcontrollers/ExpeditionBossData.encrypted
+- added: install/files/GameScript/stageeventcontrollers/ExpeditionDistrict3Hidden.encrypted
+- added: install/files/GameScript/stageeventcontrollers/ExpeditionHiddenA.encrypted
+- added: install/files/GameScript/stageeventcontrollers/ExpeditionHiddenB.encrypted
+- added: install/files/GameScript/stageeventcontrollers/ExpeditionHiddenBossFix.encrypted
+- added: install/files/GameScript/stageeventcontrollers/ExpeditionHiddenDrum.encrypted
+- added: install/files/GameScript/stageeventcontrollers/ExpeditionHiddenLeftAloneCandidate.encrypted
+- added: install/files/GameScript/stageeventcontrollers/ExpeditionHiddenMortuar.encrypted
+- added: install/files/GameScript/stageeventcontrollers/ExpeditionHiddenMortuarData.encrypted
+- added: install/files/GameScript/stageeventcontrollers/ExpeditionHiddenSanctuary.encrypted
+- added: install/files/GameScript/stageeventcontrollers/ExpeditionHiddenTrap.encrypted
+- added: install/files/GameScript/stageeventcontrollers/ExpeditionRescueNPC.encrypted
+- added: install/files/GameScript/stageeventcontrollers/Experience.encrypted
+- added: install/files/GameScript/stageeventcontrollers/FakeKnightStageController.encrypted
+- added: install/files/GameScript/stageeventcontrollers/FakeKnightStageControllerData.encrypted
+- added: install/files/GameScript/stageeventcontrollers/FallenQueenBeadController.encrypted
+- added: install/files/GameScript/stageeventcontrollers/FallenQueenBeadControllerData.encrypted
+- added: install/files/GameScript/stageeventcontrollers/FarmFishingTutorial.encrypted
+- added: install/files/GameScript/stageeventcontrollers/FieldIgnitionController.encrypted
+- added: install/files/GameScript/stageeventcontrollers/FieldIgnitionControllerData.encrypted
+- added: install/files/GameScript/stageeventcontrollers/FireWorld/HotSpring/Substage.encrypted
+- added: install/files/GameScript/stageeventcontrollers/FireWorld/Stage1.encrypted
+- added: install/files/GameScript/stageeventcontrollers/FireWorld/Stage2.encrypted
+- added: install/files/GameScript/stageeventcontrollers/FireWorld/Stage3.encrypted
+- added: install/files/GameScript/stageeventcontrollers/FireWorld/Stage4.encrypted
+- added: install/files/GameScript/stageeventcontrollers/FireWorld/Stage5.encrypted
+- added: install/files/GameScript/stageeventcontrollers/FireWorld/Stage6.encrypted
+- added: install/files/GameScript/stageeventcontrollers/FireWorld/Wyvern/Substage.encrypted
+- added: install/files/GameScript/stageeventcontrollers/Fox1At1.encrypted
+- added: install/files/GameScript/stageeventcontrollers/Fox1At2.encrypted
+- added: install/files/GameScript/stageeventcontrollers/Fox1At3.encrypted
+- added: install/files/GameScript/stageeventcontrollers/Fox1At4.encrypted
+- added: install/files/GameScript/stageeventcontrollers/Fox1At5.encrypted
+- added: install/files/GameScript/stageeventcontrollers/Fox1At6.encrypted
+- added: install/files/GameScript/stageeventcontrollers/FoxChallengeDebuffController.encrypted
+- added: install/files/GameScript/stageeventcontrollers/FoxChallengeShieldController.encrypted
+- added: install/files/GameScript/stageeventcontrollers/FoxHoleFollowers.encrypted
+- added: install/files/GameScript/stageeventcontrollers/FoxMouseSNS.encrypted
+- added: install/files/GameScript/stageeventcontrollers/FoxYangbanSNS.encrypted
+- added: install/files/GameScript/stageeventcontrollers/FrameTestNPCSpawner.encrypted
+- added: install/files/GameScript/stageeventcontrollers/Frieren/Stage.encrypted
+- added: install/files/GameScript/stageeventcontrollers/FutureCastle1At1.encrypted
+- added: install/files/GameScript/stageeventcontrollers/FutureCastle1At2.encrypted
+- added: install/files/GameScript/stageeventcontrollers/FutureCastle1At3.encrypted
+- added: install/files/GameScript/stageeventcontrollers/FutureCastle1At4.encrypted
+- added: install/files/GameScript/stageeventcontrollers/FutureCastle1At5.encrypted
+- added: install/files/GameScript/stageeventcontrollers/FutureCastle2DollGirl.encrypted
+- added: install/files/GameScript/stageeventcontrollers/FutureCastle2PartyManager.encrypted
+- added: install/files/GameScript/stageeventcontrollers/FutureCastleCraig.encrypted
+- added: install/files/GameScript/stageeventcontrollers/FutureCastlePartB1At1.encrypted
+- added: install/files/GameScript/stageeventcontrollers/FutureCastlePartB1At2.encrypted
+- added: install/files/GameScript/stageeventcontrollers/FutureCastlePartB1At3.encrypted
+- added: install/files/GameScript/stageeventcontrollers/FutureCastlePartB1At4.encrypted
+- added: install/files/GameScript/stageeventcontrollers/FutureCastlePartB1At5.encrypted
+- added: install/files/GameScript/stageeventcontrollers/FutureCastlePartB1At6.encrypted
+- added: install/files/GameScript/stageeventcontrollers/FutureCastleSohee.encrypted
+- added: install/files/GameScript/stageeventcontrollers/FutureCastleSoheePuzzle.encrypted
+- added: install/files/GameScript/stageeventcontrollers/FutureCastleStewCode.encrypted
+- added: install/files/GameScript/stageeventcontrollers/GiantYeti.encrypted
+- added: install/files/GameScript/stageeventcontrollers/GoldDigger.encrypted
+- added: install/files/GameScript/stageeventcontrollers/GuildArcadeMiniGame.encrypted
+- added: install/files/GameScript/stageeventcontrollers/GuildPunchKing.encrypted
+- added: install/files/GameScript/stageeventcontrollers/GuildRaid.encrypted
+- added: install/files/GameScript/stageeventcontrollers/GuildWar.encrypted
+- added: install/files/GameScript/stageeventcontrollers/Halloween.encrypted
+- added: install/files/GameScript/stageeventcontrollers/HeavenholdFarm.encrypted
+- added: install/files/GameScript/stageeventcontrollers/HeavenholdPasture.encrypted
+- added: install/files/GameScript/stageeventcontrollers/HeavenholdTestRoom.encrypted
+- added: install/files/GameScript/stageeventcontrollers/HellForest/AnimalTrapDoorOpener.encrypted
+- added: install/files/GameScript/stageeventcontrollers/HellForest/AnimalTrapDoorOpenerData.encrypted
+- added: install/files/GameScript/stageeventcontrollers/HellForest/CameraSizeChanger.encrypted
+- added: install/files/GameScript/stageeventcontrollers/HellForest/CameraSizeChangerData.encrypted
+- added: install/files/GameScript/stageeventcontrollers/HellForest/FieldTintSetting.encrypted
+- added: install/files/GameScript/stageeventcontrollers/HellForest/FieldTintSettingData.encrypted
+- added: install/files/GameScript/stageeventcontrollers/HellForest/PlayerHealIncomeDecrease.encrypted
+- added: install/files/GameScript/stageeventcontrollers/HellForest/RegisterNoAssassination.encrypted
+- added: install/files/GameScript/stageeventcontrollers/HellForest/RegisterNoAssassinationData.encrypted
+- added: install/files/GameScript/stageeventcontrollers/HellForest/Stage2.encrypted
+- added: install/files/GameScript/stageeventcontrollers/HellForest/Stage3.encrypted
+- added: install/files/GameScript/stageeventcontrollers/HideAndSeek.encrypted
+- added: install/files/GameScript/stageeventcontrollers/HighSchool1At1.encrypted
+- added: install/files/GameScript/stageeventcontrollers/HighSchool1At2.encrypted
+- added: install/files/GameScript/stageeventcontrollers/HighSchool1At3.encrypted
+- added: install/files/GameScript/stageeventcontrollers/HighSchool1At4.encrypted
+- added: install/files/GameScript/stageeventcontrollers/HighSchool1At5.encrypted
+- added: install/files/GameScript/stageeventcontrollers/HighSchool1At6.encrypted
+- added: install/files/GameScript/stageeventcontrollers/HighSchoolChallengeBuffController.encrypted
+- added: install/files/GameScript/stageeventcontrollers/HighSchoolChallengeTimerController.encrypted
+- added: install/files/GameScript/stageeventcontrollers/HighSchoolDefaultResourceLoader.encrypted
+- added: install/files/GameScript/stageeventcontrollers/HookShotTutorial.encrypted
+- added: install/files/GameScript/stageeventcontrollers/Idols1.encrypted
+- added: install/files/GameScript/stageeventcontrollers/ImprisonedFriends.encrypted
+- added: install/files/GameScript/stageeventcontrollers/IncubusTown.encrypted
+- added: install/files/GameScript/stageeventcontrollers/InfinityTower.encrypted
+- added: install/files/GameScript/stageeventcontrollers/InfinityTowerRecordRoom.encrypted
+- added: install/files/GameScript/stageeventcontrollers/InvaderQuestActors.encrypted
+- added: install/files/GameScript/stageeventcontrollers/InvaderReporter.encrypted
+- added: install/files/GameScript/stageeventcontrollers/InvaderReporterFrozenTransport.encrypted
+- added: install/files/GameScript/stageeventcontrollers/InvaderReporterGatekeeper.encrypted
+- added: install/files/GameScript/stageeventcontrollers/InvaderReporterLorainFlower.encrypted
+- added: install/files/GameScript/stageeventcontrollers/InvaderReporterPrisoner.encrypted
+- added: install/files/GameScript/stageeventcontrollers/InvaderReporterSoup.encrypted
+- added: install/files/GameScript/stageeventcontrollers/InvaderReporterSuperInvaderLab.encrypted
+- added: install/files/GameScript/stageeventcontrollers/KakaoZelda.encrypted
+- added: install/files/GameScript/stageeventcontrollers/KamazonLand.encrypted
+- added: install/files/GameScript/stageeventcontrollers/KanterburyNinjaWarrior.encrypted
+- added: install/files/GameScript/stageeventcontrollers/KidAndroidRescueFishing.encrypted
+- 498 more files: see changes.jsonl for the full untruncated comparison.
+
+## Research requiring review
+
+- apk/base/assets/.80916b4b7cf0e00bb6c5c433973c9839.dex
+- apk/base/assets/GameScript/base/battle_init.lua
+- apk/base/assets/bin/Data/Managed/Resources/mscorlib.dll-resources.dat
+- apk/base/classes.dex
+- apk/base/classes2.dex
+- apk/base/classes3.dex
+- apk/base/classes4.dex
+- apk/config.arm64_v8a/lib/arm64-v8a/libdxbase.so
+- apk/config.arm64_v8a/lib/arm64-v8a/libil2cpp.so
+- install/files/AssetBundles/Android/graph_hero/wyverns_purple
+- install/files/GameScript/Template/GimmickTemplate.encrypted
+- install/files/GameScript/Template/QuestEventControllerTemplate.encrypted
+- install/files/GameScript/Template/QuestNew/Controller.encrypted
+- install/files/GameScript/Template/QuestNew/Section.encrypted
+- install/files/GameScript/Template/QuestSectionTemplate.encrypted
+- install/files/GameScript/Template/StageEventControllerTemplate.encrypted
+- install/files/GameScript/Test/Test.encrypted
+- install/files/GameScript/Theatres/AfterWorldEvidence.encrypted
+- install/files/GameScript/Theatres/CarmenStreaming.encrypted
+- install/files/GameScript/base/battle_init.encrypted
+- install/files/GameScript/stageeventcontrollers/AfterWorld1At1.encrypted
+- install/files/GameScript/stageeventcontrollers/AfterWorld1At2.encrypted
+- install/files/GameScript/stageeventcontrollers/AfterWorld1At3.encrypted
+- install/files/GameScript/stageeventcontrollers/AfterWorld1At4.encrypted
+- install/files/GameScript/stageeventcontrollers/AfterWorldChallangeShooting.encrypted
+- install/files/GameScript/stageeventcontrollers/AfterWorldChallengeAreaBattleController.encrypted
+- install/files/GameScript/stageeventcontrollers/AfterWorldChallengeHotSpringExorcism.encrypted
+- install/files/GameScript/stageeventcontrollers/AfterWorldChallengePointKeeperController.encrypted
+- install/files/GameScript/stageeventcontrollers/AfterWorldChallengePointKeeperData.encrypted
+- install/files/GameScript/stageeventcontrollers/AfterWorldConveyorBelt.encrypted
+- install/files/GameScript/stageeventcontrollers/AfterWorldHotSpring.encrypted
+- install/files/GameScript/stageeventcontrollers/AfterWorldSisyphusSNS.encrypted
+- install/files/GameScript/stageeventcontrollers/BattleBall/Stage.encrypted
+- install/files/GameScript/stageeventcontrollers/BetaWeaponManager.encrypted
+- install/files/GameScript/stageeventcontrollers/BloodBeadController.encrypted
+- install/files/GameScript/stageeventcontrollers/BloodBeadControllerData.encrypted
+- install/files/GameScript/stageeventcontrollers/Blossom/ChallengeEcho/ChallengeEchoManager.encrypted
+- install/files/GameScript/stageeventcontrollers/Blossom/ChallengeEcho/Constants.encrypted
+- install/files/GameScript/stageeventcontrollers/Blossom/RegisterNoAssassination.encrypted
+- install/files/GameScript/stageeventcontrollers/Blossom/RegisterNoAssassinationData.encrypted
+- install/files/GameScript/stageeventcontrollers/Blossom/Stage1.encrypted
+- install/files/GameScript/stageeventcontrollers/Blossom/Stage2.encrypted
+- install/files/GameScript/stageeventcontrollers/BossAmmiEmpController.encrypted
+- install/files/GameScript/stageeventcontrollers/BossAuraMinionController.encrypted
+- install/files/GameScript/stageeventcontrollers/BossAuraMinionControllerData.encrypted
+- install/files/GameScript/stageeventcontrollers/BossDreamerStageController.encrypted
+- install/files/GameScript/stageeventcontrollers/BossFakeGuardianChangeController.encrypted
+- install/files/GameScript/stageeventcontrollers/BossSpeechManager.encrypted
+- install/files/GameScript/stageeventcontrollers/BrandNewTestament.encrypted
+- install/files/GameScript/stageeventcontrollers/BridgeStory/Epilogue/Stage.encrypted
+- install/files/GameScript/stageeventcontrollers/BridgeStory/Pepper/Stage.encrypted
+- install/files/GameScript/stageeventcontrollers/BridgeStory/Seira/Stage.encrypted
+- install/files/GameScript/stageeventcontrollers/BridgeStory/V_driver/Stage.encrypted
+- install/files/GameScript/stageeventcontrollers/BuildingTransparent.encrypted
+- install/files/GameScript/stageeventcontrollers/BuildingTransparentData.encrypted
+- install/files/GameScript/stageeventcontrollers/BurywoodGotTalent.encrypted
+- install/files/GameScript/stageeventcontrollers/ByeGuardianWolf.encrypted
+- install/files/GameScript/stageeventcontrollers/CEStageBose.encrypted
+- install/files/GameScript/stageeventcontrollers/CEStageDefense.encrypted
+- install/files/GameScript/stageeventcontrollers/Cafe1At1.encrypted
+- install/files/GameScript/stageeventcontrollers/Cafe1At2.encrypted
+- install/files/GameScript/stageeventcontrollers/Cafe1At3.encrypted
+- install/files/GameScript/stageeventcontrollers/Cafe1At4.encrypted
+- install/files/GameScript/stageeventcontrollers/Cafe1At5.encrypted
+- install/files/GameScript/stageeventcontrollers/CafeChallengeBuffController.encrypted
+- install/files/GameScript/stageeventcontrollers/CafeChallengeBugFix.encrypted
+- install/files/GameScript/stageeventcontrollers/CafeChallengePapermaskController.encrypted
+- install/files/GameScript/stageeventcontrollers/CafeFoodie.encrypted
+- install/files/GameScript/stageeventcontrollers/CaveBgmManager.encrypted
+- install/files/GameScript/stageeventcontrollers/ChallengeTintController.encrypted
+- install/files/GameScript/stageeventcontrollers/CharacterTestMapController.encrypted
+- install/files/GameScript/stageeventcontrollers/ChasingPortalController.encrypted
+- install/files/GameScript/stageeventcontrollers/ChasingPortalData.encrypted
+- install/files/GameScript/stageeventcontrollers/Christmas1At1.encrypted
+- install/files/GameScript/stageeventcontrollers/Christmas1At2.encrypted
+- install/files/GameScript/stageeventcontrollers/Christmas1At3.encrypted
+- install/files/GameScript/stageeventcontrollers/Christmas1At5.encrypted
+- install/files/GameScript/stageeventcontrollers/Christmas1At6.encrypted
+- install/files/GameScript/stageeventcontrollers/CivilWar1.encrypted
+- install/files/GameScript/stageeventcontrollers/CivilWar2.encrypted
+- install/files/GameScript/stageeventcontrollers/CivilWar3.encrypted
+- install/files/GameScript/stageeventcontrollers/CivilWar4.encrypted
+- install/files/GameScript/stageeventcontrollers/CivilWar5.encrypted
+- install/files/GameScript/stageeventcontrollers/CivilWar6.encrypted
+- install/files/GameScript/stageeventcontrollers/CivilWarGimmickTableUIController.encrypted
+- install/files/GameScript/stageeventcontrollers/CivilWarInfectionController.encrypted
+- install/files/GameScript/stageeventcontrollers/CivilWarSubStageDemonShire.encrypted
+- install/files/GameScript/stageeventcontrollers/CivilWarSubStageHeavenhold.encrypted
+- install/files/GameScript/stageeventcontrollers/CivilWarSubStageLana.encrypted
+- install/files/GameScript/stageeventcontrollers/CivilWarWindPotController.encrypted
+- install/files/GameScript/stageeventcontrollers/Clevatess/Stage.encrypted
+- install/files/GameScript/stageeventcontrollers/ClevatessShadowCloneController.encrypted
+- install/files/GameScript/stageeventcontrollers/ClevatessShadowCloneControllerData.encrypted
+- install/files/GameScript/stageeventcontrollers/CoExpeditionWindPathController.encrypted
+- install/files/GameScript/stageeventcontrollers/CollectTrashToPass.encrypted
+- install/files/GameScript/stageeventcontrollers/Colosseum.encrypted
+- install/files/GameScript/stageeventcontrollers/ContinuousBattleController.encrypted
+- install/files/GameScript/stageeventcontrollers/ConveyorBeltConstants.encrypted
+- install/files/GameScript/stageeventcontrollers/ConveyorBeltManager.encrypted
+- install/files/GameScript/stageeventcontrollers/CoopDefense.encrypted
+- install/files/GameScript/stageeventcontrollers/CoopExpeditionBattle1At1.encrypted
+- install/files/GameScript/stageeventcontrollers/CoopExpeditionBattle1At2.encrypted
+- install/files/GameScript/stageeventcontrollers/CoopExpeditionBattle2At1.encrypted
+- install/files/GameScript/stageeventcontrollers/CoopExpeditionBattle2At2.encrypted
+- install/files/GameScript/stageeventcontrollers/CoopExpeditionBattle2At3.encrypted
+- install/files/GameScript/stageeventcontrollers/CoopExpeditionBattle3At1.encrypted
+- install/files/GameScript/stageeventcontrollers/CoopExpeditionBattle3At3.encrypted
+- install/files/GameScript/stageeventcontrollers/CoopExpeditionBossData.encrypted
+- install/files/GameScript/stageeventcontrollers/CoopExpeditionFanTotemController.encrypted
+- install/files/GameScript/stageeventcontrollers/CoopExpeditionMagatamaController.encrypted
+- install/files/GameScript/stageeventcontrollers/CoopExpeditionMagatamaData.encrypted
+- install/files/GameScript/stageeventcontrollers/CoopExpeditionNpcController.encrypted
+- install/files/GameScript/stageeventcontrollers/CoopExpeditionSayaStoneController.encrypted
+- install/files/GameScript/stageeventcontrollers/CoopExpeditionSayaStoneData.encrypted
+- install/files/GameScript/stageeventcontrollers/CoopExpeditionStormCurtainController.encrypted
+- install/files/GameScript/stageeventcontrollers/CoopExpeditionYakshaGroggyController.encrypted
+- install/files/GameScript/stageeventcontrollers/CoopExpeditionYakshaGroggyData.encrypted
+- install/files/GameScript/stageeventcontrollers/CoopExpeditionYakshaSummonSwordController.encrypted
+- install/files/GameScript/stageeventcontrollers/CoopExpeditionYakshaSummonSwordData.encrypted
+- install/files/GameScript/stageeventcontrollers/CpuTest.encrypted
+- install/files/GameScript/stageeventcontrollers/DeathMatch.encrypted
+- install/files/GameScript/stageeventcontrollers/DefenseGame.encrypted
+- install/files/GameScript/stageeventcontrollers/DemonGodGimmickController.encrypted
+- install/files/GameScript/stageeventcontrollers/DemonShire1At1.encrypted
+- install/files/GameScript/stageeventcontrollers/DemonShire1At2.encrypted
+- install/files/GameScript/stageeventcontrollers/DemonShire1At3.encrypted
+- install/files/GameScript/stageeventcontrollers/DemonShire2At1.encrypted
+- install/files/GameScript/stageeventcontrollers/DemonShire2At3.encrypted
+- install/files/GameScript/stageeventcontrollers/DemonShire2At4.encrypted
+- install/files/GameScript/stageeventcontrollers/DemonShire3At1.encrypted
+- install/files/GameScript/stageeventcontrollers/DemonShire3At3.encrypted
+- install/files/GameScript/stageeventcontrollers/DemonShire3At5.encrypted
+- install/files/GameScript/stageeventcontrollers/DemonShire4At1.encrypted
+- install/files/GameScript/stageeventcontrollers/DemonShire4At2.encrypted
+- install/files/GameScript/stageeventcontrollers/DemonShire4At3.encrypted
+- install/files/GameScript/stageeventcontrollers/DemonShire4At4.encrypted
+- install/files/GameScript/stageeventcontrollers/DemonShire4At5.encrypted
+- install/files/GameScript/stageeventcontrollers/DemonShireBgmSystem.encrypted
+- install/files/GameScript/stageeventcontrollers/DemonShirePassage1.encrypted
+- install/files/GameScript/stageeventcontrollers/DemonShirePassage3.encrypted
+- install/files/GameScript/stageeventcontrollers/DemonShirePyramidNpc.encrypted
+- install/files/GameScript/stageeventcontrollers/DemonShireSquareEpilogue.encrypted
+- install/files/GameScript/stageeventcontrollers/DemonShireSquareNPC.encrypted
+- install/files/GameScript/stageeventcontrollers/DemonWorldBankVendingMachine.encrypted
+- install/files/GameScript/stageeventcontrollers/DemonWorldBasicSystem.encrypted
+- install/files/GameScript/stageeventcontrollers/DemonWorldBgmSystem.encrypted
+- install/files/GameScript/stageeventcontrollers/DemonWorldBuildingTransparent.encrypted
+- install/files/GameScript/stageeventcontrollers/DemonWorldCar.encrypted
+- install/files/GameScript/stageeventcontrollers/DemonWorldCivilian.encrypted
+- install/files/GameScript/stageeventcontrollers/DemonWorldConvenienceStore.encrypted
+- install/files/GameScript/stageeventcontrollers/DemonWorldConvenienceStoreData.encrypted
+- install/files/GameScript/stageeventcontrollers/DemonWorldDollar.encrypted
+- install/files/GameScript/stageeventcontrollers/DemonWorldMainPartA1At1.encrypted
+- install/files/GameScript/stageeventcontrollers/DemonWorldMainPartA1At2.encrypted
+- install/files/GameScript/stageeventcontrollers/DemonWorldMainPartA1At3.encrypted
+- install/files/GameScript/stageeventcontrollers/DemonWorldMainPartA1At4.encrypted
+- install/files/GameScript/stageeventcontrollers/DemonWorldMainPartAPassage1.encrypted
+- install/files/GameScript/stageeventcontrollers/DemonWorldMainPartAPassage2.encrypted
+- install/files/GameScript/stageeventcontrollers/DemonWorldNotoriety.encrypted
+- install/files/GameScript/stageeventcontrollers/DemonWorldPhoneBox.encrypted
+- install/files/GameScript/stageeventcontrollers/DemonWorldSubStageMoneyBank.encrypted
+- install/files/GameScript/stageeventcontrollers/DemonWorldTroubleShooter.encrypted
+- install/files/GameScript/stageeventcontrollers/DesignerTest.encrypted
+- install/files/GameScript/stageeventcontrollers/DreamVillage/CyborgFighter/SubStage.encrypted
+- install/files/GameScript/stageeventcontrollers/DreamVillage/LightGimmick/Controller.encrypted
+- install/files/GameScript/stageeventcontrollers/DreamVillage/NightAtTheMuseum/Substage.encrypted
+- install/files/GameScript/stageeventcontrollers/DreamVillage/SealedCave/Substage.encrypted
+- install/files/GameScript/stageeventcontrollers/DreamVillage/ShadowHouse/Substage.encrypted
+- install/files/GameScript/stageeventcontrollers/DreamVillage/Stage1.encrypted
+- install/files/GameScript/stageeventcontrollers/DreamVillage/Stage2.encrypted
+- install/files/GameScript/stageeventcontrollers/DreamVillage/Stage3.encrypted
+- install/files/GameScript/stageeventcontrollers/DreamVillage/Stage4.encrypted
+- install/files/GameScript/stageeventcontrollers/DreamVillage/Stage5.encrypted
+- install/files/GameScript/stageeventcontrollers/DreamVillage/Stage6.encrypted
+- install/files/GameScript/stageeventcontrollers/DreamVillage/TimeConversion/Constant.encrypted
+- install/files/GameScript/stageeventcontrollers/DreamVillage/TimeConversion/ElementController.encrypted
+- install/files/GameScript/stageeventcontrollers/DreamVillage/TimeConversion/TimeConversionManager.encrypted
+- install/files/GameScript/stageeventcontrollers/EasyForest1At1.encrypted
+- install/files/GameScript/stageeventcontrollers/EnergyballShootingGame.encrypted
+- install/files/GameScript/stageeventcontrollers/EventExpedition.encrypted
+- install/files/GameScript/stageeventcontrollers/ExaltingGnome.encrypted
+- install/files/GameScript/stageeventcontrollers/Expedition.encrypted
+- install/files/GameScript/stageeventcontrollers/ExpeditionAddon/CoopBossPan.encrypted
+- install/files/GameScript/stageeventcontrollers/ExpeditionAddon/CoopBossSelector.encrypted
+- install/files/GameScript/stageeventcontrollers/ExpeditionAddon/CoopBossSnake.encrypted
+- install/files/GameScript/stageeventcontrollers/ExpeditionAddon/CoopBossYaksha.encrypted
+- install/files/GameScript/stageeventcontrollers/ExpeditionAddon/ExpeditionArachne.encrypted
+- install/files/GameScript/stageeventcontrollers/ExpeditionAddon/ExpeditionBalock.encrypted
+- install/files/GameScript/stageeventcontrollers/ExpeditionAddon/ExpeditionClara.encrypted
+- install/files/GameScript/stageeventcontrollers/ExpeditionAddon/ExpeditionIceDragon.encrypted
+- install/files/GameScript/stageeventcontrollers/ExpeditionBeadController.encrypted
+- install/files/GameScript/stageeventcontrollers/ExpeditionBeadControllerData.encrypted
+- install/files/GameScript/stageeventcontrollers/ExpeditionBoss.encrypted
+- install/files/GameScript/stageeventcontrollers/ExpeditionBossData.encrypted
+- install/files/GameScript/stageeventcontrollers/ExpeditionDistrict3Hidden.encrypted
+- install/files/GameScript/stageeventcontrollers/ExpeditionHiddenA.encrypted
+- install/files/GameScript/stageeventcontrollers/ExpeditionHiddenB.encrypted
+- install/files/GameScript/stageeventcontrollers/ExpeditionHiddenBossFix.encrypted
+- install/files/GameScript/stageeventcontrollers/ExpeditionHiddenDrum.encrypted
+- install/files/GameScript/stageeventcontrollers/ExpeditionHiddenLeftAloneCandidate.encrypted
+- install/files/GameScript/stageeventcontrollers/ExpeditionHiddenMortuar.encrypted
+- install/files/GameScript/stageeventcontrollers/ExpeditionHiddenMortuarData.encrypted
+- install/files/GameScript/stageeventcontrollers/ExpeditionHiddenSanctuary.encrypted
+- install/files/GameScript/stageeventcontrollers/ExpeditionHiddenTrap.encrypted
+- install/files/GameScript/stageeventcontrollers/ExpeditionRescueNPC.encrypted
+- install/files/GameScript/stageeventcontrollers/Experience.encrypted
+- install/files/GameScript/stageeventcontrollers/FakeKnightStageController.encrypted
+- install/files/GameScript/stageeventcontrollers/FakeKnightStageControllerData.encrypted
+- install/files/GameScript/stageeventcontrollers/FallenQueenBeadController.encrypted
+- install/files/GameScript/stageeventcontrollers/FallenQueenBeadControllerData.encrypted
+- install/files/GameScript/stageeventcontrollers/FarmFishingTutorial.encrypted
+- install/files/GameScript/stageeventcontrollers/FieldIgnitionController.encrypted
+- install/files/GameScript/stageeventcontrollers/FieldIgnitionControllerData.encrypted
+- install/files/GameScript/stageeventcontrollers/FireWorld/HotSpring/Substage.encrypted
+- install/files/GameScript/stageeventcontrollers/FireWorld/Stage1.encrypted
+- install/files/GameScript/stageeventcontrollers/FireWorld/Stage2.encrypted
+- install/files/GameScript/stageeventcontrollers/FireWorld/Stage3.encrypted
+- install/files/GameScript/stageeventcontrollers/FireWorld/Stage4.encrypted
+- install/files/GameScript/stageeventcontrollers/FireWorld/Stage5.encrypted
+- install/files/GameScript/stageeventcontrollers/FireWorld/Stage6.encrypted
+- install/files/GameScript/stageeventcontrollers/FireWorld/Wyvern/Substage.encrypted
+- install/files/GameScript/stageeventcontrollers/Fox1At1.encrypted
+- install/files/GameScript/stageeventcontrollers/Fox1At2.encrypted
+- install/files/GameScript/stageeventcontrollers/Fox1At3.encrypted
+- install/files/GameScript/stageeventcontrollers/Fox1At4.encrypted
+- install/files/GameScript/stageeventcontrollers/Fox1At5.encrypted
+- install/files/GameScript/stageeventcontrollers/Fox1At6.encrypted
+- install/files/GameScript/stageeventcontrollers/FoxChallengeDebuffController.encrypted
+- install/files/GameScript/stageeventcontrollers/FoxChallengeShieldController.encrypted
+- install/files/GameScript/stageeventcontrollers/FoxHoleFollowers.encrypted
+- install/files/GameScript/stageeventcontrollers/FoxMouseSNS.encrypted
+- install/files/GameScript/stageeventcontrollers/FoxYangbanSNS.encrypted
+- install/files/GameScript/stageeventcontrollers/FrameTestNPCSpawner.encrypted
+- install/files/GameScript/stageeventcontrollers/Frieren/Stage.encrypted
+- install/files/GameScript/stageeventcontrollers/FutureCastle1At1.encrypted
+- install/files/GameScript/stageeventcontrollers/FutureCastle1At2.encrypted
+- install/files/GameScript/stageeventcontrollers/FutureCastle1At3.encrypted
+- install/files/GameScript/stageeventcontrollers/FutureCastle1At4.encrypted
+- install/files/GameScript/stageeventcontrollers/FutureCastle1At5.encrypted
+- install/files/GameScript/stageeventcontrollers/FutureCastle2DollGirl.encrypted
+- install/files/GameScript/stageeventcontrollers/FutureCastle2PartyManager.encrypted
+- install/files/GameScript/stageeventcontrollers/FutureCastleCraig.encrypted
+- install/files/GameScript/stageeventcontrollers/FutureCastlePartB1At1.encrypted
+- install/files/GameScript/stageeventcontrollers/FutureCastlePartB1At2.encrypted
+- install/files/GameScript/stageeventcontrollers/FutureCastlePartB1At3.encrypted
+- install/files/GameScript/stageeventcontrollers/FutureCastlePartB1At4.encrypted
+- install/files/GameScript/stageeventcontrollers/FutureCastlePartB1At5.encrypted
+- install/files/GameScript/stageeventcontrollers/FutureCastlePartB1At6.encrypted
+- install/files/GameScript/stageeventcontrollers/FutureCastleSohee.encrypted
+- install/files/GameScript/stageeventcontrollers/FutureCastleSoheePuzzle.encrypted
+- install/files/GameScript/stageeventcontrollers/FutureCastleStewCode.encrypted
+- install/files/GameScript/stageeventcontrollers/GiantYeti.encrypted
+- install/files/GameScript/stageeventcontrollers/GoldDigger.encrypted
+- install/files/GameScript/stageeventcontrollers/GuildArcadeMiniGame.encrypted
+- install/files/GameScript/stageeventcontrollers/GuildPunchKing.encrypted
+- install/files/GameScript/stageeventcontrollers/GuildRaid.encrypted
+- install/files/GameScript/stageeventcontrollers/GuildWar.encrypted
+- install/files/GameScript/stageeventcontrollers/Halloween.encrypted
+- install/files/GameScript/stageeventcontrollers/HeavenholdFarm.encrypted
+- install/files/GameScript/stageeventcontrollers/HeavenholdPasture.encrypted
+- install/files/GameScript/stageeventcontrollers/HeavenholdTestRoom.encrypted
+- install/files/GameScript/stageeventcontrollers/HellForest/AnimalTrapDoorOpener.encrypted
+- install/files/GameScript/stageeventcontrollers/HellForest/AnimalTrapDoorOpenerData.encrypted
+- install/files/GameScript/stageeventcontrollers/HellForest/CameraSizeChanger.encrypted
+- install/files/GameScript/stageeventcontrollers/HellForest/CameraSizeChangerData.encrypted
+- install/files/GameScript/stageeventcontrollers/HellForest/FieldTintSetting.encrypted
+- install/files/GameScript/stageeventcontrollers/HellForest/FieldTintSettingData.encrypted
+- install/files/GameScript/stageeventcontrollers/HellForest/PlayerHealIncomeDecrease.encrypted
+- install/files/GameScript/stageeventcontrollers/HellForest/RegisterNoAssassination.encrypted
+- install/files/GameScript/stageeventcontrollers/HellForest/RegisterNoAssassinationData.encrypted
+- install/files/GameScript/stageeventcontrollers/HellForest/Stage2.encrypted
+- install/files/GameScript/stageeventcontrollers/HellForest/Stage3.encrypted
+- install/files/GameScript/stageeventcontrollers/HideAndSeek.encrypted
+- install/files/GameScript/stageeventcontrollers/HighSchool1At1.encrypted
+- install/files/GameScript/stageeventcontrollers/HighSchool1At2.encrypted
+- install/files/GameScript/stageeventcontrollers/HighSchool1At3.encrypted
+- install/files/GameScript/stageeventcontrollers/HighSchool1At4.encrypted
+- install/files/GameScript/stageeventcontrollers/HighSchool1At5.encrypted
+- install/files/GameScript/stageeventcontrollers/HighSchool1At6.encrypted
+- install/files/GameScript/stageeventcontrollers/HighSchoolChallengeBuffController.encrypted
+- install/files/GameScript/stageeventcontrollers/HighSchoolChallengeTimerController.encrypted
+- install/files/GameScript/stageeventcontrollers/HighSchoolDefaultResourceLoader.encrypted
+- install/files/GameScript/stageeventcontrollers/HookShotTutorial.encrypted
+- install/files/GameScript/stageeventcontrollers/Idols1.encrypted
+- install/files/GameScript/stageeventcontrollers/ImprisonedFriends.encrypted
+- install/files/GameScript/stageeventcontrollers/IncubusTown.encrypted
+- install/files/GameScript/stageeventcontrollers/InfinityTower.encrypted
+- install/files/GameScript/stageeventcontrollers/InfinityTowerRecordRoom.encrypted
+- install/files/GameScript/stageeventcontrollers/InvaderQuestActors.encrypted
+- install/files/GameScript/stageeventcontrollers/InvaderReporter.encrypted
+- install/files/GameScript/stageeventcontrollers/InvaderReporterFrozenTransport.encrypted
+- install/files/GameScript/stageeventcontrollers/InvaderReporterGatekeeper.encrypted
+- install/files/GameScript/stageeventcontrollers/InvaderReporterLorainFlower.encrypted
+- install/files/GameScript/stageeventcontrollers/InvaderReporterPrisoner.encrypted
+- install/files/GameScript/stageeventcontrollers/InvaderReporterSoup.encrypted
+- install/files/GameScript/stageeventcontrollers/InvaderReporterSuperInvaderLab.encrypted
+- install/files/GameScript/stageeventcontrollers/KakaoZelda.encrypted
+- install/files/GameScript/stageeventcontrollers/KamazonLand.encrypted
+- install/files/GameScript/stageeventcontrollers/KanterburyNinjaWarrior.encrypted
+- install/files/GameScript/stageeventcontrollers/KidAndroidRescueFishing.encrypted
+
+## Limitations
+
+- Complete means the run finished, not that every format was semantically decoded.
+- Native executable code is compared by hash, not decompiled.
+- Opaque files are compared byte-for-byte; no claim of semantic coverage.
+- Unity object identity uses asset name and path ID; rebuilt IDs may appear as replacements.
+- Decoded equality can suppress packaging noise; it does not prove identical runtime behavior.
+
+## For a later website update
+
+Use review-package/manifest.json and changes.jsonl. Field paths retain record IDs where unique. Review all removals, decoding gaps and changed logic. Existing behavior reports and calculations must not be treated as revalidated. This package is not a website deployment.

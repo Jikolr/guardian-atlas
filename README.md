@@ -2,7 +2,7 @@
 
 Explore Guardian Tales heroes, enemies, items, artwork, maps and recovered game data—without writing code or installing the game.
 
-**Current data snapshot: 3.55.0 (`com.kakaogames.gdtskr`).** Tables, English text, Lua sources, character profiles and changed artwork have been refreshed from the reviewed export. Choose **What changed in 3.55.0** in the sidebar for the import report. Changed supported original files download directly; GitHub Release archives retain their labeled **3.54.0** contents. Native-code evidence and historical behavior reports remain 3.54.0 research, not revalidated for this patch. The raid simulator and source-validation tools remain hidden from navigation.
+**Current data snapshot: 3.55.0 (`com.kakaogames.gdtskr`).** Tables, English text, Lua sources, character profiles and changed artwork have been refreshed from the reviewed export. Choose **Newsletter → Latest posts** at the top of the sidebar for game analysis and website news. Changed supported original files download directly; GitHub Release archives retain their labeled **3.54.0** contents. Native-code evidence and historical behavior reports remain 3.54.0 research, not revalidated for this patch. The raid simulator and source-validation tools remain hidden from navigation.
 
 **[Open the website](https://Jikolr.github.io/guardian-explorer/) · [How to use: visual guide](https://Jikolr.github.io/guardian-explorer/help.html) · [Download archives](https://github.com/Jikolr/guardian-explorer/releases/tag/game-files-3.54.0-snapshot)**
 
@@ -16,7 +16,7 @@ Explore Guardian Tales heroes, enemies, items, artwork, maps and recovered game 
 | Recognize a hero, boss or item | [Artwork & portraits](https://Jikolr.github.io/guardian-explorer/visual.html) |
 | Look up stored stats or other details | [Data tables](https://Jikolr.github.io/guardian-explorer/index.html) |
 | Explore a map | [Map library](https://Jikolr.github.io/guardian-explorer/visual.html?tab=maps) |
-| Explore XP requirements | [XP calculator](https://Jikolr.github.io/guardian-explorer/research.html#xp) |
+| Read game analysis and site updates | [Newsletter](https://Jikolr.github.io/guardian-explorer/newsletter.html) |
 | Download a picture, table or original file | [Game files & downloads](https://Jikolr.github.io/guardian-explorer/files.html) |
 | Read recovered scripts and research | [Research archive](https://Jikolr.github.io/guardian-explorer/research.html) |
 
@@ -51,7 +51,7 @@ Your current setup saves in this browser. Named account profiles can be reused w
 
 ## Character profiles, comparisons and saved discoveries
 
-Open **Characters**, search an internal or known in-game name, and select a portrait. Profiles bring together evolution variants, linked weapons, battle actions and matched biographies. The directory has 223 character families (including non-playable/test entries); 45 names are linked, with evidence labels: 2 confirmed identities, 17 English-spelling matches and 26 biography-based inferences. The inferred matches are not independently confirmed. Biography matches are also labeled.
+Open **Characters**, search an internal or known in-game name, and select a portrait. Profiles bring together evolution variants, linked weapons, battle actions and matched biographies. The directory has 223 character families (including non-playable/test entries); 46 names are linked, with evidence labels: 3 confirmed identities, 17 English-spelling matches and 26 biography-based inferences. The inferred matches are not independently confirmed. Biography matches are also labeled.
 
 Choose **Compare** from a variant or a hero, monster, NPC or item record. Add up to four entries, then use the bottom **Compare** button. **Only differences** hides identical fields; highlighted values and numeric changes are relative to the first entry. You can download the comparison as JSON.
 
@@ -74,11 +74,9 @@ Enable **Markers** to inspect decoded placements. Use **Find a placement** to se
 
 Try [the small ancient dungeon](https://Jikolr.github.io/guardian-explorer/map-preview.html?map=ancientdungeon_red_1_1). Choose **Structural layout** if artwork is missing. The artwork count describes coverage, not loading progress. Maps are reconstructions: animations, live events and some decorations are not shown.
 
-## Use the XP calculator
+## Read the Newsletter
 
-Choose **XP & progression** in the shared left sidebar. Choose **Hero** or **Weapon**, select a variant, and enter the starting and target internal levels. The result updates automatically; **Download this table** saves the selected data.
-
-These are **internal level indices**, not verified in-game level labels. The calculator assumes no partial XP at the starting level. Platform variants, live changes and playable caps may differ.
+Open **Newsletter → Latest posts** for **v3.55 deep dive** and **Guardian Altas update**. Articles include source links, interpretation limits and a print/PDF option. The **Ingame datas** group contains the remaining source and data sections; XP & progression and Reports & evidence have been removed from navigation.
 
 ## Download a picture, a record or a folder
 
@@ -132,7 +130,7 @@ The catalogs and maps can be large. Wait for the loading message to finish befor
 - 130 searchable data collections.
 - 29,078 available graphic previews, with images linked to hundreds of hero records and thousands of monster, NPC and item entries.
 - 2,027 interactive parsed maps; unsupported entries are labeled.
-- 6,344 recovered Lua scripts and a research area for code indexes, events and extraction evidence.
+- 7,129 recovered Lua scripts and a research area for code indexes, events and extraction evidence.
 - 39 downloadable game-file archives, separate from the website repository.
 
 This is an unofficial offline archive, not a live game database. Local account settings and analytics are excluded. “Unencrypted” describes a file format; it does not mean public domain.
@@ -147,7 +145,7 @@ This is an unofficial offline archive, not a live game database. Local account s
 Every page now has the same left sidebar. On smaller screens, use **All sections** to open it.
 
 - **Damage calculation** opens the explained formula and links to its supporting instructions.
-- **Reports & evidence** contains analysis reports, recovered assembly excerpts, extraction-tool source and audit inventories. Each file can be downloaded.
+- **Newsletter** contains readable game investigations and website updates, with links to supporting sources. Historical evidence files remain accessible by direct link.
 - **Compiled code & assembly** lets you find a class (for example `DamageCalculator`), select it, then choose **Read assembly** on a mapped method. This displays the native ARM64 instructions, rather than only names and addresses.
 - **Lua source** displays the recovered scripts themselves.
 

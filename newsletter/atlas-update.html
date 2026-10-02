@@ -1,0 +1,58 @@
+<p class="standfirst">Guardian Atlas now includes the Lua implementations that were missing from the earlier export, alongside refreshed 3.55.0 data and artwork. This update makes many stage and system scripts readable in full while keeping existing source links usable.</p>
+<div class="takeaway"><strong>What changed on the site</strong><p>31 data tables refreshed · 785 additional Lua paths · one existing Lua source updated · 18 Unity bundles processed · 5,411 image previews or sprite crops written.</p><p>These are import counts. The 5,411 images include regenerated icons, and the 785 paths are not 785 confirmed new features.</p></div>
+
+<h2 id="missing-code">From a loader to the actual implementation</h2>
+<p>Previously, a search could find a very short Lua file that named a controller without providing the controller's implementation. For example, <code>AfterWorld1At1.lua</code> contains the reference:</p>
+<pre><code>controller = 'stageeventcontrollers/AfterWorld1At1.lua'</code></pre>
+<p>The root file has three lines. The now-available controller contains <strong>1,674 lines</strong> handling level loading, stage starts, area entry, interactions, scenes and a minigame. Both entries remain available: the root file explains the link, and the controller exposes the logic behind it.</p>
+<div class="reading-links"><a href="research.html?section=scripts&entry=1#scripts">Read the 3-line loader →</a><a href="research.html?section=scripts&entry=6344#scripts">Read the 1,674-line controller →</a></div>
+<p>This is the main benefit of the new capture: many references now lead to code we can inspect, instead of stopping at a filename.</p>
+
+<h2 id="breakdown">The 785 additional Lua paths</h2>
+<div class="table-scroll"><table><caption>Additional paths relative to the previous capture</caption><thead><tr><th>Folder</th><th>Files</th><th>What readers can investigate</th></tr></thead><tbody>
+<tr><td><code>stageeventcontrollers/</code></td><td>697</td><td>Stage orchestration, puzzles, field events, boss encounters, challenges and tower logic</td></tr>
+<tr><td><code>utils/</code></td><td>69</td><td>Shared music, quest-marker, stage-start, party-change, QTE and pathfinding helpers</td></tr>
+<tr><td><code>worldexplore/</code></td><td>10</td><td>World Exploration systems and individual stage behavior</td></tr>
+<tr><td><code>Template/</code></td><td>6</td><td>Developer templates for quests, stages and mechanisms</td></tr>
+<tr><td><code>Theatres/</code></td><td>2</td><td>Scripted sequences and their interfaces</td></tr>
+<tr><td><code>Test/</code></td><td>1</td><td>An internal test routine</td></tr>
+</tbody></table></div>
+<p>The earlier inventory contained only one file inside <code>stageeventcontrollers/</code>; the new inventory contains 699. The new folder count includes one <code>.etag</code> companion file, which is a cache/version tag, not another Lua implementation. The imported source library now has <strong>7,129 entries</strong>.</p>
+<p>For <strong>532</strong> of the 785 additional paths, an unchanged root file in both versions already specifies the exact implementation path: 523 point into <code>stageeventcontrollers/</code> and nine into <code>worldexplore/</code>. Three more have a same-named root file but a less direct path/syntax match. The remaining 250 have no same-named root entry in the old inventory. These three groups sum to 785.</p>
+<p><strong>What this means:</strong> much of the apparent increase is better capture coverage. Even the remaining 250 files cannot automatically be dated to 3.55.0; the earlier export may simply not have contained them. We are publishing newly available evidence, not announcing hundreds of new stages.</p>
+
+<h2 id="examples">Good places to start reading</h2>
+<div class="table-scroll"><table><caption>Examples from the newly available implementations</caption><thead><tr><th>Source</th><th>Visible responsibility</th></tr></thead><tbody>
+<tr><td><a href="research.html?section=scripts&entry=6847#scripts"><code>TowerBossEnemyCountController</code></a></td><td>Tracks enemies during a tower boss fight and updates the counter interface.</td></tr>
+<tr><td><a href="research.html?section=scripts&entry=6972#scripts"><code>WorldExploreController</code></a></td><td>A 5,578-line controller covering phases, resources such as gold/wood/stone, units, tiles and interface state.</td></tr>
+<tr><td><a href="research.html?section=scripts&entry=6966#scripts"><code>utils/QTEEvent</code></a></td><td>A touch-input quick-time event controller.</td></tr>
+<tr><td><code>utils/FieldBGMManager/FieldBGMManager</code></td><td>Changes and preloads field music in response to zones, stages and combat transitions.</td></tr>
+<tr><td><code>utils/QuestMarker/QuestMarkerManager</code></td><td>Adds, moves and removes quest markers in the field.</td></tr>
+<tr><td><code>stageeventcontrollers/HellForest/AnimalTrapDoorOpener</code></td><td>Watches damage events and opens a door when its condition is satisfied.</td></tr>
+<tr><td><code>Theatres/CarmenStreaming</code></td><td>Handles a scripted streaming sequence, including dialogue, audience, donations and reactions.</td></tr>
+</tbody></table></div>
+<p>These descriptions come from visible functions and operations, not just the filenames. They describe a script's role without proving when it was introduced, whether every branch executes or which region exposes it.</p>
+<ol class="steps"><li>Open <a href="research.html#scripts">Ingame datas → Lua source</a>.</li><li>Search a full path, part of a filename or an indexed function name.</li><li>Select the entry to read its source. Use <strong>Find in this file</strong> to locate a function or field.</li><li>Choose <strong>Download file</strong> to keep the Lua source. Reading or downloading it does not execute the game code.</li></ol>
+
+<h2 id="existing-links">Existing links and the one changed shared source</h2>
+<p>Existing Lua entries retain their website IDs. New entries were appended, so an older link to a boss script still opens the same path. The import refreshed 786 sources in total: 785 additional paths plus the existing <code>base/battle_init.lua</code>.</p>
+<p>That existing file adds an optional parent argument to the battle-state constructor. It initializes the new state's action, owner and C# action references when a parent is supplied. The <a href="newsletter-v355.html#lua-change">v3.55 deep dive</a> explains the actual diff and why it should not be presented as a confirmed damage buff.</p>
+<p>The source chunks are now compressed for delivery, then decoded by your browser. You can still search and read the Lua normally, and the source viewer still downloads a readable file. This reduces hosting size without removing code.</p>
+
+<h2 id="data-art">Data, names and artwork</h2>
+<div class="character-feature"><img src="{{astoria_image}}" width="100" height="100" alt="Astoria portrait"><div><strong>Astoria is now searchable by name</strong><p>Her internal name <code>wyverns_purple</code> remains searchable too. Seira remains linked to <code>bridge_messenger</code>.</p><a href="characters.html?q=Astoria">Find Astoria →</a></div></div>
+<p>The 31 refreshed tables cover heroes, actions, English text, equipment, awakening and character trees, buffs, projectiles, collections, events, raid scheduling and progression-related data. Astoria's profile brings together her four variants and linked equipment. The visual library includes her standard/Myth illustrations, character resources, item icons and additional Memorial Carp Girl assets.</p>
+<p>The English table has 170,487 entries. Because many localization IDs moved, the curated biographies were rejoined by their exact text rather than blindly keeping the old numeric links. The identities <code>wyverns_purple = Astoria</code> and <code>BridgeMessenger = Seira</code> are explicitly confirmed by the site owner.</p>
+<p>The artwork import processed 18 Unity bundles and wrote 5,411 previews or atlas crops with no extraction errors in that import. Most of these are refreshed sprites from shared sheets, not thousands of new designs. Existing maps remain available; the comparison found no map-file changes.</p>
+
+<h2 id="downloads">Downloads and version labels</h2>
+<p>Changed supported original game files have direct 3.55.0 downloads in <a href="files.html">Game files &amp; downloads</a>. The updated Lua is also available as readable individual files. Existing GitHub Release archives still contain the historical 3.54.0 snapshot and are labeled accordingly; they have not silently become 3.55.0 archives.</p>
+<p>Website-export JSON sometimes wraps each record with an ID and a <code>fields</code> object. Those are convenient browsing exports, not claims that the encrypted original had exactly that layout. Local account settings and telemetry are excluded from the published file selection.</p>
+
+<h2 id="navigation">A home for game analysis and site news</h2>
+<p><strong>Newsletter</strong> is now the first category in the left sidebar. It will collect both game-file investigations and website updates. The former <strong>Game rules &amp; code</strong> group is now <strong>Ingame datas</strong>; XP &amp; progression and Reports &amp; evidence no longer appear as navigation sections.</p>
+<p>The damage simulator and hero source-validation tools remain hidden from navigation. Native assembly and older boss-behavior reports still describe the historical 3.54.0 research unless explicitly updated. Refreshing tables and recovering more Lua does not revalidate every earlier combat conclusion.</p>
+
+<h2 id="sources">Sources and verification</h2>
+<p>The import was checked against decoded records, record IDs, biography contents, hero/equipment associations, image paths and download sizes/hashes. Existing Lua link identities were preserved, and the Orbital Lift checks passed. These checks validate the website import, not every possible in-game execution path.</p>
+<ul class="source-list"><li><a href="downloads/newsletter/ANNEXE_LUA_v355.md" download>Lua coverage annex (French)</a> — counts, exact loader matches, examples and the replaced build manifest.</li><li><a href="downloads/newsletter/Reports-update-3.55.0.md" download>3.55.0 website import report</a> — tables, assets and scope.</li><li><a href="downloads/newsletter/v355-evidence.json" download>Focused source evidence (JSON)</a> — reproducible before/after samples.</li><li><a href="newsletter-v355.html">v3.55 deep dive</a> — the game-data changes and their implications.</li></ul>
