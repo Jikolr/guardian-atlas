@@ -1,1 +1,1 @@
-[{"id":0,"fields":{"Section":"Dsp32","Position":0,"Models":[],"Manufacturers":["*"]}},{"id":1,"fields":{"Section":"Dsp256","Position":0,"Models":[],"Manufacturers":["samsung","Google"]}},{"id":2,"fields":{"Section":"Dsp512","Position":0,"Models":[],"Manufacturers":["LENOVO","nubia"]}}]
+[{"id":0,"fields":{"Section":"Dsp256","Position":0,"Manufacturers":["samsung","Google"],"Models":[]}},{"id":1,"fields":{"Section":"Dsp32","Position":0,"Manufacturers":["*"],"Models":[]}},{"id":2,"fields":{"Section":"Dsp512","Position":0,"Manufacturers":["LENOVO","nubia"],"Models":[]}}]

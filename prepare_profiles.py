@@ -1,7 +1,7 @@
 from pathlib import Path
-import json,gzip,re,collections
-BASE=Path(__file__).resolve().parent;DATA=BASE/'dist/data';SRC=BASE.parent/'guardian-analysis/decoded-static'
-def read(p):return json.loads(p.read_text(encoding='utf-8'))
+import json,gzip,re,collections,os
+BASE=Path(__file__).resolve().parent;DATA=BASE/'dist/data';SRC=Path(os.environ.get('ATLAS_STATIC_SOURCE',str(BASE.parent/'guardian-analysis/decoded-static')))
+def read(p):return json.loads(p.read_text(encoding='utf-8')) if p.exists() else json.loads(gzip.decompress(Path(str(p)+'.gz').read_bytes()))
 def write(p,d):p.write_text(json.dumps(d,separators=(',',':'),ensure_ascii=False),encoding='utf-8')
 heroes=read(DATA/'heroes.json');text=read(DATA/'text.json');media=read(DATA/'visual/record-media.json')
 profiles={r['OriginId']:r for r in read(SRC/'heroprofile.json')};items=read(SRC/'items.json');styles=read(SRC/'battlestyles.json')['BattleStyles'];actions=read(DATA/'actions.json')

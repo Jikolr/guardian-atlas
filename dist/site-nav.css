@@ -3,3 +3,5 @@
 @media(max-width:800px){body.shared-layout>main{margin-left:0!important;width:100%}body.shared-layout>header{margin-left:0}body.shared-layout{padding-top:52px}#site-sidebar{transform:translateX(-100%);transition:transform .16s;width:min(300px,85vw)}.nav-open #site-sidebar{transform:translateX(0)}#site-nav-toggle{display:block;position:fixed;top:8px;left:12px;z-index:69;background:#f6c85f;color:#102035;padding:9px 15px;border:0;border-radius:6px;font-weight:bold}#site-nav-close{display:block;position:absolute;right:10px;top:10px;background:transparent;color:#f6c85f;border:0;font-size:25px}.nav-open #site-nav-backdrop{display:block;position:fixed;inset:0;background:#0009;border:0;z-index:69}body.shared-layout .atlas-tools{left:0}.site-tables #datasets{display:block}.shared-layout .workspace{padding:22px 15px}}
 
 body.shared-layout>header{display:none}
+
+.site-version{display:block;margin:0 18px 18px;color:#ffd16b;font-size:12px;text-decoration:none}.snapshot-note{padding:12px 16px;border:1px solid #46546a;border-left:3px solid #ffd16b;border-radius:8px;background:#121e2c;color:#c5d5e6;font-size:14px;line-height:1.6}
