@@ -150,3 +150,16 @@ Every page now has the same left sidebar. On smaller screens, use **All sections
 - **Lua source** displays the recovered scripts themselves.
 
 The native archive covers mapped methods from the game assembly. Unmapped methods are explicitly labeled. Available assembly is not original C# source or a verified explanation: address ranges may include padding or other code, incomplete ranges are labeled, and runtime patches can change behavior. Human-readable explanations are available only for the rules already investigated.
+# Newsletter administration
+
+The private navigation entry point is `/admin/` (not linked in the public menus).
+Use GitHub login to create, edit, preview and publish articles with Decap CMS.
+See the [editor guide](dist/admin/guide.html) and [one-time authentication setup](admin-auth/README.md).
+The GitHub OAuth application and Cloudflare secrets are configured. The editor must
+be deployed to GitHub Pages to complete the hosted sign-in flow.
+
+The current article sources are `newsletter/posts/*.json`; the body is Markdown.
+GitHub Actions builds the public pages automatically before deployment. The old
+`newsletter/posts.json` and HTML fragments are retained as migration inputs only.
+Drafts are not displayed on the website, but are visible in this public Git repository.
+

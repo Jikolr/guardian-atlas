@@ -1,38 +1,63 @@
 """Render the local editorial archive. Add an entry and HTML body in newsletter/ to publish another post."""
 from pathlib import Path
-from html import escape
-import json,re,math,shutil
+from html import escape,unescape
+import json,re,math,shutil,sys
+from datetime import date
 B=Path(__file__).resolve().parent;W=B/'dist';D=W/'data';S=B/'newsletter'
+sys.path.insert(0,str(B/'.editor-deps'))
+import markdown,bleach
 def read(p):return json.loads(p.read_text(encoding='utf8'))
 def write(p,v):p.parent.mkdir(parents=True,exist_ok=True);p.write_text(json.dumps(v,ensure_ascii=False,separators=(',',':')),encoding='utf8')
-posts=read(S/'posts.json');media=read(D/'visual/record-media.json')
+all_posts=[dict(read(p),slug=p.stem) for p in sorted((S/'posts').glob('*.json'))]
+for p in all_posts:
+    if not re.fullmatch('[a-z0-9]+(?:-[a-z0-9]+)*',p['slug']):raise ValueError('Invalid article slug')
+    date.fromisoformat(p['date'])
+    for field in ['title','summary','category','body']:
+        if not isinstance(p.get(field),str) or not p[field].strip():raise ValueError('Missing '+field)
+posts=sorted([p for p in all_posts if p.get('published',False)],key=lambda p:(p['date'],p['slug']),reverse=True)
+# Remove only pages generated for articles that were deleted or unpublished.
+previous=read(D/'newsletter.json') if (D/'newsletter.json').exists() else []
+for old in previous:
+    slug=old['slug']
+    if re.fullmatch('[a-z0-9]+(?:-[a-z0-9]+)*',slug) and slug not in {p['slug'] for p in posts}:
+        (W/f'newsletter-{slug}.html').unlink(missing_ok=True)
+media=read(D/'visual/record-media.json')
 astoria='data/visual/'+media['heroes:701']['image'];seira='data/visual/'+media['heroes:695']['image']
 def page(title,description,body):return f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="{escape(description,quote=True)}"><title>{escape(title)} · Guardian Atlas</title><link rel="stylesheet" href="newsletter.css"><link rel="stylesheet" href="site-nav.css"><script src="site-nav.js" defer></script></head><body><a class="skip-link" href="#main-content">Skip to content</a><main id="main-content">{body}</main></body></html>'''
 for i,p in enumerate(posts):
-    body=(S/p['body']).read_text(encoding='utf8').replace('{{astoria_image}}',astoria).replace('{{seira_image}}',seira)
+    body=markdown.markdown(p['body'],extensions=['tables','fenced_code','toc'])
+    body=bleach.clean(body,tags={'p','br','hr','h1','h2','h3','h4','h5','h6','a','img','strong','em','del','s','blockquote','ul','ol','li','pre','code','table','thead','tbody','tr','th','td'},attributes={'*':['id'],'a':['href','title'],'img':['src','alt','title','width','height'],'th':['align'],'td':['align']},protocols=['http','https','mailto'],strip=True)
+    def restore_anchor(match):
+        title=unescape(re.sub('<[^>]+>','',match[2]));ident=p.get('anchors',{}).get(title,match[1])
+        return f'<h2 id="{escape(ident,quote=True)}">{match[2]}</h2>'
+    body=re.sub(r'<h2 id="([^"]+)">(.*?)</h2>',restore_anchor,body)
+    body=re.sub(r'(<table>.*?</table>)',r'<div class="table-scroll">\1</div>',body,flags=re.S)
     headings=re.findall(r'<h2 id="([^"]+)">([^<]+)</h2>',body)
     words=len(re.sub('<[^>]+>',' ',body).split());p['minutes']=math.ceil(words/220)
     other=posts[1-i] if len(posts)==2 else None
     footer=f'<aside class="next-post"><span>Keep reading</span><a href="newsletter-{other["slug"]}.html">{escape(other["title"])} →</a><p>{escape(other["summary"])}</p></aside>' if other else ''
-    header=f'''<a class="back" href="newsletter.html">← All posts</a><header class="article-heading"><p class="eyebrow">NEWSLETTER / {escape(p['category'].upper())}</p><h1>{escape(p['title'])}</h1><p class="post-meta"><time datetime="{p['date']}">2 October 2026</time><span>·</span>{p['minutes']} min read<span>·</span>Guardian Atlas</p></header>'''
+    header=f'''<a class="back" href="newsletter.html">← All posts</a><header class="article-heading"><p class="eyebrow">NEWSLETTER / {escape(p['category'].upper())}</p><h1>{escape(p['title'])}</h1><p class="post-meta"><time datetime="{p['date']}">{date.fromisoformat(p['date']).strftime('%d %B %Y')}</time><span>·</span>{p['minutes']} min read<span>·</span>Guardian Atlas</p></header>'''
     toc='<aside class="article-toc" aria-label="On this page"><h2>On this page</h2><nav>'+''.join(f'<a href="#{ident}">{escape(title)}</a>' for ident,title in headings)+'</nav><button type="button" onclick="window.print()">Print / save as PDF</button></aside>'
     html=page(p['title'],p['summary'],header+'<div class="article-layout">'+toc+'<article class="article-body">'+body+footer+'</article></div>')
     (W/f'newsletter-{p["slug"]}.html').write_text(html,encoding='utf8')
 cards=[]
 for i,p in enumerate(posts):
-    art=f'<div class="post-art portrait-art"><img src="{astoria}" width="100" height="100" alt="Astoria"><span>3.55</span></div>' if p['image']=='astoria' else '<div class="post-art code-art" aria-hidden="true"><span class="code-line">controller = …</span><strong>785</strong><span>more Lua paths to explore</span></div>'
-    cards.append(f'''<a class="post-card" href="newsletter-{p['slug']}.html">{art}<div class="post-card-body"><p class="eyebrow">{escape(p['category'])} <span>· 02 OCT 2026</span></p><h2>{escape(p['title'])}</h2><p>{escape(p['summary'])}</p><span class="read-link">Read article <span aria-hidden="true">↗</span><small>{p['minutes']} min read</small></span></div></a>''')
-listing='<header class="newsletter-heading"><p class="eyebrow">THE GUARDIAN ATLAS JOURNAL</p><h1>Newsletter</h1><p>Inside the game files.<br>Behind the website updates.</p><div class="edition-label">Game analysis &amp; site news · 2 posts</div></header><section class="post-grid" aria-label="Latest posts">'+''.join(cards)+'</section><footer class="newsletter-footer">Independent analysis of recovered game data. Source links and interpretation limits are included in each article.</footer>'
+    cover=p.get('cover','')
+    if cover and (cover.startswith('https://') or re.match(r'^(?:data|uploads)/',cover)):
+        art=f'<div class="post-art portrait-art"><img src="{escape(cover,quote=True)}" alt="{escape(p["title"],quote=True)}"></div>'
+    else:art='<div class="post-art code-art" aria-hidden="true"><span>GUARDIAN ATLAS</span><strong>Journal</strong></div>'
+    cards.append(f'''<a class="post-card" href="newsletter-{p['slug']}.html">{art}<div class="post-card-body"><p class="eyebrow">{escape(p['category'])} <span>· {p['date']}</span></p><h2>{escape(p['title'])}</h2><p>{escape(p['summary'])}</p><span class="read-link">Read article <span aria-hidden="true">↗</span><small>{p['minutes']} min read</small></span></div></a>''')
+listing=f'<header class="newsletter-heading"><p class="eyebrow">THE GUARDIAN ATLAS JOURNAL</p><h1>Newsletter</h1><p>Inside the game files.<br>Behind the website updates.</p><div class="edition-label">Game analysis &amp; site news · {len(posts)} posts</div></header><section class="post-grid" aria-label="Latest posts">'+''.join(cards)+'</section><footer class="newsletter-footer">Independent analysis of recovered game data. Source links and interpretation limits are included in each article.</footer>'
 (W/'newsletter.html').write_text(page('Newsletter','Game-file deep dives and updates from Guardian Atlas.',listing),encoding='utf8')
-write(D/'newsletter.json',posts)
+write(D/'newsletter.json',[{k:v for k,v in p.items() if k not in ('body','anchors')} for p in posts])
 
 # Ship the supplied research as supporting material; it is never executed.
 downloads=W/'downloads/newsletter';downloads.mkdir(parents=True,exist_ok=True)
-for src in [B.parent/'guardian-update-review/REPORT_v355_explique.md',B.parent/'guardian-update-review/ANNEXE_LUA_v355.md',Path('C:/Users/alexandre.corbineau/Downloads/REPORT_v355.md'),Path('C:/Users/alexandre.corbineau/Downloads/Reports-update-3.55.0.md')]:
-    shutil.copyfile(src,downloads/src.name)
+for src in ([B.parent/'guardian-update-review/REPORT_v355_explique.md',B.parent/'guardian-update-review/ANNEXE_LUA_v355.md',Path('C:/Users/alexandre.corbineau/Downloads/REPORT_v355.md'),Path('C:/Users/alexandre.corbineau/Downloads/Reports-update-3.55.0.md')] if '--refresh-evidence' in sys.argv else []):
+    if src.exists():shutil.copyfile(src,downloads/src.name)
 run=B.parent/'guardian-update-review/outputs/20261002-144030-522b69'
-changes=[json.loads(l) for l in (run/'changes.jsonl').read_text(encoding='utf8').splitlines()]
+changes=[json.loads(l) for l in (run/'changes.jsonl').read_text(encoding='utf8').splitlines()] if '--refresh-evidence' in sys.argv and (run/'changes.jsonl').exists() else []
 focus=[]
 for c in changes:
     if c['path'] in ['install/files/static_data/battleactions','install/files/static_data/buffs','install/files/static_data/heroes','install/files/static_data/items','install/files/static_data/projectiles','install/files/static_data/seasondate']:
@@ -48,7 +73,7 @@ for c in changes:
             sections.append({'section':d['path'],'changedLevels':sorted(changed,key=lambda r:r['level'])})
         focus.append({'path':c['path'],'sections':sections})
     if c['path']=='install/files/GameScript/base/battle_init.encrypted':focus.append({'path':c['path'],'diff':(run/c['text_diff']).read_text(encoding='utf8')})
-write(downloads/'v355-evidence.json',{'comparisonRun':run.name,'scope':'Selected source differences supporting the newsletter; not a complete patch inventory.','changes':focus})
+if changes:write(downloads/'v355-evidence.json',{'comparisonRun':run.name,'scope':'Selected source differences supporting the newsletter; not a complete patch inventory.','changes':focus})
 
 # Keep downloadable site catalogs accurate after the editorial/name updates.
 catalog=read(D/'file-catalog.json');exports={r['path']:r for r in catalog['files'] if r['section']=='exports'}

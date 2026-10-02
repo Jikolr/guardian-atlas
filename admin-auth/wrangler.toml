@@ -1,0 +1,10 @@
+name = "guardian-atlas-auth"
+main = "worker.mjs"
+compatibility_date = "2026-10-01"
+workers_dev = true
+
+[vars]
+SITE_ORIGIN = "https://jikolr.github.io"
+ALLOWED_LOGIN = "Jikolr"
+REPOSITORY = "Jikolr/guardian-explorer"
+# GITHUB_CLIENT_ID and GITHUB_CLIENT_SECRET must be set as Worker secrets.

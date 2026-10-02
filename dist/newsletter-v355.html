@@ -1,97 +1,212 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Astoria&#x27;s complete character package, Seira&#x27;s support-action correction, the scarecrow data adjustment and the regional event schedule—what the files prove, and what they do not."><title>v3.55 deep dive · Guardian Atlas</title><link rel="stylesheet" href="newsletter.css"><link rel="stylesheet" href="site-nav.css"><script src="site-nav.js" defer></script></head><body><a class="skip-link" href="#main-content">Skip to content</a><main id="main-content"><a class="back" href="newsletter.html">← All posts</a><header class="article-heading"><p class="eyebrow">NEWSLETTER / GAME FILES</p><h1>v3.55 deep dive</h1><p class="post-meta"><time datetime="2026-10-02">2 October 2026</time><span>·</span>10 min read<span>·</span>Guardian Atlas</p></header><div class="article-layout"><aside class="article-toc" aria-label="On this page"><h2>On this page</h2><nav><a href="#scope">What was actually compared?</a><a href="#astoria">Astoria: more than a portrait or an unused name</a><a href="#combat">What Astoria&#x27;s combat records tell us</a><a href="#seira">Seira: a specific support-action correction</a><a href="#scarecrow">The scarecrow number rises by roughly 22%—what does that mean?</a><a href="#calendar">Events and regional scheduling</a><a href="#lua-change">One concrete change to shared battle initialization</a><a href="#noise">Why the biggest diff counts are misleading</a><a href="#limits">Coverage and what remains unknown</a><a href="#sources">Sources and further reading</a></nav><button type="button" onclick="window.print()">Print / save as PDF</button></aside><article class="article-body"><p class="standfirst">Astoria is the clearest content addition in this snapshot. Around her, the files also reveal a narrowly scoped correction for Seira, a systematic adjustment to a scarecrow-related table, and several regional event configurations. The interesting part is separating these changes from the noise of renamed text IDs, newly captured scripts and rebuilt application resources.</p>
-<div class="takeaway"><strong>The three things to remember</strong><ul><li>Astoria has a complete set of hero, equipment, combat and visual records, including her Myth form.</li><li>Seira's support action changes its stored damage classification from <code>Melee</code> to <code>Projectile</code>; this is not evidence of a change to all her attacks.</li><li>The approximately 22% increase in <code>ScarecrowTotalDmg</code> is a table adjustment. It does not establish a universal 22% damage buff.</li></ul></div>
-
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Astoria&#x27;s complete character package, Seira&#x27;s support-action correction, the scarecrow data adjustment and the regional event schedule—what the files prove, and what they do not."><title>v3.55 deep dive · Guardian Atlas</title><link rel="stylesheet" href="newsletter.css"><link rel="stylesheet" href="site-nav.css"><script src="site-nav.js" defer></script></head><body><a class="skip-link" href="#main-content">Skip to content</a><main id="main-content"><a class="back" href="newsletter.html">← All posts</a><header class="article-heading"><p class="eyebrow">NEWSLETTER / GAME FILES</p><h1>v3.55 deep dive</h1><p class="post-meta"><time datetime="2026-10-02">02 October 2026</time><span>·</span>10 min read<span>·</span>Guardian Atlas</p></header><div class="article-layout"><aside class="article-toc" aria-label="On this page"><h2>On this page</h2><nav><a href="#scope">What was actually compared?</a><a href="#astoria">Astoria: more than a portrait or an unused name</a><a href="#combat">What Astoria&#x27;s combat records tell us</a><a href="#seira">Seira: a specific support-action correction</a><a href="#scarecrow">The scarecrow number rises by roughly 22%—what does that mean?</a><a href="#calendar">Events and regional scheduling</a><a href="#lua-change">One concrete change to shared battle initialization</a><a href="#noise">Why the biggest diff counts are misleading</a><a href="#limits">Coverage and what remains unknown</a><a href="#sources">Sources and further reading</a></nav><button type="button" onclick="window.print()">Print / save as PDF</button></aside><article class="article-body"><p>Astoria is the clearest content addition in this snapshot. Around her, the files also reveal a narrowly scoped correction for Seira, a systematic adjustment to a scarecrow-related table, and several regional event configurations. The interesting part is separating these changes from the noise of renamed text IDs, newly captured scripts and rebuilt application resources.</p>
+<p><strong>The three things to remember</strong></p>
+<ul>
+<li>Astoria has a complete set of hero, equipment, combat and visual records, including her Myth form.</li>
+<li>Seira's support action changes its stored damage classification from <code>Melee</code> to <code>Projectile</code>; this is not evidence of a change to all her attacks.</li>
+<li>The approximately 22% increase in <code>ScarecrowTotalDmg</code> is a table adjustment. It does not establish a universal 22% damage buff.</li>
+</ul>
 <h2 id="scope">What was actually compared?</h2>
 <p>This article examines the supplied 3.54.0 and 3.55.0 APK/data exports for <code>com.kakaogames.gdtskr</code>, using the comparison generated on 2 October 2026. The raw inventory reports <strong>114 modified files, 867 added files, one removed file and 17,016 unchanged files</strong>. These are file counts, not counts of new features, stages or balance changes.</p>
 <p>Throughout this article, <strong>Astoria</strong> refers to <code>wyverns_purple</code>, and <strong>Seira</strong> to <code>BridgeMessenger</code>/<code>bridge_messenger</code>. These identities were confirmed by the site owner. Internal names remain visible so readers can find the original records.</p>
 <p>We distinguish a value directly stored in a file from an interpretation of its likely role. Client files can contain region-specific, future, test or unused records. A schedule stored in the client is not an official announcement or proof that the server has enabled it.</p>
-
 <h2 id="astoria">Astoria: more than a portrait or an unused name</h2>
-<div class="character-feature"><img src="data/visual/images/b94da5639104c414f2e6.webp" width="100" height="100" alt="Astoria's portrait from the updated game files"><div><strong>Astoria · wyverns_purple</strong><p>Four hero records, exclusive equipment, combat graphs, progression data and artwork arrive together.</p><a href="character.html?id=701">Explore Astoria's profile →</a></div></div>
+<p><img alt="Astoria's portrait from the updated game files" src="data/visual/images/b94da5639104c414f2e6.webp"></p>
+<p><strong>Astoria · wyverns_purple</strong></p>
+<p>Four hero records, exclusive equipment, combat graphs, progression data and artwork arrive together.</p>
+<p><a href="character.html?id=701">Explore Astoria's profile →</a></p>
 <p>The new hero records form a connected progression path. Records <code>701</code>, <code>702</code> and <code>703</code> are named <code>wyverns_purple_3</code>, <code>wyverns_purple_4</code> and <code>wyverns_purple_5</code>. Record <code>20701</code> is <code>wyverns_purple_myth</code>. They share origin ID <code>701</code>; the first two point to their next evolution, and the final normal form links to the Myth record.</p>
 <p>The entries describe a playable Unique hero using the basket weapon class. The normal forms include <code>guildraid</code> among their recommended content, while <code>VersionFrom</code> specifies <code>v3.55</code> for both <code>KakaoGlobal</code> and <code>KakaoKorea</code>. Other platform gates differ. This is strong evidence of an integrated character release package; the recommendation field does not, by itself, demonstrate raid performance.</p>
-<div class="table-scroll"><table><caption>Linked additions in the item data</caption><thead><tr><th>Record</th><th>Internal name</th><th>Role</th></tr></thead><tbody>
-<tr><td>9050594</td><td><code>cwp_wyvernspurple_epic</code></td><td>Exclusive weapon; linked to character 701</td></tr>
-<tr><td>9050595</td><td><code>cwp_wyvernspurple_myth</code></td><td>Myth exclusive weapon; also linked to 701</td></tr>
-<tr><td>80701</td><td><code>evolve_stone_wyverns_purple</code></td><td>Evolution material</td></tr>
-<tr><td>85701</td><td><code>myth_stone_wyverns_purple</code></td><td>Myth material</td></tr>
-<tr><td>10662</td><td><code>wyverns_purple_doll</code></td><td>Costume record</td></tr>
-</tbody></table></div>
+<p>Linked additions in the item data</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Record</th>
+<th>Internal name</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>9050594</td>
+<td><code>cwp_wyvernspurple_epic</code></td>
+<td>Exclusive weapon; linked to character 701</td>
+</tr>
+<tr>
+<td>9050595</td>
+<td><code>cwp_wyvernspurple_myth</code></td>
+<td>Myth exclusive weapon; also linked to 701</td>
+</tr>
+<tr>
+<td>80701</td>
+<td><code>evolve_stone_wyverns_purple</code></td>
+<td>Evolution material</td>
+</tr>
+<tr>
+<td>85701</td>
+<td><code>myth_stone_wyverns_purple</code></td>
+<td>Myth material</td>
+</tr>
+<tr>
+<td>10662</td>
+<td><code>wyverns_purple_doll</code></td>
+<td>Costume record</td>
+</tr>
+</tbody>
+</table></div>
 <p>The patch also adds awakening data, tree layouts, collection entries and profile information. Visual files include standard and Myth character resources, a doll variant, illustrations, effects and updated hero/item sprite sheets. Taken together, these connected records are much more informative than a single filename.</p>
-<p class="source-note">Inspect: <a href="index.html?table=heroes&record=701#heroes">hero 701</a>, <a href="index.html?table=heroes&record=20701#heroes">Myth hero 20701</a>, <a href="index.html?table=static-items&q=cwp_wyvernspurple&scope=name#static-items">exclusive weapons</a>, <a href="visual.html?tab=assets&q=wyverns_purple">artwork</a>. Sources: <code>heroes</code>, <code>items</code>, <code>heroprofile</code>, awakening tables and <code>AssetBundles/Android</code>.</p>
-
+<p>Inspect: <a href="index.html?table=heroes&amp;record=701#heroes">hero 701</a>, <a href="index.html?table=heroes&amp;record=20701#heroes">Myth hero 20701</a>, <a href="index.html?table=static-items&amp;q=cwp_wyvernspurple&amp;scope=name#static-items">exclusive weapons</a>, <a href="visual.html?tab=assets&amp;q=wyverns_purple">artwork</a>. Sources: <code>heroes</code>, <code>items</code>, <code>heroprofile</code>, awakening tables and <code>AssetBundles/Android</code>.</p>
 <h2 id="combat">What Astoria's combat records tell us</h2>
 <p>Four new action definitions connect Astoria to the <code>graph_hero/wyverns_purple</code> resource. Each stores <code>BaseDamageType = Projectile</code>. The following values describe the action configuration; they are not a complete damage simulation or a verified count of damage numbers shown on screen.</p>
-<div class="table-scroll"><table><caption>New action definitions and their stored parameters</caption><thead><tr><th>Action</th><th>Selected fields</th><th>What follows from the record</th></tr></thead><tbody>
-<tr><td><code>GraphStamina:WyvernsPurple</code></td><td>ActionDuration 0.4; ShootTiming 0.1; StaminaPerAction 20; StaminaBreakModifier 1.5</td><td>A manual/stamina action is wired to <code>ManualWyvernsPurple</code>. Its graph still determines the detailed sequence.</td></tr>
-<tr><td><code>GraphSupport:WyvernsPurple</code></td><td>Trigger Down; Connect Aerial; TotalDpsMult 3.5; Radius 2; HealRatio 0.2</td><td>A support/chain-style action with a Down-to-Aerial transition and a configured healing ratio. The ratio alone does not identify the healing base or all recipients.</td></tr>
-<tr><td><code>GraphTrigger:CwpWyvernsPurple</code></td><td>MaxHit 4; DamageTerm 0.15; AttackDuration 0.7; Ailment down</td><td>The exclusive weapon has a graph-backed skill with hit and timing parameters. MaxHit is not proof that every cast lands four ticks on every target.</td></tr>
-<tr><td><code>GraphMyth:WyvernsPurple</code></td><td>TotalDpsMult 4.2; Cooltime 10; InitCooltime 10; Duration 1.2</td><td>A Myth action with separate critical-leader buff references for default play, co-op expedition, boss rush and guild raid.</td></tr>
-</tbody></table></div>
+<p>New action definitions and their stored parameters</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Selected fields</th>
+<th>What follows from the record</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GraphStamina:WyvernsPurple</code></td>
+<td>ActionDuration 0.4; ShootTiming 0.1; StaminaPerAction 20; StaminaBreakModifier 1.5</td>
+<td>A manual/stamina action is wired to <code>ManualWyvernsPurple</code>. Its graph still determines the detailed sequence.</td>
+</tr>
+<tr>
+<td><code>GraphSupport:WyvernsPurple</code></td>
+<td>Trigger Down; Connect Aerial; TotalDpsMult 3.5; Radius 2; HealRatio 0.2</td>
+<td>A support/chain-style action with a Down-to-Aerial transition and a configured healing ratio. The ratio alone does not identify the healing base or all recipients.</td>
+</tr>
+<tr>
+<td><code>GraphTrigger:CwpWyvernsPurple</code></td>
+<td>MaxHit 4; DamageTerm 0.15; AttackDuration 0.7; Ailment down</td>
+<td>The exclusive weapon has a graph-backed skill with hit and timing parameters. MaxHit is not proof that every cast lands four ticks on every target.</td>
+</tr>
+<tr>
+<td><code>GraphMyth:WyvernsPurple</code></td>
+<td>TotalDpsMult 4.2; Cooltime 10; InitCooltime 10; Duration 1.2</td>
+<td>A Myth action with separate critical-leader buff references for default play, co-op expedition, boss rush and guild raid.</td>
+</tr>
+</tbody>
+</table></div>
 <p>Six projectile records cover two regular projectiles, their Myth counterparts and two break variants. These names and references confirm alternate attack components, but their presence does not establish a six-hit normal attack.</p>
-<h3>Buff definitions: useful clues, not a finished rotation</h3>
+<h3 id="buff-definitions-useful-clues-not-a-finished-rotation">Buff definitions: useful clues, not a finished rotation</h3>
 <p>Nine new buffs accompany the character. The exclusive-weapon option families include <code>TotalAttackScale</code> values of −0.10 for 2 seconds and −0.15 for 3 seconds, plus <code>CriticalMultiplierScale</code> values of 0.40 and 0.55 for 6 seconds. The special-effect families include <code>SuperSkillScale</code> with 0.40, <code>CriticalBase</code> with 20, and a Myth <code>NormalSkillScale</code> entry with 0.15. Their configured durations distinguish the normal and Myth sets.</p>
 <p><strong>Interpretation:</strong> the records support a design involving timed offensive modifiers and different normal/Myth effects. They do not, by themselves, establish who receives each buff, its trigger, whether it stacks, or its final place in the damage formula. In particular, a negative attack-scale field should not be described as a self-penalty without tracing its target. This article therefore does not turn the raw values into a promised team-wide damage increase.</p>
-<p class="source-note">Inspect: <a href="index.html?table=static-battleactions&q=WyvernsPurple#static-battleactions">battle actions</a>, <a href="index.html?table=static-buffs&q=wyverns_purple#static-buffs">buffs</a>, <a href="index.html?table=static-projectiles&q=wyverns_purple#static-projectiles">projectiles</a>. The graph bundle is also available through <a href="files.html?q=wyverns_purple&section=unencrypted">Game files</a>.</p>
-
+<p>Inspect: <a href="index.html?table=static-battleactions&amp;q=WyvernsPurple#static-battleactions">battle actions</a>, <a href="index.html?table=static-buffs&amp;q=wyverns_purple#static-buffs">buffs</a>, <a href="index.html?table=static-projectiles&amp;q=wyverns_purple#static-projectiles">projectiles</a>. The graph bundle is also available through <a href="files.html?q=wyverns_purple&amp;section=unencrypted">Game files</a>.</p>
 <h2 id="seira">Seira: a specific support-action correction</h2>
-<div class="character-feature compact"><img src="data/visual/images/950a530de02dc26d99d4.webp" width="100" height="100" alt="Seira's portrait"><div><strong>Seira · BridgeMessenger</strong><p><code>GraphSupport:BridgeMessenger</code><br><span class="before">Melee</span> → <span class="after">Projectile</span></p></div></div>
+<p><img alt="Seira's portrait" src="data/visual/images/950a530de02dc26d99d4.webp"></p>
+<p><strong>Seira · BridgeMessenger</strong></p>
+<p><code>GraphSupport:BridgeMessenger</code><br>
+Melee → Projectile</p>
 <p>The action's <code>BaseDamageType</code> changes from <code>Melee</code> to <code>Projectile</code>. Its other reported parameters remain the same: <code>TotalDpsMult = 3</code>, <code>Radius = 3.5</code>, <code>Duration = 1.2</code> and <code>Connect = Poison</code>. Seira's hero record is not changed by this comparison.</p>
 <p>The supplied follow-up investigation also found that the unchanged <code>SupportBridgeMessenger</code> Unity graph already contained <code>Oak.DamageType = Projectile</code> in both captures. The best-supported reading is a correction that brings the action's table definition into agreement with its graph.</p>
 <p><strong>Possible gameplay relevance:</strong> if a runtime path consults this table field, it could affect handling that distinguishes melee and projectile damage. The unchanged graph means we cannot infer from this diff alone whether the live damage result changed. It is neither a demonstrated multiplier buff nor a reclassification of every Seira attack. Here, <code>Projectile</code> is a damage-type enum, not a description of the visual shape of the animation.</p>
-<p class="source-note">Source: <code>static_data/battleactions</code>, record <code>GraphSupport:BridgeMessenger</code>; graph cross-check documented in the supplied explanatory report. <a href="index.html?table=static-battleactions&q=GraphSupport%3ABridgeMessenger#static-battleactions">Read the action</a> · <a href="character.html?id=695">Seira's profile</a>.</p>
-
+<p>Source: <code>static_data/battleactions</code>, record <code>GraphSupport:BridgeMessenger</code>; graph cross-check documented in the supplied explanatory report. <a href="index.html?table=static-battleactions&amp;q=GraphSupport%3ABridgeMessenger#static-battleactions">Read the action</a> · <a href="character.html?id=695">Seira's profile</a>.</p>
 <h2 id="scarecrow">The scarecrow number rises by roughly 22%—what does that mean?</h2>
 <p>In <code>exps2</code>, <code>ScarecrowTotalDmg</code> increases for internal levels 0 through 150, inclusive, in both <code>LevelExps</code> and <code>LevelExps.Kong</code>. There are 151 affected level rows in each section. The guild scarecrow is the damage-testing target associated with elemental variants and rankings, but the exact consumer of this particular field has not been established.</p>
-<div class="table-scroll"><table><caption>Stored ScarecrowTotalDmg values; internal table levels</caption><thead><tr><th>Level</th><th>3.54.0</th><th>3.55.0</th><th>Change</th></tr></thead><tbody>
-<tr><td>0</td><td>21,278,175</td><td>25,959,375</td><td>≈ +22%</td></tr>
-<tr><td>100</td><td>286,519,945</td><td>349,554,328</td><td>≈ +22%</td></tr>
-<tr><td>150</td><td>386,414,932</td><td>471,426,203</td><td>≈ +22%</td></tr>
-</tbody></table></div>
+<p>Stored ScarecrowTotalDmg values; internal table levels</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Level</th>
+<th>3.54.0</th>
+<th>3.55.0</th>
+<th>Change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>21,278,175</td>
+<td>25,959,375</td>
+<td>≈ +22%</td>
+</tr>
+<tr>
+<td>100</td>
+<td>286,519,945</td>
+<td>349,554,328</td>
+<td>≈ +22%</td>
+</tr>
+<tr>
+<td>150</td>
+<td>386,414,932</td>
+<td>471,426,203</td>
+<td>≈ +22%</td>
+</tr>
+</tbody>
+</table></div>
 <p><code>RaidTotalDmg</code> and the other columns remain unchanged in these rows; <code>LevelExps.Switch</code> is unchanged too. The follow-up analysis finds an almost constant relationship to <code>RaidTotalDmg</code>: approximately ×2.321684 before, and ×2.832455 after. This supports a systematic rescaling of a level-dependent benchmark, rather than an edit to individual hero statistics.</p>
 <p>What that benchmark does is still unresolved. It might be used as a target, a limit, a normalization value, retained historical data or a server-side input; these are possibilities, not findings. No decoded Lua reference identifies its consumer. The older, different-build native metadata examined in the earlier research does not settle the question for these APKs.</p>
-<div class="takeaway"><strong>For players:</strong> do not multiply your team's predicted damage by 1.22 based on this change. The file proves that this named table value increased. It does not prove that the combat damage formula, scarecrow HP, score cap or anti-cheat threshold changed.</div>
-<p class="source-note">Source: <a href="index.html?table=static-exps2&q=ScarecrowTotalDmg#static-exps2"><code>exps2</code></a>. Compare the before/after rows in the <a href="downloads/newsletter/v355-evidence.json" download>article's evidence extract</a>.</p>
-
+<p><strong>For players:</strong> do not multiply your team's predicted damage by 1.22 based on this change. The file proves that this named table value increased. It does not prove that the combat damage formula, scarecrow HP, score cap or anti-cheat threshold changed.</p>
+<p>Source: <a href="index.html?table=static-exps2&amp;q=ScarecrowTotalDmg#static-exps2"><code>exps2</code></a>. Compare the before/after rows in the <a href="downloads/newsletter/v355-evidence.json">article's evidence extract</a>.</p>
 <h2 id="calendar">Events and regional scheduling</h2>
 <p>The files add a hero-growth season with 30 new missions, a <code>giant_gacha_27</code> event and associated reward/mission data, two pass seasons (56 and 57) with 68 new missions, and a guild-raid season. These are configured client schedules, not confirmed live availability.</p>
-<div class="table-scroll"><table><caption>KakaoGlobal dates as stored in seasondate; not converted to your timezone</caption><thead><tr><th>Content</th><th>Configured period</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>Hero growth</td><td>13–27 October 2026</td><code>s3herogrowthevent</code> + <code>seasondate</code></td></tr>
-<tr><td>Giant gacha machine</td><td>13–27 October 2026</td><code>s3gachaevents</code> + <code>seasondate</code></td></tr>
-<tr><td>Pass</td><td>13 October–9 November 2026</td>Period ID <code>5007001</code></td></tr>
-<tr><td>Guild raid, season 44</td><td>15–21 October 2026</td>Period ID <code>5400044</code>; boss set <code>40</code></td></tr>
-</tbody></table></div>
+<p>KakaoGlobal dates as stored in seasondate; not converted to your timezone</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Content</th>
+<th>Configured period</th>
+<th>Evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hero growth</td>
+<td>13–27 October 2026</td>
+<td><code>s3herogrowthevent</code> + <code>seasondate</code></td>
+</tr>
+<tr>
+<td>Giant gacha machine</td>
+<td>13–27 October 2026</td>
+<td><code>s3gachaevents</code> + <code>seasondate</code></td>
+</tr>
+<tr>
+<td>Pass</td>
+<td>13 October–9 November 2026</td>
+<td>Period ID <code>5007001</code></td>
+</tr>
+<tr>
+<td>Guild raid, season 44</td>
+<td>15–21 October 2026</td>
+<td>Period ID <code>5400044</code>; boss set <code>40</code></td>
+</tr>
+</tbody>
+</table></div>
 <p>Raid season 44 uses boss set 40, with monster IDs <code>1790011</code>, <code>1791132</code>, <code>1791153</code> and <code>1790204</code> in slots 1–4. Its banner reference includes <code>wyverns_purple</code>. The <code>Kong</code> configuration has its own season entry and period; it should not be merged into the Global dates.</p>
 <p>Other additions include two festival-pass seasons, a Guild Punch King season and an attendance event named <code>year_5_anniversary_jp</code>. Anniversary and shop-banner references occur alongside them. The regional suffix and separate schedule fields matter: these do not establish a simultaneous anniversary event for every server.</p>
 <p>Some <code>seasondate</code> fields carry an explicit <code>+09</code> offset, while others contain timezone-less date/time strings. Old placeholder dates and null values also exist for certain regions. We therefore show date ranges exactly as configured, without inventing a common timezone or treating every regional entry as active.</p>
-<p class="source-note">Inspect <a href="index.html#static-seasondate">seasondate</a>, <a href="index.html#static-s3herogrowthevent">hero growth</a>, <a href="index.html#static-s3gachaevents">gacha events</a>, <a href="index.html#static-pass2">passes</a> and <a href="index.html#static-guildraid2">raid configuration</a>.</p>
-
+<p>Inspect <a href="index.html#static-seasondate">seasondate</a>, <a href="index.html#static-s3herogrowthevent">hero growth</a>, <a href="index.html#static-s3gachaevents">gacha events</a>, <a href="index.html#static-pass2">passes</a> and <a href="index.html#static-guildraid2">raid configuration</a>.</p>
 <h2 id="lua-change">One concrete change to shared battle initialization</h2>
 <p>The shared Lua constructor changes from <code>battle_state_base:new(mt)</code> to <code>battle_state_base:new(mt, parent_class)</code>. When a parent is supplied, the new state receives the following references:</p>
 <pre><code>if parent_class then
     obj.action = parent_class
     obj.owner = parent_class.owner
     obj.cs_action = parent_class.cs_action
-end</code></pre>
+end
+</code></pre>
 <p>Notice that <code>action</code> is assigned the parent object itself; it is not copied from <code>parent_class.action</code>. The <code>owner</code> and <code>cs_action</code> references are copied from the parent. This gives derived battle states a shared way to initialize their context. Calls without a parent keep the old initialization path.</p>
 <p>The change appears in the APK Lua and the downloaded encrypted copy. It is a real code change, but the diff does not establish a particular fixed bug, character buff or connection to the scarecrow adjustment. Those claims would require tracing the callers and runtime behavior.</p>
-<p class="source-note">Source: <a href="research.html?section=scripts&entry=1063#scripts"><code>base/battle_init.lua</code></a>, near line 7602. The <a href="downloads/newsletter/v355-evidence.json" download>evidence extract</a> includes the constructor diff.</p>
-
+<p>Source: <a href="research.html?section=scripts&amp;entry=1063#scripts"><code>base/battle_init.lua</code></a>, near line 7602. The <a href="downloads/newsletter/v355-evidence.json">evidence extract</a> includes the constructor diff.</p>
 <h2 id="noise">Why the biggest diff counts are misleading</h2>
-<h3>English text: mostly ID movement</h3>
+<h3 id="english-text-mostly-id-movement">English text: mostly ID movement</h3>
 <p>The comparison reports 168,955 changes for each copy of <code>strings-bin-enUS</code>. That does not mean 168,955 translations were rewritten. Of the 170,387 old entries, <strong>170,335 have exactly the same text somewhere in the new table</strong>, often under another ID. This comparison counts matching text values, not a guaranteed one-to-one ID mapping; repeated strings exist.</p>
 <p>The new table has 170,487 entries, a net increase of 100. Some texts are genuinely new or removed, including material around Astoria and anniversary content. The cache and installed copies mostly represent the same logical table, so their changes should not be counted twice. Atlas rejoined its curated biographies by exact text to avoid attaching an old ID to the wrong character.</p>
-<h3>Lua: newly available does not always mean newly written</h3>
+<h3 id="lua-newly-available-does-not-always-mean-newly-written">Lua: newly available does not always mean newly written</h3>
 <p>There are 785 additional Lua paths, including 697 stage controllers. In 532 cases, an unchanged root script already pointed to the newly captured implementation in the old snapshot. A three-line loader becoming inspectable alongside its full controller is an improvement in research coverage, not proof of a new stage. The <a href="newsletter-atlas-update.html">website update article</a> breaks down these additions and gives readable examples.</p>
-<h3>The single removed file is build metadata</h3>
+<h3 id="the-single-removed-file-is-build-metadata">The single removed file is build metadata</h3>
 <p>The removed 400-byte Unity resource <code>8e70841960d6744b7b1a7f92fc12a4d4</code> contains <code>UnityCloudBuildManifest.json</code>. A new 400-byte resource, <code>91ea1fa393f4c47f39710152b5020fd7</code>, contains the same kind of build manifest. The supplied investigation identifies build start dates of 26 August and 22 September 2026 respectively, both using Unity <code>2022.3.62f2</code> and branch <code>master-kakao-kr</code>. This is a build-resource replacement, not evidence of a deleted character or playable map.</p>
-
 <h2 id="limits">Coverage and what remains unknown</h2>
 <p>The comparison ended with <code>complete-with-gaps</code>: 3,808 diagnostics for the previous snapshot and 3,816 for the new one, totaling 7,624. These are processing diagnostics, not 7,624 encryption-key changes. Many involve Unity object inspection or formats the comparison tool does not fully interpret. All 7,129 encrypted Lua files in the new capture were decoded, as were the 130 static-data files counted by the follow-up review.</p>
 <p>The website import subsequently extracted the changed artwork successfully, but that does not resolve every diagnostic in the full APK comparison. Native libraries and DEX resources also changed; hashes establish that their bytes differ, not what gameplay behavior changed. Historical native-code explanations remain labeled as 3.54.0 research. The captured map files have no reported changes.</p>
 <p>For this patch, the strongest conclusions are Astoria's connected content package, Seira's one-field correction, a changed scarecrow-related benchmark and new event configurations. Exact combat outcomes, server activation and the consumer of <code>ScarecrowTotalDmg</code> remain separate questions.</p>
-
 <h2 id="sources">Sources and further reading</h2>
-<ul class="source-list"><li><a href="downloads/newsletter/REPORT_v355.md" download>Original comparison report</a> — file inventory and decoded differences.</li><li><a href="downloads/newsletter/REPORT_v355_explique.md" download>Explanatory follow-up (French)</a> — graph cross-check, localization analysis, schedule interpretation and coverage limitations.</li><li><a href="downloads/newsletter/ANNEXE_LUA_v355.md" download>Lua and build-manifest annex (French)</a> — additional paths, loader relationships and examples.</li><li><a href="downloads/newsletter/v355-evidence.json" download>Focused before/after evidence (JSON)</a> — the tables, action fields, level samples and constructor diff cited above, extracted from the reviewed run.</li><li><a href="newsletter-atlas-update.html">Guardian Altas update</a> — what changed on this website and how to explore the recovered scripts.</li></ul>
-<aside class="next-post"><span>Keep reading</span><a href="newsletter-atlas-update.html">Guardian Altas update →</a><p>The missing Lua implementations are now readable: 785 additional script paths, preserved source links, refreshed artwork and a clearer distinction between new game content and newly recovered files.</p></aside></article></div></main></body></html>
+<ul>
+<li><a href="downloads/newsletter/REPORT_v355.md">Original comparison report</a> — file inventory and decoded differences.</li>
+<li><a href="downloads/newsletter/REPORT_v355_explique.md">Explanatory follow-up (French)</a> — graph cross-check, localization analysis, schedule interpretation and coverage limitations.</li>
+<li><a href="downloads/newsletter/ANNEXE_LUA_v355.md">Lua and build-manifest annex (French)</a> — additional paths, loader relationships and examples.</li>
+<li><a href="downloads/newsletter/v355-evidence.json">Focused before/after evidence (JSON)</a> — the tables, action fields, level samples and constructor diff cited above, extracted from the reviewed run.</li>
+<li><a href="newsletter-atlas-update.html">Guardian Altas update</a> — what changed on this website and how to explore the recovered scripts.</li>
+</ul><aside class="next-post"><span>Keep reading</span><a href="newsletter-atlas-update.html">Guardian Altas update →</a><p>The missing Lua implementations are now readable: 785 additional script paths, preserved source links, refreshed artwork and a clearer distinction between new game content and newly recovered files.</p></aside></article></div></main></body></html>
