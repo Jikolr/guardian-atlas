@@ -7,4 +7,5 @@ workers_dev = true
 SITE_ORIGIN = "https://jikolr.github.io"
 ALLOWED_LOGIN = "Jikolr"
 REPOSITORY = "Jikolr/guardian-explorer"
-# GITHUB_CLIENT_ID and GITHUB_CLIENT_SECRET must be set as Worker secrets.
+GITHUB_CLIENT_ID = "Ov23li3XX9c0Sd4PCFWv"
+# GITHUB_CLIENT_SECRET is configured as an encrypted Worker secret.

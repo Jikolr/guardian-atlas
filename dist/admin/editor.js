@@ -6,6 +6,11 @@
   if(!s.authBaseUrl||!s.authReady){status.textContent='L’éditeur est installé. Il reste à associer l’application GitHub au service Cloudflare.';return;}
   if(new URL(s.authBaseUrl).protocol!=='https:')throw Error('Le service de connexion doit utiliser HTTPS.');
   if(!window.CMS)throw Error('Impossible de charger l’éditeur. Recharge la page.');
+  if(location.origin!==new URL(s.siteUrl).origin){
+   status.textContent='La connexion GitHub s’utilise sur le site en ligne. Les modifications locales doivent d’abord être publiées.';
+   button.textContent='Ouvrir l’éditeur en ligne';button.disabled=false;
+   button.onclick=()=>{location.href=s.siteUrl+'/admin/';};return;
+  }
   status.textContent='Accès réservé au propriétaire du site.';button.disabled=false;
   button.onclick=()=>{
    document.getElementById('welcome').hidden=true;

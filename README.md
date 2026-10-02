@@ -155,8 +155,8 @@ The native archive covers mapped methods from the game assembly. Unmapped method
 The private navigation entry point is `/admin/` (not linked in the public menus).
 Use GitHub login to create, edit, preview and publish articles with Decap CMS.
 See the [editor guide](dist/admin/guide.html) and [one-time authentication setup](admin-auth/README.md).
-The GitHub OAuth application and Cloudflare secrets are configured. The editor must
-be deployed to GitHub Pages to complete the hosted sign-in flow.
+The GitHub OAuth application and Cloudflare secrets are configured. Hosted GitHub
+sign-in and loading the two existing articles were verified on 2 October 2026.
 
 The current article sources are `newsletter/posts/*.json`; the body is Markdown.
 GitHub Actions builds the public pages automatically before deployment. The old
