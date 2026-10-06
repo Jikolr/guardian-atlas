@@ -67,7 +67,7 @@ def build():
         rel=p.relative_to(WEB).as_posix()
         if rel.startswith(('data/','downloads/')):
             entries.append(dict(section='exports',path=rel,bytes=p.stat().st_size,url=rel,kind='Website export / preview'))
-    catalog=dict(version=1,releasePublished=previous.get('releasePublished',False),releaseTag=TAG,releaseURL=f'https://github.com/Jikolr/guardian-explorer/releases/tag/{TAG}',releaseBase=f'https://github.com/Jikolr/guardian-explorer/releases/download/{TAG}/',archives=archives,files=entries,notes='Original game content only; local account settings, notification state and analytics are excluded. Unencrypted does not mean public domain. Unknown binaries are classified separately. Decrypted includes decoded cache exports.')
+    catalog=dict(version=1,releasePublished=previous.get('releasePublished',False),releaseTag=TAG,releaseURL=f'https://github.com/Jikolr/guardian-atlas/releases/tag/{TAG}',releaseBase=f'https://github.com/Jikolr/guardian-atlas/releases/download/{TAG}/',archives=archives,files=entries,notes='Original game content only; local account settings, notification state and analytics are excluded. Unencrypted does not mean public domain. Unknown binaries are classified separately. Decrypted includes decoded cache exports.')
     (WEB/'data/file-catalog.json').write_text(json.dumps(catalog,separators=(',',':')),encoding='utf-8')
     (OUT/'release-manifest.json').write_text(json.dumps({k:v for k,v in catalog.items() if k!='files'},indent=2),encoding='utf-8')
     print('Catalog:',len(entries),'files;',len(archives),'archives',flush=True)

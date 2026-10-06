@@ -5,3 +5,11 @@
 body.shared-layout>header{display:none}
 
 .site-version{display:block;margin:0 18px 18px;color:#ffd16b;font-size:12px;text-decoration:none}.snapshot-note{padding:12px 16px;border:1px solid #46546a;border-left:3px solid #ffd16b;border-radius:8px;background:#121e2c;color:#c5d5e6;font-size:14px;line-height:1.6}
+
+.atlas-logo{display:block;width:28px;height:28px;flex-shrink:0}#site-sidebar .site-brand{gap:9px;font-size:12px;letter-spacing:.7px}
+
+#report-issue{display:block;width:calc(100% - 20px);margin:24px 10px 0;padding:11px;background:#192b40;color:#f6c85f;border:1px solid #4d627c;border-radius:6px;font:inherit;cursor:pointer}
+#issue-dialog{box-sizing:border-box;width:min(620px,calc(100vw - 24px));max-height:90dvh;overflow:auto;padding:25px;border:1px solid #52657c;border-radius:12px;background:#101d2d;color:#eaf1fb;font:16px/1.6 system-ui}
+#issue-dialog::backdrop{background:#000a}#issue-dialog textarea{box-sizing:border-box;display:block;width:100%;margin:8px 0 18px;padding:12px;color:#eaf1fb;background:#091421;border:1px solid #52657c;border-radius:6px;font:inherit;resize:vertical}
+#issue-dialog button{padding:10px 14px;background:#f6c85f;color:#0b1320;border:0;border-radius:6px;font:inherit;cursor:pointer}#issue-dialog a{color:#f6c85f}#issue-dialog .issue-close{float:right}#issue-dialog h2{clear:both}#issue-dialog label{display:block;font-weight:600}#issue-status{color:#f6c85f}
+@media(max-width:650px){.profile-heading{align-items:flex-start;gap:12px}.profile-heading>div{min-width:0}.profile-heading h1{font-size:30px;overflow-wrap:anywhere}.profile-heading p{overflow-wrap:anywhere}}

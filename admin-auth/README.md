@@ -2,14 +2,14 @@
 
 The editor is at `/guardian-explorer/admin/`. It has no public navigation link.
 GitHub authenticates the owner; the hidden URL is not a security boundary.
-The Worker accepts only Jikolr and verifies write access to Jikolr/guardian-explorer.
+The Worker accepts only Jikolr and verifies write access to Jikolr/guardian-atlas.
 
 ## One-time activation
 
 1. Deploy `worker.mjs` as the Cloudflare Worker `guardian-atlas-auth` (Workers & Pages).
 2. Set the ordinary variables from `wrangler.toml` in the Worker settings.
 3. In GitHub Settings → Developer settings → OAuth Apps, register Guardian Atlas Editor.
-   Homepage: `https://jikolr.github.io/guardian-explorer/admin/`.
+   Homepage: `https://jikolr.github.io/guardian-atlas/admin/`.
    Callback: `https://YOUR-WORKER.workers.dev/callback`.
 4. Put the OAuth Client ID and Client Secret into Cloudflare encrypted secrets named
    `GITHUB_CLIENT_ID` and `GITHUB_CLIENT_SECRET`. Never put them in this repository or chat.

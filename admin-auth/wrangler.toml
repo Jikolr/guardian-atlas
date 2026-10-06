@@ -6,6 +6,6 @@ workers_dev = true
 [vars]
 SITE_ORIGIN = "https://jikolr.github.io"
 ALLOWED_LOGIN = "Jikolr"
-REPOSITORY = "Jikolr/guardian-explorer"
+REPOSITORY = "Jikolr/guardian-atlas"
 GITHUB_CLIENT_ID = "Ov23li3XX9c0Sd4PCFWv"
 # GITHUB_CLIENT_SECRET is configured as an encrypted Worker secret.

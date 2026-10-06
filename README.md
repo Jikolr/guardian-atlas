@@ -4,37 +4,31 @@ Explore Guardian Tales heroes, enemies, items, artwork, maps and recovered game 
 
 **Current data snapshot: 3.55.0 (`com.kakaogames.gdtskr`).** Tables, English text, Lua sources, character profiles and changed artwork have been refreshed from the reviewed export. Choose **Newsletter → Latest posts** at the top of the sidebar for game analysis and website news. Changed supported original files download directly; GitHub Release archives retain their labeled **3.54.0** contents. Native-code evidence and historical behavior reports remain 3.54.0 research, not revalidated for this patch. The raid simulator and source-validation tools remain hidden from navigation.
 
-**[Open the website](https://Jikolr.github.io/guardian-explorer/) · [How to use: visual guide](https://Jikolr.github.io/guardian-explorer/help.html) · [Download archives](https://github.com/Jikolr/guardian-explorer/releases/tag/game-files-3.54.0-snapshot)**
+**[Open the website](https://jikolr.github.io/guardian-atlas/) · [How to use: visual guide](https://jikolr.github.io/guardian-atlas/help.html) · [Download archives](https://github.com/Jikolr/guardian-atlas/releases/tag/game-files-3.54.0-snapshot)**
+
+The website opens on a guided home page. Use **Report an issue** in the sidebar to prepare a message with the current page and selected filters; nothing is sent automatically.
 
 ## What would you like to do?
 
 | I want to… | Start here |
 | --- | --- |
-| Find a character’s identity, variants and linked weapons | [Character directory](https://Jikolr.github.io/guardian-explorer/characters.html) |
-| Build a raid team and estimate damage per hit | [Raid damage simulator](https://Jikolr.github.io/guardian-explorer/raid.html) |
-| Compare up to four records | [Side-by-side comparison](https://Jikolr.github.io/guardian-explorer/compare.html) |
-| Recognize a hero, boss or item | [Artwork & portraits](https://Jikolr.github.io/guardian-explorer/visual.html) |
-| Look up stored stats or other details | [Data tables](https://Jikolr.github.io/guardian-explorer/index.html) |
-| Explore a map | [Map library](https://Jikolr.github.io/guardian-explorer/visual.html?tab=maps) |
-| Read game analysis and site updates | [Newsletter](https://Jikolr.github.io/guardian-explorer/newsletter.html) |
-| Download a picture, table or original file | [Game files & downloads](https://Jikolr.github.io/guardian-explorer/files.html) |
-| Read recovered scripts and research | [Research archive](https://Jikolr.github.io/guardian-explorer/research.html) |
+| Find a character’s identity, variants and linked weapons | [Character directory](https://jikolr.github.io/guardian-atlas/characters.html) |
+| Build a raid team and estimate damage per hit | [Raid damage simulator](https://jikolr.github.io/guardian-atlas/raid.html) |
+| Compare up to four records | [Side-by-side comparison](https://jikolr.github.io/guardian-atlas/compare.html) |
+| Recognize a hero, boss or item | [Artwork & portraits](https://jikolr.github.io/guardian-atlas/visual.html) |
+| Look up stored stats or other details | [Data tables](https://jikolr.github.io/guardian-atlas/index.html) |
+| Explore a map | [Map library](https://jikolr.github.io/guardian-atlas/visual.html?tab=maps) |
+| Read game analysis and site updates | [Newsletter](https://jikolr.github.io/guardian-atlas/newsletter.html) |
+| Download a picture, table or original file | [Game files & downloads](https://jikolr.github.io/guardian-atlas/files.html) |
+| Read recovered scripts and research | [Research archive](https://jikolr.github.io/guardian-atlas/research.html) |
 
-## Simulate a raid build
+## Plan mastery upgrades and watch raid guides
 
-Choose **Raid damage simulator** in the left sidebar.
+- [Mastery planner](https://jikolr.github.io/guardian-atlas/mastery-planner.html) introduces Nihal’s separate offline planning application and links to its downloads.
+- [Raid videos](https://jikolr.github.io/guardian-atlas/raid-videos.html) features recent uploads and selected community videos.
+- [Contacts](https://jikolr.github.io/guardian-atlas/contacts.html) includes Nihal’s profile, Discord and email.
 
-Equipment now shows a picture beside each selection and bonus summaries for non-weapon slots. Card suggestions are limited to ATK, skill-damage and critical-chance bonuses. The visible **Relic substats & stage bonus** panel lets you choose three substats, their roll strengths, a special effect and stage resistance. Heroes without a Myth entry and their EX weapons cap at level 130; the illustration ATK max preset is 2.2%.
-
-1. Enter the ATK bonuses shown in your collection, knowledge and Guardian screens. Open the mastery section and enter **levels**, not percentages. **Set account bonuses to max** fills the editable snapshot preset while preserving mastery.
-2. Choose up to four heroes and their evolution stages. Pick a leader, weapons, accessory, cards, merch, jewel and relic. Hero nodes, eligible blessing, weapon rolls, limit breaks and engraving are treated as maxed. For relics, choose the evolution record and enter each roll; the page previews its percentage.
-3. Choose a raid boss and element, then tick the debuffs already active on it. **No debuffs** keeps the boss’s permanent raid protection. Additional unmapped debuffs can be entered as manual assumptions.
-4. Open **Active team buffs** and tick temporary bonuses active at the moment of the hit. The list follows your team, gear and leader. Set stack counts where available; each entry shows its trigger, duration and recipients. For example, you can activate Dabin's chain ATK buff or equipped Ameris's EX critical-damage stacks. These choices are saved with the complete setup.
-5. Read noncritical, critical and average damage. Expand an attack to see the calculation, or the coverage section to see missing effects. Buff timers and automatic rotations are not simulated; unknown recipient rules require an explicit manual choice.
-
-**Load measured Dabin example** reproduces the weapon-only test: about **513,668 predicted** versus **513,669 observed** on her critical normal hit after the Earth debuff. This validates that scenario, not the entire roster. Dabin’s weapon skill has a recovered three-hit split; many other actions are aggregate estimates or explicitly unresolved. Scripted procs, conditional stacks, transformations, alternate EX behavior and timed rotations are not universally implemented. Manual coefficients are marked custom.
-
-Your current setup saves in this browser. Named account profiles can be reused with other teams. Download a profile or complete setup as JSON and use **Import setup** to restore it on another device. **Download results** includes the inputs and coverage notes. Nothing is uploaded by these controls.
+The experimental raid simulator and hero source validation remain available by direct URL, but are hidden from navigation while accuracy issues are investigated.
 
 ## Find your first character
 
@@ -45,7 +39,7 @@ Your current setup saves in this browser. Named account profiles can be reused w
 
 ![Three-step guide to searching by name](dist/help-assets/search.svg)
 
-**Try [Andras](https://Jikolr.github.io/guardian-explorer/visual.html?tab=heroes&q=Andras&scope=name): her internal name is `demon_slayer`.** In-game names and file names can differ; the directory labels confirmed names and English-spelling matches separately.
+**Try [Andras](https://jikolr.github.io/guardian-atlas/visual.html?tab=heroes&q=Andras&scope=name): her internal name is `demon_slayer`.** In-game names and file names can differ; the directory labels confirmed names and English-spelling matches separately.
 
 **Name only** still matches parts of names: `oni` can match `onigirl` or `moniko`. **All fields** searches every stored value, including nested details. Use it when you are researching something beyond a name.
 
@@ -72,7 +66,7 @@ In a map, **drag to move**, **scroll or use +/− to zoom**, and choose **Fit ma
 
 Enable **Markers** to inspect decoded placements. Use **Find a placement** to search names and toggle NPCs, enemies, events, camera markers or other markers. Select a search result to zoom directly to it. Marker colors follow the stored layer, and each marker shows its stored name and position; these do not confirm live spawn identities or event behavior. Map links remember the view mode, layers and selected object, but reset the camera to fit.
 
-Try [the small ancient dungeon](https://Jikolr.github.io/guardian-explorer/map-preview.html?map=ancientdungeon_red_1_1). Choose **Structural layout** if artwork is missing. The artwork count describes coverage, not loading progress. Maps are reconstructions: animations, live events and some decorations are not shown.
+Try [the small ancient dungeon](https://jikolr.github.io/guardian-atlas/map-preview.html?map=ancientdungeon_red_1_1). Choose **Structural layout** if artwork is missing. The artwork count describes coverage, not loading progress. Maps are reconstructions: animations, live events and some decorations are not shown.
 
 ## Read the Newsletter
 
@@ -91,7 +85,7 @@ JSON is simply a text file containing organized names and values. You can save i
 
 ### Original and recovered files
 
-The [file browser](https://Jikolr.github.io/guardian-explorer/files.html) separates **Decrypted / decoded files**, **Unencrypted originals**, **Encrypted originals**, **Other original binaries**, and **Website exports & images**.
+The [file browser](https://jikolr.github.io/guardian-atlas/files.html) separates **Decrypted / decoded files**, **Unencrypted originals**, **Encrypted originals**, **Other original binaries**, and **Website exports & images**.
 
 ![Download an archive, open it locally, then save an individual file](dist/help-assets/downloads.svg)
 
@@ -144,7 +138,6 @@ This is an unofficial offline archive, not a live game database. Local account s
 
 Every page now has the same left sidebar. On smaller screens, use **All sections** to open it.
 
-- **Damage calculation** opens the explained formula and links to its supporting instructions.
 - **Newsletter** contains readable game investigations and website updates, with links to supporting sources. Historical evidence files remain accessible by direct link.
 - **Compiled code & assembly** lets you find a class (for example `DamageCalculator`), select it, then choose **Read assembly** on a mapped method. This displays the native ARM64 instructions, rather than only names and addresses.
 - **Lua source** displays the recovered scripts themselves.
@@ -163,3 +156,15 @@ GitHub Actions builds the public pages automatically before deployment. The old
 `newsletter/posts.json` and HTML fragments are retained as migration inputs only.
 Drafts are not displayed on the website, but are visible in this public Git repository.
 
+
+## Contacts and raid videos
+
+The sidebar includes Contacts and Raid videos. In the admin editor, use:
+- **Contacts / About me > My profile** to update the biography, image and contact details.
+- **Raid videos > New Video** to curate a YouTube video from any creator. Add its HTTPS video URL, title, creator, date and optional search tags. Save a draft and publish using the existing editorial workflow.
+
+Nihal's latest 15 uploads are imported from the official public YouTube RSS feed at each deployment. No YouTube API key is needed. This is not a scheduled or live feed: the page displays the last refresh date and links to the channel. A failed refresh retains the checked-in snapshot. Curated entries take precedence over duplicate channel videos. Drafts and unpublished curated entries are excluded from the website.
+
+Run `python build_community.py` to refresh and build, or add `--offline` to use the checked-in snapshot. Source: `community/contact.json`, `community/videos/*.json`, `community/youtube-cache.json`. Tests: `python test_community.py` and `node test-community.cjs` (local preview on port 8766).
+
+The selected logo is the open atlas, used in the sidebar and browser tab. Its SVG is `dist/logo.svg`; the original concepts remain at `logo-concepts.html`.

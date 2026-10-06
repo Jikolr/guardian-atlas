@@ -6,7 +6,7 @@ const fail=(message,status=400)=>new Response(message,{status,headers:{...header
 function random(){return Array.from(crypto.getRandomValues(new Uint8Array(32)),v=>v.toString(16).padStart(2,'0')).join('');}
 export default {async fetch(request,env){
  try{
-  env={SITE_ORIGIN:'https://jikolr.github.io',ALLOWED_LOGIN:'Jikolr',REPOSITORY:'Jikolr/guardian-explorer',...env};
+  env={SITE_ORIGIN:'https://jikolr.github.io',ALLOWED_LOGIN:'Jikolr',REPOSITORY:'Jikolr/guardian-atlas',...env};
   const url=new URL(request.url);
   if(request.method!=='GET')return fail('Method not allowed',405);
   if(url.pathname==='/')return new Response('Guardian Atlas authentication service',{headers});
@@ -37,7 +37,7 @@ export default {async fetch(request,env){
   const repo=await repoResponse.json();if(!repoResponse.ok||!repo.permissions?.push)return fail('Repository write access is required.',403);
   const nonce=random();
   const payload=JSON.stringify('authorization:github:success:'+JSON.stringify({token,provider:'github'})).replace(/</g,'\\u003c');
-  const html=`<!doctype html><meta charset="utf-8"><title>Connexion à Guardian Atlas</title><p>Connexion réussie. Retourne dans l’éditeur.</p><script nonce="${nonce}">const origin=${JSON.stringify(origin)};const receive=e=>{if(e.origin!==origin||e.source!==window.opener)return;window.opener.postMessage(${payload},origin);window.removeEventListener('message',receive);window.close();};window.addEventListener('message',receive);if(window.opener)window.opener.postMessage('authorizing:github',origin);</script>`;
+  const html=`<!doctype html><meta charset="utf-8"><title>Sign in to Guardian Atlas</title><p>Sign-in successful. Return to the editor.</p><script nonce="${nonce}">const origin=${JSON.stringify(origin)};const receive=e=>{if(e.origin!==origin||e.source!==window.opener)return;window.opener.postMessage(${payload},origin);window.removeEventListener('message',receive);window.close();};window.addEventListener('message',receive);if(window.opener)window.opener.postMessage('authorizing:github',origin);</script>`;
   return new Response(html,{headers:{...headers,'Content-Type':'text/html; charset=utf-8','Set-Cookie':cookie('',0),'Content-Security-Policy':`default-src 'none'; script-src 'nonce-${nonce}'; base-uri 'none'; frame-ancestors 'none'`}});
  }catch{return fail('Authentication service unavailable. Please try again.',502);}
 }};
