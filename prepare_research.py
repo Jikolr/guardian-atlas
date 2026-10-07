@@ -1,6 +1,6 @@
 """Build public, static research views from the offline analysis. No original binaries or user settings."""
 from pathlib import Path
-import json,csv,gzip,shutil,collections
+import json,csv,gzip,shutil,collections,os
 BASE=Path(__file__).resolve().parent; SRC=BASE.parent/'guardian-analysis'; OUT=BASE/'dist'; DATA=OUT/'data'; R=DATA/'research';R.mkdir(parents=True,exist_ok=True)
 def read(p):return json.loads(p.read_text(encoding='utf-8'))
 def write(p,obj):
@@ -53,7 +53,7 @@ with (SRC/'audit/bundle-objects.csv').open(encoding='utf-8') as f:
 write(R/'bundles.json',[{'path':k,'objects':sum(v.values()),'types':dict(v)} for k,v in bundles.items()])
 write(R/'audit.json',csvrows('file-review-status.csv'))
 events=[]
-original=Path(r'C:\Users\alexandre.corbineau\OneDrive - APS Solutions Informatiques\Desktop\com.kakaogames.gdtskr')
+original=Path(os.environ.get('ATLAS_INSTALL_SOURCE',str(BASE.parent/'game-install')))
 for i,row in enumerate(csvrows('event-catalog.csv')):
     source=original/row['file'];normalized=SRC/'decoded-events'/source.name
     obj=read(normalized if normalized.exists() else source);write(R/'events'/f'{i}.json',obj)
@@ -70,3 +70,6 @@ for p in (SRC/'audit/disassembly').glob('*.asm'):shutil.copyfile(p,downloads/p.n
 for p in (SRC/'decoded-static').glob('LevelExps*.csv'):shutil.copyfile(p,downloads/p.name)
 shutil.copyfile(SRC/'RAPPORT-HORS-LIGNE.md',downloads/'offline-report-fr.md')
 print('Prepared',len(manifest),'datasets;',len(scripts),'scripts;',len(types),'types;',len(mapindex),'maps;',len(events),'events.')
+
+from sanitize_public_exports import sanitize
+sanitize()

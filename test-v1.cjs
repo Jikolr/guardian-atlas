@@ -1,5 +1,5 @@
 
-const {chromium}=require('C:/Users/alexandre.corbineau/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const {chromium}=require(process.env.PLAYWRIGHT_MODULE || 'playwright');
 const fs=require('node:fs'),http=require('node:http'),path=require('node:path'),assert=require('node:assert/strict');
 const root=path.resolve('dist');
 const server=http.createServer((req,res)=>{const p=path.join(root,decodeURIComponent(new URL(req.url,'http://localhost').pathname).replace(/\/$/,'/index.html'));try{const stat=fs.statSync(p);res.setHeader('Content-Type',({'.js':'text/javascript','.css':'text/css','.json':'application/json','.svg':'image/svg+xml','.png':'image/png','.webp':'image/webp','.html':'text/html'})[path.extname(p)]||'application/octet-stream');res.setHeader('Content-Length',stat.size);fs.createReadStream(p).pipe(res)}catch{res.statusCode=404;res.end()}});
@@ -17,10 +17,10 @@ await page.locator('#directory .card').first().waitFor();assert((await page.loca
 await page.locator('#site-nav-toggle').click();await page.locator('#report-issue').click();await page.locator('#issue-description').fill('The portrait seems wrong.');
 const text=await page.locator('#issue-context').inputValue();assert(text.includes('https://jikolr.github.io/guardian-atlas/characters.html?q=demon+slayer'));assert(text.includes('The portrait seems wrong.'));assert(text.includes('demon slayer'));
 assert((await page.locator('#issue-email').getAttribute('href')).startsWith('mailto:nihalguardiantales@gmail.com'));
-await page.screenshot({path:'C:/Codex/guardian-analysis/v1-report-mobile.png',fullPage:true});
+await page.screenshot({path:'./v1-report-mobile.png',fullPage:true});
 await page.keyboard.press('Escape');assert(!(await page.locator('#issue-dialog').isVisible()));
 await page.goto(base+'/index.html?table=heroes');assert(page.url().includes('index.html?table=heroes'));
-await page.goto(base+'/home.html');await page.setViewportSize({width:1440,height:1000});await page.screenshot({path:'C:/Codex/guardian-analysis/v1-home.png',fullPage:true});
+await page.goto(base+'/home.html');await page.setViewportSize({width:1440,height:1000});await page.screenshot({path:'./v1-home.png',fullPage:true});
 assert.deepEqual(errors,[]);console.log('PASS: home routing, deep links, name search, issue context, desktop/mobile layouts and navigation.');
 }finally{await browser.close();server.close()}})().catch(e=>{console.error(e);server.close();process.exitCode=1});
 

@@ -1,7 +1,7 @@
 const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const path=require('node:path');
-const {chromium}=require('C:/Users/alexandre.corbineau/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const {chromium}=require(process.env.PLAYWRIGHT_MODULE || 'playwright');
 (async()=>{
  const root=path.join(__dirname,'dist/data');
  const db=JSON.parse(fs.readFileSync(path.join(root,'orbital-lift.json')));

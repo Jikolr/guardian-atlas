@@ -24,7 +24,7 @@ for old in previous:
 media=read(D/'visual/record-media.json')
 astoria='data/visual/'+media['heroes:701']['image'];seira='data/visual/'+media['heroes:695']['image']
 def page(title,description,body):return f'''<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="{escape(description,quote=True)}"><title>{escape(title)} · Guardian Atlas</title><link rel="stylesheet" href="newsletter.css"><link rel="stylesheet" href="site-nav.css"><script src="site-nav.js" defer></script></head><body><a class="skip-link" href="#main-content">Skip to content</a><main id="main-content">{body}</main></body></html>'''
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="{escape(description,quote=True)}"><title>{escape(title)} · Guardian Atlas</title><link rel="stylesheet" href="newsletter.css"><link rel="stylesheet" href="site-nav.css"><script src="site-nav.js?v=20261007-downloads355" defer></script></head><body><a class="skip-link" href="#main-content">Skip to content</a><main id="main-content">{body}</main></body></html>'''
 for i,p in enumerate(posts):
     body=markdown.markdown(p['body'],extensions=['tables','fenced_code','toc'])
     body=bleach.clean(body,tags={'p','br','hr','h1','h2','h3','h4','h5','h6','a','img','strong','em','del','s','blockquote','ul','ol','li','pre','code','table','thead','tbody','tr','th','td'},attributes={'*':['id'],'a':['href','title'],'img':['src','alt','title','width','height'],'th':['align'],'td':['align']},protocols=['http','https','mailto'],strip=True)
@@ -54,7 +54,7 @@ write(D/'newsletter.json',[{k:v for k,v in p.items() if k not in ('body','anchor
 
 # Ship the supplied research as supporting material; it is never executed.
 downloads=W/'downloads/newsletter';downloads.mkdir(parents=True,exist_ok=True)
-for src in ([B.parent/'guardian-update-review/REPORT_v355_explique.md',B.parent/'guardian-update-review/ANNEXE_LUA_v355.md',Path('C:/Users/alexandre.corbineau/Downloads/REPORT_v355.md'),Path('C:/Users/alexandre.corbineau/Downloads/Reports-update-3.55.0.md')] if '--refresh-evidence' in sys.argv else []):
+for src in ([B.parent/'guardian-update-review/REPORT_v355_explique.md',B.parent/'guardian-update-review/ANNEXE_LUA_v355.md',(Path.home()/'Downloads'/'REPORT_v355.md'),(Path.home()/'Downloads'/'Reports-update-3.55.0.md')] if '--refresh-evidence' in sys.argv else []):
     if src.exists():shutil.copyfile(src,downloads/src.name)
 run=B.parent/'guardian-update-review/outputs/20261002-144030-522b69'
 changes=[json.loads(l) for l in (run/'changes.jsonl').read_text(encoding='utf8').splitlines()] if '--refresh-evidence' in sys.argv and (run/'changes.jsonl').exists() else []

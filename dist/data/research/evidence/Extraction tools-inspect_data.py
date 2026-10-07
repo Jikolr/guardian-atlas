@@ -2,7 +2,7 @@ from pathlib import Path
 from collections import Counter, defaultdict
 import json, re, hashlib
 
-ROOT = Path(r'C:\Users\alexandre.corbineau\OneDrive - APS Solutions Informatiques\Desktop\com.kakaogames.gdtskr')
+ROOT = Path(r'com.kakaogames.gdtskr')
 OUT = Path(__file__).parent
 paths = sorted(p for p in ROOT.rglob('*') if p.is_file())
 groups = defaultdict(lambda: [0, 0])

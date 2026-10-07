@@ -1,5 +1,5 @@
 const assert=require('node:assert/strict');
-const {chromium}=require('C:/Users/alexandre.corbineau/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const {chromium}=require(process.env.PLAYWRIGHT_MODULE || 'playwright');
 (async()=>{
  const browser=await chromium.launch({headless:true,channel:'msedge'});
  try{

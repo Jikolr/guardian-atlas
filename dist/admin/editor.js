@@ -3,16 +3,22 @@
  try {
   const response=await fetch('settings.json');if(!response.ok)throw Error('Configuration unavailable');
   const s=await response.json();
-  if(!s.authBaseUrl||!s.authReady){status.textContent='The editor is installed. Connect the GitHub application to the Cloudflare service to finish setup.';return;}
-  if(new URL(s.authBaseUrl).protocol!=='https:')throw Error('The authentication service must use HTTPS.');
+  if(!s.authReady){status.textContent='The editor is installed. Connect the GitHub application to the Cloudflare service to finish setup.';return;}
+
   if(!window.CMS)throw Error('Unable to load the editor. Reload the page.');
   if(location.origin!==new URL(s.siteUrl).origin){
    status.textContent='GitHub sign-in is available on the hosted website. Publish local changes first.';
    button.textContent='Open the hosted editor';button.disabled=false;
    button.onclick=()=>{location.href=s.siteUrl+'/admin/';};return;
   }
-  status.textContent='Access is restricted to authorized site editors.';button.disabled=false;
+  const field=document.createElement('label');field.textContent='Authentication service URL (stored in this browser only)';
+  const input=document.createElement('input');input.type='url';input.placeholder='https://your-auth-service.example';input.autocomplete='off';input.style.cssText='display:block;box-sizing:border-box;width:100%;padding:12px;margin:10px 0 20px;font:inherit';
+  let saved='';try{saved=localStorage.getItem('atlas-admin-auth-url')||''}catch{}
+  input.value=s.authBaseUrl||saved;field.append(input);button.before(field);
+  status.textContent='Enter your own Cloudflare authentication URL. It is no longer included in the public website.';button.disabled=false;
   button.onclick=()=>{
+   try{const u=new URL(input.value.trim());if(u.protocol!=='https:'||u.username||u.password||u.search||u.hash)throw Error();s.authBaseUrl=u.href.replace(/\/$/,'');}catch{status.textContent='Enter a valid HTTPS authentication service URL.';input.focus();return;}
+   try{localStorage.setItem('atlas-admin-auth-url',s.authBaseUrl)}catch{}
    document.getElementById('welcome').hidden=true;
    CMS.init({config:{load_config_file:false,backend:{name:'github',repo:s.repo,branch:s.branch,base_url:s.authBaseUrl,auth_endpoint:'auth'},publish_mode:'editorial_workflow',site_url:s.siteUrl,display_url:s.siteUrl+'/newsletter.html',media_folder:'dist/uploads/newsletter',public_folder:'uploads/newsletter',collections:[{
     name:'newsletter',label:'Newsletters',label_singular:'Newsletter',folder:'newsletter/posts',create:true,delete:true,extension:'json',format:'json',slug:'{{slug}}',summary:'{{title}} · {{date}}',preview_path:'newsletter-{{slug}}.html',fields:[

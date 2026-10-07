@@ -2,7 +2,7 @@
 from pathlib import Path
 import struct, json, hashlib
 
-ROOT=Path(r'C:\Users\alexandre.corbineau\OneDrive - APS Solutions Informatiques\Desktop\com.kakaogames.gdtskr')
+ROOT=Path(r'com.kakaogames.gdtskr')
 OUT=Path(__file__).parent/'decoded'
 OUT.mkdir(exist_ok=True)
 

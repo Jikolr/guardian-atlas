@@ -7,7 +7,8 @@ add(S/'audit/damage-formula.md','Reports','Damage calculation explained','Analyz
 for p in [S/'RAPPORT-HORS-LIGNE.md',S/'README.md']:add(p,'Reports')
 for p in sorted((S/'audit/disassembly').glob('*.asm')):add(p,'Assembly','Native evidence · '+p.stem,'Recovered ARM64 instructions; not original C# source. Some files cover several methods.')
 for p in sorted((S/'audit').glob('*.asm')):add(p,'Assembly')
-for p in sorted(S.glob('*.py')):add(p,'Extraction tools',note='Offline extraction/research tool source, displayed as text only.')
+for p in sorted(S.glob('*.py')):
+ if p.name not in {'decode_scripts.py','decode_static.py','decode_maps.py'}:add(p,'Extraction tools',note='Offline extraction/research tool source, displayed as text only.')
 for name in ['catalog-summary.json','metadata-summary.json','static-decode-summary.json','script-decode-summary.json','dev-comment-candidates.json']:
  add(S/'audit'/name,'Audit summaries')
 for p in sorted((D/'downloads').glob('*')):
@@ -34,3 +35,6 @@ if catalog_path.exists():
   if p.is_file():
    rel=p.relative_to(D).as_posix();by_path[rel]=dict(section='exports',path=rel,bytes=p.stat().st_size,url=rel,kind='Website code / evidence export')
  catalog['files']=[r for r in catalog['files'] if r['section']!='exports']+list(by_path.values());catalog_path.write_text(json.dumps(catalog,separators=(',',':')),encoding='utf8')
+
+from sanitize_public_exports import sanitize
+sanitize()

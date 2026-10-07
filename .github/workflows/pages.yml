@@ -26,10 +26,14 @@ jobs:
           python-version: '3.12'
       - name: Install newsletter renderer
         run: python -m pip install -r requirements-newsletter.txt
+      - name: Apply reviewed character and boss names
+        run: python apply_reviewed_names.py
       - name: Build newsletters
         run: python build_newsletter.py
       - name: Build Contacts and refresh raid videos
         run: python build_community.py
+      - name: Sanitize public exports and check privacy
+        run: python sanitize_public_exports.py
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4
         with:

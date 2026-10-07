@@ -3,7 +3,7 @@ from collections import Counter
 import sys,json,csv,hashlib,gc
 sys.path.insert(0,str(Path(__file__).parent/'tool-libs'))
 import UnityPy
-BASE=Path(__file__).parent; OUT=BASE/'audit'; ROOT=Path(r'C:\Users\alexandre.corbineau\OneDrive - APS Solutions Informatiques\Desktop\com.kakaogames.gdtskr')
+BASE=Path(__file__).parent; OUT=BASE/'audit'; ROOT=Path(r'com.kakaogames.gdtskr')
 rows=list(csv.DictReader((OUT/'all-files.csv').open(encoding='utf-8')))
 bundles=[r for r in rows if r['type']=='UnityFS bundle']
 types=Counter();errors=[];exports=[];mbkeys=Counter();versions=Counter()

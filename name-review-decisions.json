@@ -1,0 +1,1364 @@
+{
+  "version": 1,
+  "snapshot": "3.55.0",
+  "decisions": [
+    {
+      "key": "hero:470",
+      "internal": "summer_android",
+      "proposedName": "AA72",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:119",
+      "internal": "steam_princess",
+      "proposedName": "Aisha",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:101",
+      "internal": "akayuki",
+      "proposedName": "Akayuki",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:356",
+      "internal": "golem_rider",
+      "proposedName": "Alef",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:686",
+      "internal": "alicia",
+      "proposedName": "Alicia",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:533",
+      "internal": "dragon_daughter",
+      "proposedName": "Ameris",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:135",
+      "internal": "maid",
+      "proposedName": "Amy",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:488",
+      "internal": "demon_slayer",
+      "proposedName": "Andras",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:563",
+      "internal": "guardian_angel",
+      "proposedName": "Angie",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:605",
+      "internal": "secret_agent",
+      "proposedName": "Anna",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:28",
+      "internal": "leaf_fairy",
+      "proposedName": "Aoba",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:464",
+      "internal": "sea_witch",
+      "proposedName": "Ara",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:307",
+      "internal": "villain_redhood",
+      "proposedName": "Arabelle",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:701",
+      "internal": "wyverns_purple",
+      "proposedName": "Astoria",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:318",
+      "internal": "flower_girl",
+      "proposedName": "Bari",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:656",
+      "internal": "summer_rie",
+      "proposedName": "Beach Cleanup Hitter Rie",
+      "decision": "correct",
+      "note": "Rie"
+    },
+    {
+      "key": "hero:410",
+      "internal": "surfer_sohee",
+      "proposedName": "Beach Sohee",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:368",
+      "internal": "invader_knight",
+      "proposedName": "Beth",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:350",
+      "internal": "succubus_noble",
+      "proposedName": "Bianca",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:641",
+      "internal": "wrestler",
+      "proposedName": "Callie",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:515",
+      "internal": "fallen_queen",
+      "proposedName": "Camilla / 1st Corps Commander",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:440",
+      "internal": "captain_rabbit",
+      "proposedName": "Carol",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:161",
+      "internal": "survivor",
+      "proposedName": "Catherine",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:662",
+      "internal": "squirrel_girl",
+      "proposedName": "Chriselle",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:530",
+      "internal": "cyborg_monk",
+      "proposedName": "Chun Ryeo",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:443",
+      "internal": "saintess",
+      "proposedName": "Clara",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:461",
+      "internal": "vampire_lord",
+      "proposedName": "Claude",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:3",
+      "internal": "innuit",
+      "proposedName": "Coco",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:37",
+      "internal": "innuit",
+      "proposedName": "Coco",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:590",
+      "internal": "pixy_girl",
+      "proposedName": "Cornet",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:92",
+      "internal": "tanker",
+      "proposedName": "Craig",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:293",
+      "internal": "tanker",
+      "proposedName": "Craig",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:485",
+      "internal": "demon_operator",
+      "proposedName": "Crosselle",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:596",
+      "internal": "sunyeo",
+      "proposedName": "Dabin",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:500",
+      "internal": "dai",
+      "proposedName": "Dai",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:653",
+      "internal": "adela_noble",
+      "proposedName": "Daisy",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:611",
+      "internal": "soulpower_girl",
+      "proposedName": "Dohwa",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:130",
+      "internal": "swindler",
+      "proposedName": "Dolf",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:416",
+      "internal": "eleanor",
+      "proposedName": "Eleanor",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:12",
+      "internal": "redhood",
+      "proposedName": "Elvira",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:422",
+      "internal": "legendary_hero",
+      "proposedName": "Erina",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:581",
+      "internal": "forest_elf",
+      "proposedName": "Estel",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:338",
+      "internal": "eugene",
+      "proposedName": "Eugene",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:542",
+      "internal": "dokkaebi",
+      "proposedName": "Eunha",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:5",
+      "internal": "knightcaptain",
+      "proposedName": "Eva",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:97",
+      "internal": "knightcaptain",
+      "proposedName": "Eva",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:27",
+      "internal": "demon_brother",
+      "proposedName": "Favi",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:52",
+      "internal": "china",
+      "proposedName": "Fei / Mei",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:53",
+      "internal": "china",
+      "proposedName": "Fei / Mei",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:294",
+      "internal": "china",
+      "proposedName": "Fei / Mei",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:626",
+      "internal": "fern",
+      "proposedName": "Fern",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:623",
+      "internal": "frieren",
+      "proposedName": "Frieren",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:389",
+      "internal": "future_knight",
+      "proposedName": "Future Knight",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:362",
+      "internal": "future_princess",
+      "proposedName": "Future Princess",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:378",
+      "internal": "store_angel",
+      "proposedName": "Gabriel",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:365",
+      "internal": "garam",
+      "proposedName": "Garam",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:692",
+      "internal": "carp_girl",
+      "proposedName": "Geumrin",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:156",
+      "internal": "dragon_boy",
+      "proposedName": "Girgas",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:452",
+      "internal": "gourry",
+      "proposedName": "Gourry Gabriev",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:31",
+      "internal": "mad_scientist",
+      "proposedName": "Gremory",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:518",
+      "internal": "hero_ai",
+      "proposedName": "H.E.R.O.S KAI",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:437",
+      "internal": "hana",
+      "proposedName": "Hana",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:674",
+      "internal": "magical_girl",
+      "proposedName": "Haruka / Serena",
+      "decision": "correct",
+      "note": "Haruka"
+    },
+    {
+      "key": "hero:36",
+      "internal": "sniper",
+      "proposedName": "Hekate",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:15",
+      "internal": "hyper",
+      "proposedName": "Hyper",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:315",
+      "internal": "idol_captain",
+      "proposedName": "Idol Captain Eva",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:668",
+      "internal": "eternal_flame",
+      "proposedName": "Illuni",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:650",
+      "internal": "mermaid_spy",
+      "proposedName": "J",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:665",
+      "internal": "first_bishop",
+      "proposedName": "Kahlor",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:425",
+      "internal": "kamael",
+      "proposedName": "Kamael",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:434",
+      "internal": "white_druid",
+      "proposedName": "Kanna",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:17",
+      "internal": "vampire",
+      "proposedName": "Karina",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:680",
+      "internal": "klen",
+      "proposedName": "Klen",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:689",
+      "internal": "second_bishop",
+      "proposedName": "Lacrima",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:335",
+      "internal": "librarian",
+      "proposedName": "Lahn",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:124",
+      "internal": "uptown_lancer_girl",
+      "proposedName": "Lapice",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:24",
+      "internal": "demon_sister",
+      "proposedName": "Lavi",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:593",
+      "internal": "milkyway_girl",
+      "proposedName": "Lena",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:413",
+      "internal": "lifeguard_yuze",
+      "proposedName": "Lifeguard Yuze",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:404",
+      "internal": "demon_ceo",
+      "proposedName": "Lilith",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:449",
+      "internal": "lina",
+      "proposedName": "Lina Inverse",
+      "decision": "correct",
+      "note": "Lina"
+    },
+    {
+      "key": "hero:19",
+      "internal": "maiden",
+      "proposedName": "Loraine",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:407",
+      "internal": "lady_thief",
+      "proposedName": "Lucy",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:328",
+      "internal": "witch_coco",
+      "proposedName": "Lupina",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:386",
+      "internal": "china_chef",
+      "proposedName": "Lynn",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:503",
+      "internal": "maam",
+      "proposedName": "Maam",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:476",
+      "internal": "party_mad_panda",
+      "proposedName": "Mad Panda Trio",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:38",
+      "internal": "teatan_hero",
+      "proposedName": "Marianne",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:304",
+      "internal": "admiral",
+      "proposedName": "Marina",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:381",
+      "internal": "teatan_hero",
+      "proposedName": "Marty Junior",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:54",
+      "internal": "desert_slave",
+      "proposedName": "Marvin",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:398",
+      "internal": "alpaca_girl",
+      "proposedName": "Mayreel",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:560",
+      "internal": "bakeneko",
+      "proposedName": "Mikke",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:578",
+      "internal": "slime_milim",
+      "proposedName": "Milim Nava",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:479",
+      "internal": "ms_chrome",
+      "proposedName": "Miss Chrom",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:359",
+      "internal": "festival_girl",
+      "proposedName": "Miya",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:428",
+      "internal": "villain_android",
+      "proposedName": "Mk.2",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:401",
+      "internal": "mecha_android",
+      "proposedName": "Mk.99",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:548",
+      "internal": "demon_governor",
+      "proposedName": "Morrian",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:347",
+      "internal": "eight_tail",
+      "proposedName": "Nari",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:614",
+      "internal": "ninja_leader",
+      "proposedName": "Natsume",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:683",
+      "internal": "nelluru",
+      "proposedName": "Nell",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:374",
+      "internal": "viking",
+      "proposedName": "Neva",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:632",
+      "internal": "twins_android",
+      "proposedName": "Nifty",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:677",
+      "internal": "gnome_doctor",
+      "proposedName": "Noel",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:395",
+      "internal": "necromancer",
+      "proposedName": "Noxia",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:557",
+      "internal": "demon_inspector",
+      "proposedName": "Odile",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:353",
+      "internal": "robot_tanker",
+      "proposedName": "Oghma",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:431",
+      "internal": "mercenary",
+      "proposedName": "Orca",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:446",
+      "internal": "parvati",
+      "proposedName": "Parvati",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:566",
+      "internal": "plague_doctor",
+      "proposedName": "Plague Doctor",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:110",
+      "internal": "plitvice",
+      "proposedName": "Plitvice",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:506",
+      "internal": "popp",
+      "proposedName": "Popp",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:458",
+      "internal": "half_vampire",
+      "proposedName": "Priscilla",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:497",
+      "internal": "demon_powergirl",
+      "proposedName": "Pymon",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:32",
+      "internal": "pirate",
+      "proposedName": "Rachel",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:659",
+      "internal": "battleball_pitcher",
+      "proposedName": "Randi",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:102",
+      "internal": "doll_girl",
+      "proposedName": "Ranpang",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:467",
+      "internal": "sheep_girl",
+      "proposedName": "Rey",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:331",
+      "internal": "battleball_girl",
+      "proposedName": "Rie",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:572",
+      "internal": "slime_rimuru",
+      "proposedName": "Rimuru Tempest",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:509",
+      "internal": "desertelf_hunter",
+      "proposedName": "Rosetta",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:371",
+      "internal": "rudolph",
+      "proposedName": "Rue",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:608",
+      "internal": "streamer_girl",
+      "proposedName": "Ruri",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:602",
+      "internal": "exorcist_girl",
+      "proposedName": "Saya",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:419",
+      "internal": "fire_harpy",
+      "proposedName": "Scintilla",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:695",
+      "internal": "bridge_messenger",
+      "proposedName": "Seira",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:125",
+      "internal": "steam_knight",
+      "proposedName": "Shapira",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:575",
+      "internal": "slime_shuna",
+      "proposedName": "Shuna",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:536",
+      "internal": "mermaid",
+      "proposedName": "Sia",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:41",
+      "internal": "ghost_buster",
+      "proposedName": "Sohee",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:629",
+      "internal": "stark",
+      "proposedName": "Stark",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:494",
+      "internal": "kunoichi",
+      "proposedName": "Sumire",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:539",
+      "internal": "summer_amy",
+      "proposedName": "Summer Amy",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:473",
+      "internal": "summer_loraine",
+      "proposedName": "Summer Loraine",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:599",
+      "internal": "boatracing_girl",
+      "proposedName": "Summer Rachel",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:545",
+      "internal": "summer_shapira",
+      "proposedName": "Summer Shapira",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:617",
+      "internal": "jade_shaman",
+      "proposedName": "Tasha",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:341",
+      "internal": "dancing_archer",
+      "proposedName": "Tinia",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:584",
+      "internal": "goat_girl",
+      "proposedName": "Toga",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:698",
+      "internal": "bridge_driver",
+      "proposedName": "V",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:482",
+      "internal": "vampire_captain",
+      "proposedName": "Valencia",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:635",
+      "internal": "valentine_ameris",
+      "proposedName": "Valentine Ameris",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:392",
+      "internal": "priestess",
+      "proposedName": "Veronica",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:551",
+      "internal": "demon_engineer",
+      "proposedName": "Vinette",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:344",
+      "internal": "fire_bishop",
+      "proposedName": "Vishuvac",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:638",
+      "internal": "whiteday_girgas",
+      "proposedName": "White Day Girgas",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:512",
+      "internal": "white_beast",
+      "proposedName": "White Snow",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:455",
+      "internal": "xellos",
+      "proposedName": "Xellos",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:647",
+      "internal": "panda_girl",
+      "proposedName": "Xiaoman",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:587",
+      "internal": "blue_dragon",
+      "proposedName": "Yun",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:569",
+      "internal": "watcher",
+      "proposedName": "Yuna",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:105",
+      "internal": "succubus",
+      "proposedName": "Yuze",
+      "decision": "confirm"
+    },
+    {
+      "key": "boss:790220",
+      "internal": "arachne_guild",
+      "proposedName": "Arachne",
+      "decision": "confirm"
+    },
+    {
+      "key": "boss:790210",
+      "internal": "monster_boss_carmen_enhanced_guild",
+      "proposedName": "Carmen",
+      "decision": "confirm"
+    },
+    {
+      "key": "boss:790120",
+      "internal": "boss_portrait_raid",
+      "proposedName": "Cursed Kamazone Director",
+      "note": "Elphaba",
+      "decision": "correct"
+    },
+    {
+      "key": "boss:790010",
+      "internal": "boss_demon",
+      "proposedName": "Demon",
+      "decision": "confirm"
+    },
+    {
+      "key": "boss:790090",
+      "internal": "erina",
+      "proposedName": "Erina",
+      "decision": "confirm"
+    },
+    {
+      "key": "boss:790140",
+      "internal": "boss_evil_fairy",
+      "proposedName": "Fairy",
+      "decision": "confirm"
+    },
+    {
+      "key": "boss:790030",
+      "internal": "boss_fox",
+      "proposedName": "Garam",
+      "decision": "confirm"
+    },
+    {
+      "key": "boss:790020",
+      "internal": "boss_wolf",
+      "proposedName": "Gast",
+      "decision": "confirm"
+    },
+    {
+      "key": "boss:790050",
+      "internal": "boss_harvester",
+      "proposedName": "Harvester",
+      "decision": "confirm"
+    },
+    {
+      "key": "boss:790170",
+      "internal": "boss_invader",
+      "proposedName": "Invader Commander",
+      "decision": "confirm"
+    },
+    {
+      "key": "boss:790160",
+      "internal": "monster_boss_invader_director_guild",
+      "proposedName": "Invader Director",
+      "decision": "confirm"
+    },
+    {
+      "key": "boss:790180",
+      "internal": "monster_boss_invader_terrorist_fury_guild_v2",
+      "proposedName": "Invader Terrorist",
+      "decision": "confirm"
+    },
+    {
+      "key": "boss:790150",
+      "internal": "boss_lava_slime_king",
+      "proposedName": "Lava Slime King",
+      "decision": "confirm"
+    },
+    {
+      "key": "boss:790000",
+      "internal": "boss_mech",
+      "proposedName": "Mad Panda",
+      "decision": "confirm"
+    },
+    {
+      "key": "boss:790200",
+      "internal": "boss_magwi_enhanced_guild",
+      "proposedName": "Magwi",
+      "decision": "correct",
+      "note": "Jerry"
+    },
+    {
+      "key": "boss:790060",
+      "internal": "monster_boss_admiral_s3_new_guild",
+      "proposedName": "Marina",
+      "decision": "confirm"
+    },
+    {
+      "key": "boss:790190",
+      "internal": "boss_minister",
+      "proposedName": "Minister",
+      "note": "Minister Duncan",
+      "decision": "correct"
+    },
+    {
+      "key": "boss:790070",
+      "internal": "minotaurs",
+      "proposedName": "Minotaur",
+      "decision": "confirm"
+    },
+    {
+      "key": "boss:790130",
+      "internal": "boss_robot_knight",
+      "proposedName": "Raid Robot",
+      "decision": "correct",
+      "note": "Invader Knight"
+    },
+    {
+      "key": "boss:790080",
+      "internal": "boss_graboid",
+      "proposedName": "Sandmonster",
+      "decision": "correct",
+      "note": "Worm"
+    },
+    {
+      "key": "boss:790040",
+      "internal": "shadow_beast",
+      "proposedName": "Shadow Beast",
+      "decision": "confirm"
+    },
+    {
+      "key": "boss:790110",
+      "internal": "boss_snowman_general",
+      "proposedName": "Snowman General",
+      "decision": "correct",
+      "note": "Snowman General Gast"
+    },
+    {
+      "key": "boss:790100",
+      "internal": "boss_sapa",
+      "proposedName": "Viper Clan Leader",
+      "decision": "confirm"
+    },
+    {
+      "key": "hero:1",
+      "internal": "warrior",
+      "proposedName": "",
+      "decision": "correct",
+      "note": "Knight (female)"
+    },
+    {
+      "key": "hero:2",
+      "internal": "warrior",
+      "proposedName": "",
+      "decision": "correct",
+      "note": "Knight (male)"
+    },
+    {
+      "key": "hero:8",
+      "internal": "knight_zaco",
+      "proposedName": "",
+      "decision": "correct",
+      "note": "Knight (unknown)"
+    },
+    {
+      "key": "hero:9",
+      "internal": "guardian_linda",
+      "proposedName": "",
+      "decision": "correct",
+      "note": "Linda"
+    },
+    {
+      "key": "hero:10",
+      "internal": "guardian_bob",
+      "proposedName": "",
+      "decision": "correct",
+      "note": "Bob"
+    },
+    {
+      "key": "hero:11",
+      "internal": "npc_knight_unknown",
+      "proposedName": "",
+      "decision": "correct",
+      "note": "Knight"
+    },
+    {
+      "key": "hero:13",
+      "internal": "pet",
+      "proposedName": "",
+      "decision": "correct",
+      "note": "White beast"
+    },
+    {
+      "key": "hero:20",
+      "internal": "princess",
+      "proposedName": "",
+      "decision": "correct",
+      "note": "Little Princess"
+    },
+    {
+      "key": "hero:23",
+      "internal": "pet",
+      "proposedName": "",
+      "decision": "correct",
+      "note": "Rie"
+    },
+    {
+      "key": "hero:42",
+      "internal": "npc_demon_sister",
+      "proposedName": "",
+      "decision": "correct",
+      "note": "Lavi"
+    },
+    {
+      "key": "hero:43",
+      "internal": "npc_demon_brother",
+      "proposedName": "",
+      "decision": "correct",
+      "note": "Favi"
+    },
+    {
+      "key": "hero:55",
+      "internal": "warrior",
+      "proposedName": "",
+      "decision": "correct",
+      "note": "Erina"
+    },
+    {
+      "key": "hero:56",
+      "internal": "shooter",
+      "proposedName": "",
+      "decision": "correct",
+      "note": "Nyan"
+    },
+    {
+      "key": "hero:57",
+      "internal": "npc_teatan_hero",
+      "proposedName": "",
+      "decision": "correct",
+      "note": "Marianne"
+    },
+    {
+      "key": "hero:91",
+      "internal": "npc_ghost_buster",
+      "proposedName": "",
+      "note": "Sohee",
+      "decision": "correct"
+    },
+    {
+      "key": "hero:95",
+      "internal": "warrior",
+      "proposedName": "",
+      "decision": "correct",
+      "note": "Craig"
+    },
+    {
+      "key": "hero:96",
+      "internal": "desert_slave_for_quest",
+      "proposedName": "",
+      "decision": "correct",
+      "note": "Marvin"
+    },
+    {
+      "key": "hero:174",
+      "internal": "bow_weak",
+      "proposedName": "",
+      "decision": "correct",
+      "note": "Linda"
+    },
+    {
+      "key": "hero:179",
+      "internal": "one_hand_weak",
+      "proposedName": "",
+      "decision": "correct",
+      "note": "Bob"
+    },
+    {
+      "key": "hero:184",
+      "internal": "one_hand_weak",
+      "proposedName": "",
+      "decision": "correct",
+      "note": "Hyper"
+    },
+    {
+      "key": "hero:189",
+      "internal": "gauntlet_weak",
+      "proposedName": "",
+      "note": "Maria",
+      "decision": "correct"
+    },
+    {
+      "key": "hero:194",
+      "internal": "bow_weak",
+      "proposedName": "",
+      "decision": "correct",
+      "note": "Lisa"
+    },
+    {
+      "key": "hero:199",
+      "internal": "bow_weak",
+      "proposedName": "",
+      "decision": "correct",
+      "note": "Leah"
+    },
+    {
+      "key": "hero:204",
+      "internal": "one_hand_weak",
+      "proposedName": "",
+      "decision": "correct",
+      "note": "Jay"
+    },
+    {
+      "key": "hero:209",
+      "internal": "gauntlet_weak",
+      "proposedName": "",
+      "decision": "correct",
+      "note": "Dragon"
+    },
+    {
+      "key": "hero:214",
+      "internal": "gauntlet_weak",
+      "proposedName": "",
+      "decision": "correct",
+      "note": "Blade"
+    },
+    {
+      "key": "hero:219",
+      "internal": "rifle_weak",
+      "proposedName": "",
+      "decision": "correct",
+      "note": "Mina"
+    },
+    {
+      "key": "hero:224",
+      "internal": "one_hand_weak",
+      "proposedName": "",
+      "decision": "correct",
+      "note": "Hoshida"
+    },
+    {
+      "key": "hero:229",
+      "internal": "basket_weak",
+      "proposedName": "",
+      "decision": "correct",
+      "note": "Peggy"
+    },
+    {
+      "key": "hero:234",
+      "internal": "basket_weak",
+      "proposedName": "",
+      "decision": "correct",
+      "note": "Ailie"
+    },
+    {
+      "key": "hero:239",
+      "internal": "staff_weak",
+      "proposedName": "",
+      "decision": "correct",
+      "note": "Oralie"
+    },
+    {
+      "key": "hero:244",
+      "internal": "claw_weak",
+      "proposedName": "",
+      "decision": "correct",
+      "note": "Kang"
+    },
+    {
+      "key": "hero:249",
+      "internal": "two_hand_weak",
+      "proposedName": "",
+      "decision": "correct",
+      "note": "Agatha"
+    },
+    {
+      "key": "hero:254",
+      "internal": "gauntlet_weak",
+      "proposedName": "",
+      "decision": "correct",
+      "note": "DaVinci"
+    },
+    {
+      "key": "hero:259",
+      "internal": "staff_weak",
+      "proposedName": "",
+      "decision": "correct",
+      "note": "Kate"
+    },
+    {
+      "key": "hero:264",
+      "internal": "rifle_weak",
+      "proposedName": "",
+      "decision": ""
+    },
+    {
+      "key": "hero:269",
+      "internal": "staff_weak",
+      "proposedName": "",
+      "decision": "correct",
+      "note": "Zoe"
+    },
+    {
+      "key": "hero:274",
+      "internal": "gauntlet_weak",
+      "proposedName": "",
+      "decision": "correct",
+      "note": "Rio"
+    },
+    {
+      "key": "hero:279",
+      "internal": "warrior",
+      "proposedName": "",
+      "decision": "correct",
+      "note": "Craig"
+    },
+    {
+      "key": "hero:287",
+      "internal": "rifle_weak",
+      "proposedName": "",
+      "note": "",
+      "decision": "correct"
+    },
+    {
+      "key": "hero:554",
+      "internal": "shuran",
+      "proposedName": "",
+      "decision": "correct",
+      "note": "Win Ling"
+    },
+    {
+      "key": "hero:671",
+      "internal": "fox_shikigami",
+      "proposedName": "",
+      "decision": "correct",
+      "note": "Wakamo"
+    }
+  ]
+}

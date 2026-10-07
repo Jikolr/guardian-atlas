@@ -2,9 +2,9 @@
 
 Explore Guardian Tales heroes, enemies, items, artwork, maps and recovered game data—without writing code or installing the game.
 
-**Current data snapshot: 3.55.0 (`com.kakaogames.gdtskr`).** Tables, English text, Lua sources, character profiles and changed artwork have been refreshed from the reviewed export. Choose **Newsletter → Latest posts** at the top of the sidebar for game analysis and website news. Changed supported original files download directly; GitHub Release archives retain their labeled **3.54.0** contents. Native-code evidence and historical behavior reports remain 3.54.0 research, not revalidated for this patch. The raid simulator and source-validation tools remain hidden from navigation.
+**Current data snapshot: 3.55.0 (`com.kakaogames.gdtskr`).** Tables, English text, Lua sources, character profiles and changed artwork have been refreshed from the reviewed export. Choose **Newsletter → Latest posts** at the top of the sidebar for game analysis and website news. Complete 3.55.0 game-content archives are available through GitHub Releases, with original and decoded files packaged separately. Native-code evidence and historical behavior reports remain 3.54.0 research, not revalidated for this patch. The raid simulator and source-validation tools remain hidden from navigation.
 
-**[Open the website](https://jikolr.github.io/guardian-atlas/) · [How to use: visual guide](https://jikolr.github.io/guardian-atlas/help.html) · [Download archives](https://github.com/Jikolr/guardian-atlas/releases/tag/game-files-3.54.0-snapshot)**
+**[Open the website](https://jikolr.github.io/guardian-atlas/) · [Download archives](https://github.com/Jikolr/guardian-atlas/releases/tag/game-files-3.55.0-snapshot)**
 
 The website opens on a guided home page. Use **Report an issue** in the sidebar to prepare a message with the current page and selected filters; nothing is sent automatically.
 
@@ -125,7 +125,7 @@ The catalogs and maps can be large. Wait for the loading message to finish befor
 - 29,078 available graphic previews, with images linked to hundreds of hero records and thousands of monster, NPC and item entries.
 - 2,027 interactive parsed maps; unsupported entries are labeled.
 - 7,129 recovered Lua scripts and a research area for code indexes, events and extraction evidence.
-- 39 downloadable game-file archives, separate from the website repository.
+- 34 downloadable 3.55.0 game-file archives, separate from the website repository.
 
 This is an unofficial offline archive, not a live game database. Local account settings and analytics are excluded. “Unencrypted” describes a file format; it does not mean public domain.
 
@@ -168,3 +168,19 @@ Nihal's latest 15 uploads are imported from the official public YouTube RSS feed
 Run `python build_community.py` to refresh and build, or add `--offline` to use the checked-in snapshot. Source: `community/contact.json`, `community/videos/*.json`, `community/youtube-cache.json`. Tests: `python test_community.py` and `node test-community.cjs` (local preview on port 8766).
 
 The selected logo is the open atlas, used in the sidebar and browser tab. Its SVG is `dist/logo.svg`; the original concepts remain at `logo-concepts.html`.
+
+## Reviewed names
+
+The portrait review dated 7 October 2026 validates 193 character profiles and 23 raid-boss families. Decisions are preserved in `name-review-decisions.json`; `apply_reviewed_names.py` applies them by record ID to profiles, the visual catalog and table aliases. Raw game identifiers are retained. Empty decisions and empty corrections are not applied. Shared internal classes are not treated as a unique identity. Rebuilds and Pages deployment reapply these reviewed names.
+
+## Publication privacy
+
+Decryption tools are retained outside this repository and excluded from public evidence downloads. `sanitize_public_exports.py` strips local source paths and removes excluded exports and catalog links before deployment. Run it after regenerating research exports.
+
+The editor authentication URL is configured in the admin browser and saved in its local storage; it is intentionally blank in the public settings file. Enter your own configured HTTPS service URL on first use. The server still enforces the GitHub account and repository write permissions.
+
+These measures clean current files only. Earlier commits, external release archives and previous deployments require separate review.
+
+## Friends
+
+The Community menu includes Friends, with a thank-you to SoeZ, a Spanish player and Orbital Lift expert who helped build that section. How to use and Story events are no longer linked in site navigation.

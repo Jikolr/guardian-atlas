@@ -2,7 +2,7 @@
 from pathlib import Path
 from collections import Counter
 import csv,hashlib,json,zipfile,io,struct
-ROOT=Path(r'C:\Users\alexandre.corbineau\OneDrive - APS Solutions Informatiques\Desktop\com.kakaogames.gdtskr')
+ROOT=Path(r'com.kakaogames.gdtskr')
 OUT=Path(__file__).parent/'audit'
 OUT.mkdir(exist_ok=True)
 def classify(b,name):
@@ -36,7 +36,7 @@ def scan_downloads():
     print(json.dumps(result),flush=True)
 
 def scan_apk():
-    z=zipfile.ZipFile(r'C:\Users\alexandre.corbineau\Downloads\Guardian+Tales_3.54.0_APKPure.xapk')
+    z=zipfile.ZipFile(r'Guardian+Tales_3.54.0_APKPure.xapk')
     rows=[];hits=[]
     for name in z.namelist():
         if not name.endswith('.apk'):continue

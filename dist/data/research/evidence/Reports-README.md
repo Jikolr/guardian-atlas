@@ -6,8 +6,8 @@ Original files were read only. Extracted material and analysis outputs are store
 
 ## Sources and version caveat
 
-- Downloaded data: `C:\Users\alexandre.corbineau\OneDrive - APS Solutions Informatiques\Desktop\com.kakaogames.gdtskr`
-- XAPK: `C:\Users\alexandre.corbineau\Downloads\Guardian+Tales_3.54.0_APKPure.xapk`
+- Downloaded data: `com.kakaogames.gdtskr`
+- XAPK: `Guardian+Tales_3.54.0_APKPure.xapk`
 - XAPK manifest: version 3.54.0, version code 423, package `com.kakaogames.gdts`, ARM64 split.
 - The data folder name ends in `gdtskr`; the APK package ends in `gdts`. Region/version equivalence is NOT established. Cache contents may also predate the downloaded source tables. Do not treat cross-source matches as proof of identical versions.
 

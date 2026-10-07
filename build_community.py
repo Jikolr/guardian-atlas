@@ -40,7 +40,7 @@ def refresh():
   result=json.loads(cache.read_text(encoding='utf8')) if cache.exists() else {'fetchedAt':None,'videos':[]}
  return result
 def page(title,body):
- return '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+esc(title)+' · Guardian Atlas</title><link rel="stylesheet" href="newsletter.css"><link rel="stylesheet" href="community.css"><link rel="stylesheet" href="site-nav.css"><script src="site-nav.js" defer></script></head><body><a class="skip-link" href="#main-content">Skip to content</a><main id="main-content">'+body+'</main><script src="community.js" defer></script></body></html>'
+ return '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+esc(title)+' · Guardian Atlas</title><link rel="stylesheet" href="newsletter.css"><link rel="stylesheet" href="community.css"><link rel="stylesheet" href="site-nav.css"><script src="site-nav.js?v=20261007-downloads355" defer></script></head><body><a class="skip-link" href="#main-content">Skip to content</a><main id="main-content">'+body+'</main><script src="community.js" defer></script></body></html>'
 def contact(p):
  if not re.fullmatch(r'[^\s<>@]+@[^\s<>@]+\.[^\s<>@]+',p['email']):raise ValueError('Invalid email')
  image=p['image']

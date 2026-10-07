@@ -2,7 +2,7 @@ from pathlib import Path
 import zipfile,io,json
 OUT=Path(__file__).parent/'apk'
 OUT.mkdir(exist_ok=True)
-z=zipfile.ZipFile(r'C:\Users\alexandre.corbineau\Downloads\Guardian+Tales_3.54.0_APKPure.xapk')
+z=zipfile.ZipFile(r'Guardian+Tales_3.54.0_APKPure.xapk')
 manifest=json.loads(z.read('manifest.json'))
 (OUT/'xapk-manifest.json').write_text(json.dumps(manifest,indent=2,ensure_ascii=False),encoding='utf-8')
 inventory=[]

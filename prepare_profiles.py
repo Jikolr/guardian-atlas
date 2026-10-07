@@ -54,3 +54,8 @@ write(DATA/'visual/assets.json',assets)
 print('Profiles',len(result),'mapped',sum(bool(r['name']) for r in result),'biographies',sum(bool(r['biography']) for r in result),'bytes',out.stat().st_size)
 print([(r['internal'],r['name']) for r in result if r['name']])
 
+
+# Preserve the reviewed identities when rebuilding profiles.
+if (BASE/"name-review-decisions.json").exists():
+ from apply_reviewed_names import main as apply_reviewed_names
+ apply_reviewed_names()
