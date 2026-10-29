@@ -1,0 +1,63 @@
+{
+  "version": "3.57.0",
+  "architecture": "ARM64 / AArch64",
+  "binary": "config.arm64_v8a/lib/arm64-v8a/libil2cpp.so",
+  "binary_sha256": "be6eca92f03e65a8347967d1160baace9939ab07e82f59ae24a3c101620a2eee",
+  "metadata_sha256": "444f62f10a49a0341a70bf9ff8cd08a1babe64df91855e62e889857925955ab2",
+  "methods": 292881,
+  "codegen_modules": 136,
+  "mapped_nonzero_methods": 279506,
+  "null_method_pointers": 13372,
+  "unmapped_methods": [
+    {
+      "index": 292878,
+      "assembly": "__Generated",
+      "type": "IActivationFactory",
+      "name": "ActivateInstance",
+      "token": "0x6000001"
+    },
+    {
+      "index": 292879,
+      "assembly": "__Generated",
+      "type": "System.__Il2CppComObject",
+      "name": "Finalize",
+      "token": "0x6000002"
+    },
+    {
+      "index": 292880,
+      "assembly": "__Generated",
+      "type": "System.__Il2CppComDelegate",
+      "name": "Finalize",
+      "token": "0x6000003"
+    }
+  ],
+  "distinct_nonzero_addresses": 279506,
+  "validation": {
+    "module_names_unique": true,
+    "all_module_method_counts_match_metadata": true,
+    "all_module_tokens_cover_exact_contiguous_ranges": true,
+    "all_pointer_values_match_native_arrays": true,
+    "all_nonzero_addresses_in_executable_load_segments": true,
+    "all_nonzero_addresses_aarch64_aligned": true
+  },
+  "limits": [
+    "Addresses are virtual addresses for this exact native library, before runtime load relocation.",
+    "Null pointers can correspond to abstract/generic methods; no executable address is invented.",
+    "Three __Generated methods have no matching code-generation module.",
+    "Shared native addresses may belong to multiple methods.",
+    "Method bodies are not decompiled or exhaustively semantically reviewed.",
+    "Existing historical native browser IDs and addresses remain unchanged."
+  ],
+  "artifacts": [
+    {
+      "file": "method-addresses.json.gz",
+      "bytes": 4304881,
+      "sha256": "4d4cfa3b27ab0396f3b7c681f27fd027354792c87fee7f6d4a0a8e35b9a1aee9"
+    },
+    {
+      "file": "codegen-modules.json.gz",
+      "bytes": 2600,
+      "sha256": "8172c6afc69eec9fd123d606eb8b6b519bbb3dec5222564b703d0c1fb61ed879"
+    }
+  ]
+}

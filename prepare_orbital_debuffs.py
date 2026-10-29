@@ -1,5 +1,6 @@
 """Conservative direct tower-class -> action -> buff reference index."""
 import json
+from import_snapshot import write
 from pathlib import Path
 ROOT = Path(__file__).resolve().parent/'dist/data'
 def get(name):
@@ -42,4 +43,4 @@ for enemy in db['enemies'].values():
                 entry['references'].append({'styleId':style['id'], 'actionId':action['id'], 'action':name, 'field':key, 'level':action['fields'].get('BuffLevel',action['fields'].get('DebuffLv'))})
     if found:
         result[str(spec['Id'])] = list(found.values())
-(ROOT/'orbital-debuffs.json').write_text(json.dumps({'enemies':result,'coverage':'Direct BattleActions buff references with negative stat parameters only. Script, projectile, graph and option-only effects may be missing. Assignment does not prove execution or target in combat.'}),encoding='utf-8')
+write(ROOT/'orbital-debuffs.json',{'enemies':result,'coverage':'Direct BattleActions buff references with negative stat parameters only. Script, projectile, graph and option-only effects may be missing. Assignment does not prove execution or target in combat.'})

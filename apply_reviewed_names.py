@@ -2,9 +2,9 @@
 """Apply visually reviewed names by record identity, without changing raw game fields."""
 from pathlib import Path
 import json,gzip,re,collections
+from import_snapshot import write
 B=Path(__file__).resolve().parent;D=B/'dist/data'
 def read(p):return json.loads(p.read_text(encoding='utf-8'))
-def write(p,x):p.write_text(json.dumps(x,ensure_ascii=False,separators=(',',':')),encoding='utf-8')
 def main():
  decisions=read(B/'name-review-decisions.json')['decisions']
  profiles=json.loads(gzip.decompress((D/'characters.json.gz').read_bytes()))
@@ -25,7 +25,7 @@ def main():
    for v in bosses:
     if (v.get('VisualName') or v['Class'])==visual:verified['monsters:'+str(v['Id'])]=dict(name=name,evidence=evidence)
   labels[d['key']]=dict(name=name,internal=d['internal'],evidence=evidence);count[kind]+=1
- (D/'characters.json.gz').write_bytes(gzip.compress(json.dumps(profiles,ensure_ascii=False,separators=(',',':')).encode(),mtime=0))
+ write(D/'characters.json.gz',profiles)
  aliases=read(D/'character-aliases.json')
  for k,v in verified.items():
   if k.startswith('heroes:'):aliases[k.split(':')[1]]=dict(name=v['name'],profileId=v['profileId'],evidence=v['evidence'])
@@ -69,7 +69,8 @@ def main():
   a['aliases']=sorted(set(a['aliases'])|ns)
   if ns:affected+=1
  write(D/'visual/assets.json',assets)
- write(D/'reviewed-names.json',dict(snapshot='3.55.0',reviewDate='2026-10-07',entries=labels,skipped=skipped))
+ snapshot=read(D/'manifest.json').get('heroes',{}).get('version','3.55.0')
+ write(D/'reviewed-names.json',dict(snapshot=snapshot,reviewDate='2026-10-07',entries=labels,skipped=skipped))
  print(dict(accepted=dict(count),skipped=skipped,records=len(verified),artwork=affected))
 if __name__=='__main__':main()
 

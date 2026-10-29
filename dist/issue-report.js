@@ -12,7 +12,7 @@
   const url=new URL(location.href);
   if(['127.0.0.1','localhost',''].includes(url.hostname)){url.protocol='https:';url.host='jikolr.github.io';url.port='';url.pathname='/guardian-atlas/'+(location.pathname.split('/').pop()||'home.html');}
   const filters=[...document.querySelectorAll('main input[type="search"],main select')].filter(e=>e.value).slice(0,8).map(e=>(e.getAttribute('aria-label')||e.id||'Filter')+': '+e.value);
-  pageContext=['Page: '+document.title,'Link: '+url.href,'Data snapshot: 3.55.0',...filters].join('\n');
+  pageContext=['Page: '+document.title,'Link: '+url.href,'Data snapshot: 3.57.0',...filters].join('\n');
   status.textContent='';update();dialog.showModal();description.focus();
  };
  description.addEventListener('input',update);

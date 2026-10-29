@@ -1,8 +1,8 @@
 from pathlib import Path
 import json,gzip,re,collections,os
+from import_snapshot import write
 BASE=Path(__file__).resolve().parent;DATA=BASE/'dist/data';SRC=Path(os.environ.get('ATLAS_STATIC_SOURCE',str(BASE.parent/'guardian-analysis/decoded-static')))
 def read(p):return json.loads(p.read_text(encoding='utf-8')) if p.exists() else json.loads(gzip.decompress(Path(str(p)+'.gz').read_bytes()))
-def write(p,d):p.write_text(json.dumps(d,separators=(',',':'),ensure_ascii=False),encoding='utf-8')
 heroes=read(DATA/'heroes.json');text=read(DATA/'text.json');media=read(DATA/'visual/record-media.json')
 profiles={r['OriginId']:r for r in read(SRC/'heroprofile.json')};items=read(SRC/'items.json');styles=read(SRC/'battlestyles.json')['BattleStyles'];actions=read(DATA/'actions.json')
 action_names={r['fields'].get('Name'):r for r in actions};groups=collections.defaultdict(list)
@@ -38,7 +38,7 @@ for origin,variants in groups.items():
  for r in variants:
   aliases[str(r['id'])]=dict(name=display,profileId=origin,evidence=evidence)
   if 'heroes:'+str(r['id']) in media:media['heroes:'+str(r['id'])].update(name=display,profileId=origin,aliasSource=evidence)
-out=DATA/'characters.json.gz';out.write_bytes(gzip.compress(json.dumps(result,separators=(',',':'),ensure_ascii=False).encode(),mtime=0));write(DATA/'character-aliases.json',aliases);write(DATA/'visual/record-media.json',media)
+out=DATA/'characters.json.gz';write(out,result);write(DATA/'character-aliases.json',aliases);write(DATA/'visual/record-media.json',media)
 records=read(DATA/'visual/records.json')
 for r in records:
  if r['table']=='heroes' and str(r['id']) in aliases:r['displayName']=aliases[str(r['id'])]['name'];r['profileId']=aliases[str(r['id'])]['profileId']

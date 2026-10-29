@@ -1,25 +1,58 @@
 
-"""Upload the verified 3.55.0 snapshot using existing Git credentials (never written to disk).
-Creates a draft first; publishes and switches the local catalog only after all assets verify.
+"""Verify a prepared snapshot; upload only when --publish is explicitly supplied.
+Creates a draft first, then publishes and switches the catalog after all assets verify.
+Usage: python publish_snapshot_release.py --archives PATH --version 3.57.0 [--publish]
 """
 from pathlib import Path
-import json,subprocess,os,urllib.request,urllib.error,urllib.parse,http.client,hashlib
-B=Path(__file__).resolve().parent;OUT=B.parent/'guardian-release-archives/3.55.0'
-REPO='Jikolr/guardian-atlas';TAG='game-files-3.55.0-snapshot'
+import argparse,json,subprocess,os,re,urllib.request,urllib.error,urllib.parse,http.client,hashlib
+from prepare_snapshot_release import exported_files, write
+B=Path(__file__).resolve().parent
 def hash_file(p):
  h=hashlib.sha256()
  with p.open('rb') as f:
   for part in iter(lambda:f.read(4*1024*1024),b''):h.update(part)
  return h.hexdigest()
 def main():
- manifest=json.loads((OUT/'release-manifest.json').read_text())
+ parser=argparse.ArgumentParser(description=__doc__)
+ parser.add_argument('--archives',type=Path,help='Prepared directory containing release-manifest.json and ZIPs')
+ parser.add_argument('--work',type=Path,help='Snapshot directory; uses its packs/ child when --archives is omitted')
+ parser.add_argument('--version',required=True)
+ parser.add_argument('--repo',default='Jikolr/guardian-atlas')
+ parser.add_argument('--desktop-account',help='Use this existing GitHub Desktop account if Git Credential Manager has no credential')
+ parser.add_argument('--publish',action='store_true',help='Upload, verify, publish and activate the prepared snapshot')
+ args=parser.parse_args()
+ if not args.archives and not args.work:parser.error('Specify --archives or --work')
+ OUT=args.archives or args.work/'packs';REPO=args.repo;TAG='game-files-'+args.version+'-snapshot'
+ if not re.fullmatch(r'[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+',REPO):raise RuntimeError('Invalid GitHub owner/repository')
+ manifest=json.loads((OUT/'release-manifest.json').read_text(encoding='utf8'))
+ candidate=json.loads((OUT/'file-catalog.pending.json').read_text(encoding='utf8'))
+ expected_base='https://github.com/'+REPO+'/releases/download/'+TAG+'/'
+ for document in [manifest,candidate]:
+  if document.get('currentVersion')!=args.version or document.get('releaseTag')!=TAG or document.get('releaseBase')!=expected_base:
+   raise RuntimeError('Requested release does not match the prepared catalog')
+ if manifest['archives']!=candidate['archives']:raise RuntimeError('Prepared catalog and release manifest disagree')
  for a in manifest['archives']:
   p=OUT/a['name']
+  if p.resolve().parent!=OUT.resolve():raise RuntimeError('Unsafe archive name')
   if p.stat().st_size!=a['bytes'] or hash_file(p)!=a['sha256']:raise RuntimeError('Archive changed: '+a['name'])
+ print('Verified prepared snapshot',args.version,len(manifest['archives']),'archives',flush=True)
+ if not args.publish:
+  print('No remote changes made. Supply --publish to upload and publish this snapshot.',flush=True)
+  return
  env=dict(os.environ,GIT_TERMINAL_PROMPT='0',GCM_INTERACTIVE='Never')
  c=subprocess.run(['git','-c','credential.interactive=never','credential','fill'],input='protocol=https\nhost=github.com\n\n',text=True,capture_output=True,env=env,timeout=20)
  cred=dict(line.split('=',1) for line in c.stdout.splitlines() if '=' in line)
  token=cred.get('password')
+ if not token and args.desktop_account:
+  # Use GitHub Desktop's installed credential provider for this one explicit account.
+  # Its service key is defined by Desktop's getKeyForEndpoint; no credential enumeration.
+  desktop=Path(os.environ.get('LOCALAPPDATA',''))/'GitHubDesktop'
+  providers=list(desktop.glob('app-*/resources/app/keytar.node'))
+  providers.sort(key=lambda p:tuple(int(x) for x in re.findall(r'\d+',p.parents[2].name)),reverse=True)
+  if providers:
+   js="const k=require(process.argv[1]);k.getPassword('GitHub - https://api.github.com',process.argv[2]).then(p=>{if(p)process.stdout.write(p);else process.exitCode=1}).catch(()=>process.exitCode=1)"
+   result=subprocess.run(['node','-e',js,str(providers[0]),args.desktop_account],capture_output=True,text=True,timeout=20)
+   if result.returncode==0 and re.fullmatch(r'[A-Za-z0-9_]+',result.stdout):token=result.stdout
  if not token:raise RuntimeError('GitHub credentials unavailable')
  headers={'Authorization':'Bearer '+token,'Accept':'application/vnd.github+json','User-Agent':'Guardian-Atlas-Release','X-GitHub-Api-Version':'2022-11-28'}
  def api(path,method='GET',body=None):
@@ -43,11 +76,15 @@ def main():
    release=matches[0]
    print('Resuming release',release['id'],flush=True)
   else:
-   release=api(base+'/releases','POST',{'tag_name':TAG,'target_commitish':'main','name':'Guardian Tales game files — 3.55.0','body':(OUT/'RELEASE.md').read_text(encoding='utf8'),'draft':True,'prerelease':False})
+   body=(OUT/'RELEASE.md').read_text(encoding='utf8').replace('This snapshot is prepared locally and has not been published.','This snapshot contains the verified archives listed below.')
+   release=api(base+'/releases','POST',{'tag_name':TAG,'target_commitish':'main','name':'Guardian Tales game files — '+args.version,'body':body,'draft':True,'prerelease':False})
    print('Draft release created',release['html_url'],flush=True)
- manifest['releasePublished']=True;manifest['notes']='Verified game content snapshot 3.55.0; see coverage.json for exclusions and decode gaps.'
- (OUT/'release-manifest.json').write_text(json.dumps(manifest,indent=2),encoding='utf8')
- files=[OUT/a['name'] for a in manifest['archives']]+[OUT/n for n in ['release-manifest.json','coverage.json','SHA256SUMS.txt','RELEASE.md']]
+ # Stage published labels separately; a failed upload must not mark local artifacts published.
+ published_manifest={**manifest,'releasePublished':True,'notes':'Verified game content snapshot '+args.version+'; see coverage.json for exclusions and decode gaps.'}
+ staging=OUT/'publication-staging';staging.mkdir(exist_ok=True)
+ (staging/'release-manifest.json').write_text(json.dumps(published_manifest,indent=2),encoding='utf8')
+ (staging/'RELEASE.md').write_text((OUT/'RELEASE.md').read_text(encoding='utf8').replace('This snapshot is prepared locally and has not been published.','This snapshot contains the verified archives listed above.'),encoding='utf8')
+ files=[OUT/a['name'] for a in manifest['archives']]+[staging/'release-manifest.json',OUT/'coverage.json',OUT/'SHA256SUMS.txt',staging/'RELEASE.md']
  def assets():
   result=[];page=1
   while True:
@@ -91,11 +128,11 @@ def main():
  verified=assets()
  if not all(p.name in verified and valid(verified[p.name],p) for p in files):raise RuntimeError('Release verification incomplete')
  if release['draft']:release=api(base+'/releases/'+str(release['id']),'PATCH',{'draft':False})
- candidate=json.loads((OUT/'file-catalog.pending.json').read_text())
- current=json.loads((B/'dist/data/file-catalog.json').read_text())
- candidate['files']=[r for r in candidate['files'] if r['section']!='exports']+[r for r in current['files'] if r['section']=='exports']
- candidate['releasePublished']=True;candidate['notes']=manifest['notes']
- (B/'dist/data/file-catalog.json').write_text(json.dumps(candidate,separators=(',',':')),encoding='utf8')
+ candidate['files']=[r for r in candidate['files'] if r['section']!='exports']+exported_files(B)
+ candidate['releasePublished']=True;candidate['notes']=published_manifest['notes']
+ write(B/'dist/data/file-catalog.json',candidate)
+ (OUT/'release-manifest.json').write_text(json.dumps(published_manifest,indent=2),encoding='utf8')
+ (OUT/'RELEASE.md').write_text((staging/'RELEASE.md').read_text(encoding='utf8'),encoding='utf8')
  (OUT/'publication.json').write_text(json.dumps({'url':release['html_url'],'id':release['id'],'assets':len(files),'verified':True},indent=2),encoding='utf8')
  print('PUBLISHED',release['html_url'],flush=True)
 if __name__=='__main__':

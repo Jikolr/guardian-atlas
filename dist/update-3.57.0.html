@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Guardian Atlas 3.57.0 snapshot: refreshed tables, Invader Reporter scripts, artwork, maps and downloadable evidence.">
+  <title>3.57.0 snapshot update · Guardian Atlas</title>
+  <link rel="icon" href="logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="newsletter.css">
+  <link rel="stylesheet" href="site-nav.css">
+  <script src="site-nav.js?v=20261029-snapshot357" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<main id="main-content">
+  <a class="back" href="home.html">← Guardian Atlas</a>
+  <header class="article-heading">
+    <p class="eyebrow">SNAPSHOT UPDATE · 29 OCTOBER 2026</p>
+    <h1>Game data 3.57.0</h1>
+    <p class="post-meta">From the supplied Korean APK and downloaded game files.</p>
+  </header>
+  <article class="article-body">
+    <p>The tables, Lua source library, character profiles, artwork and maps now use the supplied 3.57.0 capture. The downloadable file catalog identifies the version and publication status of its archives separately.</p>
+    <h2>Newly available content</h2>
+    <ul>
+      <li><a href="character.html?id=707">The <code>indaver_journalist</code> character family</a>: four records, including its Myth variant, portraits and linked equipment. The original internal spelling is preserved.</li>
+      <li>25 additional item records, 38 NPC records and six battle action definitions.</li>
+      <li>24 additional Lua paths for <code>InvaderReporter2</code> and related stage helpers; seven existing scripts changed. The source library contains 7,153 entries, with existing links preserved.</li>
+      <li><a href="map-preview.html?map=short_story_invader2">The <code>short_story_invader2</code> map</a>, a changed <code>invader_reporter</code> map, and three additional maps from the APK: <code>prologue1</code>, <code>prologue2_new</code> and <code>throneroom</code>.</li>
+      <li>Artwork from 37 changed or added downloaded bundles and 103 additional APK bundles. The library now offers 30,684 image previews.</li>
+    </ul>
+    <p>43 of the 130 website collections contain content differences. JSON field order, generated row positions and shifted localization IDs are excluded from that count. These collections overlap, so their record counts should not be added as unique game entities.</p>
+    <h2>Files and evidence</h2>
+    <p>The original-file comparison found 109 added and 175 modified game-content files against the previous 3.55.0 archive catalog. Another 15,836 files were identical; no previously cataloged original was absent. Additional APK content expands capture coverage and is not automatically a feature introduced in this patch.</p>
+    <p><a href="files.html">Browse original files, decoded files and archive packs →</a></p>
+    <p><a href="data/update-3.57.0.json" download>Download the website import summary</a> · <a href="data/research/metadata-3.57.0/summary.json" download>Download current metadata coverage</a></p>
+    <h2>Coverage and limits</h2>
+    <p>2,054 complete map payloads were recovered across the phone capture and APK; 2,031 have a supported interactive representation. The 23 legacy version-9 maps remain available as decoded binaries. The pre-existing <code>short_story_clevatess_test</code> asset contains an incomplete compressed stream, and its recovered prefix is explicitly marked partial.</p>
+    <p>Twelve additional APK graphics have no stored image to display: eleven zero-sized font textures and one sprite without a texture reference. Their original bundles remain included. Map previews use static meshes and textures; animation, live scripts and some decorations are not reconstructed.</p>
+    <p>The existing compiled-code browser and historical behavior reports retain their 3.54.0 evidence and stable links. Current 3.57.0 metadata and native-address indexes are provided separately. Updated tables do not validate historical damage formulas or prove that a stored feature is enabled on a live server.</p>
+  </article>
+</main>
+</body>
+</html>

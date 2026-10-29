@@ -2,9 +2,9 @@
 
 Explore Guardian Tales heroes, enemies, items, artwork, maps and recovered game data—without writing code or installing the game.
 
-**Current data snapshot: 3.55.0 (`com.kakaogames.gdtskr`).** Tables, English text, Lua sources, character profiles and changed artwork have been refreshed from the reviewed export. Choose **Newsletter → Latest posts** at the top of the sidebar for game analysis and website news. Complete 3.55.0 game-content archives are available through GitHub Releases, with original and decoded files packaged separately. Native-code evidence and historical behavior reports remain 3.54.0 research, not revalidated for this patch. The raid simulator and source-validation tools remain hidden from navigation.
+**Current data snapshot: 3.57.0 (`com.kakaogames.gdtskr`).** Tables, English text, Lua sources, character profiles, artwork and maps have been refreshed from the supplied phone capture and APK. [Read the 3.57.0 changes](https://jikolr.github.io/guardian-atlas/update-3.57.0.html). Historical native-code research remains 3.54.0 evidence; current metadata and method-address indexes are exported separately. The file browser labels the version and publication status of its archive packs.
 
-**[Open the website](https://jikolr.github.io/guardian-atlas/) · [Download archives](https://github.com/Jikolr/guardian-atlas/releases/tag/game-files-3.55.0-snapshot)**
+**[Open the website](https://jikolr.github.io/guardian-atlas/) · [Download archives](https://jikolr.github.io/guardian-atlas/files.html)**
 
 The website opens on a guided home page. Use **Report an issue** in the sidebar to prepare a message with the current page and selected filters; nothing is sent automatically.
 
@@ -45,7 +45,7 @@ The experimental raid simulator and hero source validation remain available by d
 
 ## Character profiles, comparisons and saved discoveries
 
-Open **Characters**, search an internal or known in-game name, and select a portrait. Profiles bring together evolution variants, linked weapons, battle actions and matched biographies. The directory has 223 character families (including non-playable/test entries); 46 names are linked, with evidence labels: 3 confirmed identities, 17 English-spelling matches and 26 biography-based inferences. The inferred matches are not independently confirmed. Biography matches are also labeled.
+Open **Characters**, search an internal or known in-game name, and select a portrait. Profiles bring together evolution variants, linked weapons, battle actions and matched biographies. The directory has 224 character families (including non-playable/test entries); 46 names are linked, with evidence labels: 3 confirmed identities, 17 English-spelling matches and 26 biography-based inferences. The inferred matches are not independently confirmed. Biography matches are also labeled.
 
 Choose **Compare** from a variant or a hero, monster, NPC or item record. Add up to four entries, then use the bottom **Compare** button. **Only differences** hides identical fields; highlighted values and numeric changes are relative to the first entry. You can download the comparison as JSON.
 
@@ -109,7 +109,7 @@ Different evolution ranks, regional variants and game modes can have separate en
 
 **Are these the final stats I will see in the game?**
 
-No. These are stored values from an offline snapshot. Equipment, buffs, runtime changes and server behavior can affect the final result. The source folder and inspected APK may differ in region or version.
+No. These are stored values from an offline snapshot. Equipment, buffs, runtime changes and server behavior can affect the final result. The current phone dump and APK agree on version 3.57.0; historical research keeps its own version labels.
 
 **Why is “Download this file” disabled?**
 
@@ -122,10 +122,10 @@ The catalogs and maps can be large. Wait for the loading message to finish befor
 ## What is available?
 
 - 130 searchable data collections.
-- 29,078 available graphic previews, with images linked to hundreds of hero records and thousands of monster, NPC and item entries.
-- 2,027 interactive parsed maps; unsupported entries are labeled.
-- 7,129 recovered Lua scripts and a research area for code indexes, events and extraction evidence.
-- 34 downloadable 3.55.0 game-file archives, separate from the website repository.
+- 30,684 available graphic previews, with images linked to hundreds of hero records and thousands of monster, NPC and item entries.
+- 2,031 interactive parsed maps; 23 legacy formats and one incomplete test asset are labeled.
+- 7,153 recovered Lua scripts and a research area for code indexes, events and extraction evidence.
+- 45 rebuilt 3.57.0 game-file ZIP packs prepared separately from the website repository; the file browser shows the currently published archive release.
 
 This is an unofficial offline archive, not a live game database. Local account settings and analytics are excluded. “Unencrypted” describes a file format; it does not mean public domain.
 
