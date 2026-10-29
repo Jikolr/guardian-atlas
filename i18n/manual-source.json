@@ -1,0 +1,403 @@
+{
+  "messages": [
+    {
+      "id": "m_cb7c5ba20b64",
+      "source": "LOCALIZATION",
+      "contexts": [
+        "app.js:2"
+      ]
+    },
+    {
+      "id": "m_b009ae425ac5",
+      "source": "Close record details",
+      "contexts": [
+        "app.js:19"
+      ]
+    },
+    {
+      "id": "m_de63941f6e05",
+      "source": "Browse related artwork ↗",
+      "contexts": [
+        "app.js:19"
+      ]
+    },
+    {
+      "id": "m_ae8580f3ebd2",
+      "source": "☆ Save record",
+      "contexts": [
+        "app.js:19"
+      ]
+    },
+    {
+      "id": "m_d9d8827aaf8d",
+      "source": "Record JSON",
+      "contexts": [
+        "app.js:19"
+      ]
+    },
+    {
+      "id": "m_7db7bee5ca30",
+      "source": "Find a field or value…",
+      "contexts": [
+        "app.js:19"
+      ]
+    },
+    {
+      "id": "m_60ebe86bc58f",
+      "source": "Search fields in this record",
+      "contexts": [
+        "app.js:19"
+      ]
+    },
+    {
+      "id": "m_b4daa7007642",
+      "source": "For example: this portrait does not match the selected character.",
+      "contexts": [
+        "issue-report.js:6"
+      ]
+    },
+    {
+      "id": "m_69423babe8e6",
+      "source": "File contents",
+      "contexts": [
+        "research.js:9"
+      ]
+    },
+    {
+      "id": "m_c707ee4ecc24",
+      "source": "Source:",
+      "contexts": [
+        "app.js:22"
+      ]
+    },
+    {
+      "id": "m_5967c03f093e",
+      "source": "full-resolution",
+      "contexts": [
+        "hero-illustrations.js:32"
+      ]
+    },
+    {
+      "id": "m_eaf0fe0a362b",
+      "source": "Warrior",
+      "contexts": [
+        "mastery role label"
+      ]
+    },
+    {
+      "id": "m_3f0b51a2492f",
+      "source": "Ranged",
+      "contexts": [
+        "raid.js:53 mastery label"
+      ]
+    },
+    {
+      "id": "m_c0b21fb164de",
+      "source": "Tank",
+      "contexts": [
+        "mastery role label"
+      ]
+    },
+    {
+      "id": "m_be91940b79f4",
+      "source": "Support",
+      "contexts": [
+        "raid.js:53 mastery label"
+      ]
+    },
+    {
+      "id": "m_65cbc89b6f7d",
+      "source": "Tanker",
+      "contexts": [
+        "raid.js:53 mastery label"
+      ]
+    },
+    {
+      "id": "m_2ce6c0101026",
+      "source": "Supporter",
+      "contexts": [
+        "combat role label"
+      ]
+    },
+    {
+      "id": "m_a48b4907b525",
+      "source": "onehandsword",
+      "contexts": [
+        "raid.js:52 UI weapon-book label only; preserve underlying value"
+      ]
+    },
+    {
+      "id": "m_de2a06049be2",
+      "source": "twohandsword",
+      "contexts": [
+        "raid.js:52 UI weapon-book label only; preserve underlying value"
+      ]
+    },
+    {
+      "id": "m_bff545c4bf02",
+      "source": "assaultrifle",
+      "contexts": [
+        "raid.js:52 UI weapon-book label only; preserve underlying value"
+      ]
+    },
+    {
+      "id": "m_c177affdff64",
+      "source": "bow",
+      "contexts": [
+        "raid.js:52 UI weapon-book label only; preserve underlying value"
+      ]
+    },
+    {
+      "id": "m_1562206543da",
+      "source": "staff",
+      "contexts": [
+        "raid.js:52 UI weapon-book label only; preserve underlying value"
+      ]
+    },
+    {
+      "id": "m_fa76d99ad957",
+      "source": "basket",
+      "contexts": [
+        "raid.js:52 UI weapon-book label only; preserve underlying value"
+      ]
+    },
+    {
+      "id": "m_fe8461233d1a",
+      "source": "gauntlet",
+      "contexts": [
+        "raid.js:52 UI weapon-book label only; preserve underlying value"
+      ]
+    },
+    {
+      "id": "m_06deac5b8d4a",
+      "source": "claw",
+      "contexts": [
+        "raid.js:52 UI weapon-book label only; preserve underlying value"
+      ]
+    },
+    {
+      "id": "m_480d4be7d61f",
+      "source": "Shield",
+      "contexts": [
+        "equipment slot label"
+      ]
+    },
+    {
+      "id": "m_a8b7ac8fa1d4",
+      "source": "{0} skill damage",
+      "contexts": [
+        "raid.js:53 mastery label"
+      ]
+    },
+    {
+      "id": "m_ce07ec933556",
+      "source": "Elemental Type",
+      "contexts": [
+        "app.js:7 generated display label"
+      ]
+    },
+    {
+      "id": "m_130289c69825",
+      "source": "Action Duration",
+      "contexts": [
+        "app.js:7 generated display label"
+      ]
+    },
+    {
+      "id": "m_a9292a2fe16b",
+      "source": "Damage Modifier",
+      "contexts": [
+        "app.js:7 generated display label"
+      ]
+    },
+    {
+      "id": "m_a18c13d855ea",
+      "source": "Attack Range",
+      "contexts": [
+        "app.js:7 generated display label"
+      ]
+    },
+    {
+      "id": "m_b9be0478c06c",
+      "source": "Run Speed",
+      "contexts": [
+        "app.js:7 generated display label"
+      ]
+    },
+    {
+      "id": "m_6b42e083e438",
+      "source": "Walk Speed",
+      "contexts": [
+        "app.js:7 generated display label"
+      ]
+    },
+    {
+      "id": "m_4a3d47f07a57",
+      "source": "Battle Class",
+      "contexts": [
+        "app.js:7 generated display label"
+      ]
+    },
+    {
+      "id": "m_cc350ea33939",
+      "source": "Stamina",
+      "contexts": [
+        "app.js:7 generated display label"
+      ]
+    },
+    {
+      "id": "m_48f6a8d5688b",
+      "source": "Recovery",
+      "contexts": [
+        "app.js:7 generated display label"
+      ]
+    },
+    {
+      "id": "m_10a0c5f853c3",
+      "source": "Mass",
+      "contexts": [
+        "app.js:7 generated display label"
+      ]
+    },
+    {
+      "id": "m_930ce30c41a8",
+      "source": "Internal:",
+      "contexts": [
+        "characters.js source identifier prefix"
+      ]
+    },
+    {
+      "id": "m_b4b02d9f43ff",
+      "source": "Keep reading",
+      "contexts": [
+        "build_newsletter.py generated publication layout"
+      ]
+    },
+    {
+      "id": "m_fa1e587d3bb2",
+      "source": "Game analysis & site news · {0} posts",
+      "contexts": [
+        "build_newsletter.py generated publication layout"
+      ]
+    },
+    {
+      "id": "m_6e2a15d234fe",
+      "source": "All character PNGs",
+      "contexts": [
+        "final UI coverage audit"
+      ]
+    },
+    {
+      "id": "m_bdcae2745e0a",
+      "source": "All illustrations with effects",
+      "contexts": [
+        "final UI coverage audit"
+      ]
+    },
+    {
+      "id": "m_e699ab0ca085",
+      "source": "All separate effects",
+      "contexts": [
+        "final UI coverage audit"
+      ]
+    },
+    {
+      "id": "m_fa74b4ee4c06",
+      "source": "Light background",
+      "contexts": [
+        "final UI coverage audit"
+      ]
+    },
+    {
+      "id": "m_b552a277da96",
+      "source": "Dark background",
+      "contexts": [
+        "final UI coverage audit"
+      ]
+    },
+    {
+      "id": "m_ef6691545d2c",
+      "source": "Standard",
+      "contexts": [
+        "final UI coverage audit"
+      ]
+    },
+    {
+      "id": "m_57eb5aedb42b",
+      "source": "graphics",
+      "contexts": [
+        "final UI coverage audit"
+      ]
+    },
+    {
+      "id": "m_78fce07ceeaf",
+      "source": "Decoded table JSON",
+      "contexts": [
+        "final UI coverage audit"
+      ]
+    },
+    {
+      "id": "m_235b145bba71",
+      "source": "Decrypted APK game asset",
+      "contexts": [
+        "final UI coverage audit"
+      ]
+    },
+    {
+      "id": "m_594b5159c482",
+      "source": "Decrypted game content",
+      "contexts": [
+        "final UI coverage audit"
+      ]
+    },
+    {
+      "id": "m_da43694ea8f1",
+      "source": "Newsletter source / evidence",
+      "contexts": [
+        "final UI coverage audit"
+      ]
+    },
+    {
+      "id": "m_9d5c46274ce5",
+      "source": "Original APK game asset",
+      "contexts": [
+        "final UI coverage audit"
+      ]
+    },
+    {
+      "id": "m_c82e71d10727",
+      "source": "Original game content",
+      "contexts": [
+        "final UI coverage audit"
+      ]
+    },
+    {
+      "id": "m_afaaa3ca555f",
+      "source": "Website export / preview",
+      "contexts": [
+        "final UI coverage audit"
+      ]
+    },
+    {
+      "id": "m_a9971c3eada4",
+      "source": "Website translations",
+      "contexts": [
+        "final UI coverage audit"
+      ]
+    },
+    {
+      "id": "m_9089aec4717a",
+      "source": "{0} min read",
+      "contexts": [
+        "final UI coverage audit"
+      ]
+    },
+    {
+      "id": "m_abf5f5c521ba",
+      "source": "{0} methods",
+      "contexts": [
+        "final UI coverage audit"
+      ]
+    }
+  ]
+}

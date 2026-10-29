@@ -96,9 +96,9 @@
    $('#room-dialogue').innerHTML=parts.map(e=>'<p>'+esc(e.text)+'</p>').join('');
    $('#room-source p').hidden=true;
    $('#room-source pre').textContent=parts.map(e=>e.key+'\n'+e.raw).join('\n\n');
-   panel.querySelectorAll('.record-room-buttons button').forEach(b=>b.setAttribute('aria-pressed',String(b.textContent==='Record '+letter)));
+   panel.querySelectorAll('.record-room-buttons button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.record===letter)));
   };
-  for(const letter of letters){const button=document.createElement('button');button.type='button';button.textContent='Record '+letter;button.onclick=()=>render(letter);panel.querySelector('.record-room-buttons').append(button);}
+  for(const letter of letters){const button=document.createElement('button');button.type='button';button.dataset.record=letter;button.textContent='Record '+letter;button.onclick=()=>render(letter);panel.querySelector('.record-room-buttons').append(button);}
   if(letters.length)render(letters[0]);
   else{const noRecords=[951,1251,1351,1451].includes(f.Floor);$('#room-record-title').textContent=noRecords?'No records':'Records unavailable';$('#room-dialogue').textContent=noRecords?'A broken console.':roomError?'Record data could not be loaded.':'Texts for this floor have not been recovered yet.';$('#room-source').hidden=true;}
  }

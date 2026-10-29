@@ -9,3 +9,5 @@ node_modules/
 __pycache__/
 *.pyc
 .build-cache/
+.i18n-tools/
+i18n/source-chunks/

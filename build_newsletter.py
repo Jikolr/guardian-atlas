@@ -1,7 +1,7 @@
 """Render the local editorial archive. Add an entry and HTML body in newsletter/ to publish another post."""
 from pathlib import Path
 from html import escape,unescape
-import json,re,math,shutil,sys
+import json,re,math,shutil,sys,hashlib
 from datetime import date
 B=Path(__file__).resolve().parent;W=B/'dist';D=W/'data';S=B/'newsletter'
 sys.path.insert(0,str(B/'.editor-deps'))
@@ -39,7 +39,8 @@ for i,p in enumerate(posts):
     footer=f'<aside class="next-post"><span>Keep reading</span><a href="newsletter-{other["slug"]}.html">{escape(other["title"])} →</a><p>{escape(other["summary"])}</p></aside>' if other else ''
     header=f'''<a class="back" href="newsletter.html">← All posts</a><header class="article-heading"><p class="eyebrow">NEWSLETTER / {escape(p['category'].upper())}</p><h1>{escape(p['title'])}</h1><p class="post-meta"><time datetime="{p['date']}">{date.fromisoformat(p['date']).strftime('%d %B %Y')}</time><span>·</span>{p['minutes']} min read<span>·</span>Guardian Atlas</p></header>'''
     toc='<aside class="article-toc" aria-label="On this page"><h2>On this page</h2><nav>'+''.join(f'<a href="#{ident}">{escape(title)}</a>' for ident,title in headings)+'</nav><button type="button" onclick="window.print()">Print / save as PDF</button></aside>'
-    html=page(p['title'],p['summary'],header+'<div class="article-layout">'+toc+'<article class="article-body">'+body+footer+'</article></div>')
+    source_hash=hashlib.sha256(json.dumps({k:p[k] for k in ('title','summary','body')},ensure_ascii=False,sort_keys=True,separators=(',',':')).encode('utf8')).hexdigest()
+    html=page(p['title'],p['summary'],header+'<div class="article-layout">'+toc+f'<article class="article-body" data-article-slug="{p["slug"]}" data-source-hash="{source_hash}">'+body+footer+'</article></div>')
     (W/f'newsletter-{p["slug"]}.html').write_text(html,encoding='utf8')
 cards=[]
 for i,p in enumerate(posts):

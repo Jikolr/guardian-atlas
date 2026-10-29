@@ -51,7 +51,7 @@ function profileUI(){
  $('#account-fields').innerHTML=Object.entries(labels).map(([k,l])=>field(l,'profile.'+k,state.profile[k])).join('');
  $('#weapon-books').innerHTML=Object.keys(state.profile.weaponBooks).map(k=>field(k,'profile.weaponBooks.'+k,state.profile.weaponBooks[k],0,100)).join('');
  $('#mastery-fields').innerHTML=Object.keys(state.profile.mastery).map(k=>field(k.replace('Atk',' ATK').replace('Skill',' skill damage')+' level','profile.mastery.'+k,state.profile.mastery[k],0,E.db.mastery.at(-1).SkillLevel,1)).join('');
- $('#profile-list').innerHTML='<option value="">Choose a profile…</option>'+Object.keys(profiles).map(k=>`<option>${esc(k)}</option>`).join('');
+ $('#profile-list').innerHTML='<option value="">Choose a profile…</option>'+Object.keys(profiles).map(k=>`<option value="${esc(k)}" translate="no">${esc(k)}</option>`).join('');
 }
 function relicUI(s,index){const r=E.items[s.relic];if(!r)return '<p class="muted">Select a relic to choose its stage-specific rolls. The selected item includes its evolution stage.</p>';
  const pools=[...(r.BaseOptions||[]),...(r.ChangeOptions||[])];

@@ -32,6 +32,8 @@ jobs:
         run: python build_newsletter.py
       - name: Build Contacts and refresh raid videos
         run: python build_community.py
+      - name: Build website translations
+        run: python build_i18n.py
       - name: Sanitize public exports and check privacy
         run: python sanitize_public_exports.py
       - uses: actions/configure-pages@v5

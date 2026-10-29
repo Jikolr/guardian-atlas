@@ -3,12 +3,13 @@ const fs=require('node:fs'),path=require('node:path'),os=require('node:os');
 const {chromium}=require(process.env.PLAYWRIGHT_MODULE || 'playwright');
 const output=fs.mkdtempSync(path.join(os.tmpdir(),'guardian-newsletter-'));
 const base=process.env.ATLAS_TEST_BASE||'http://127.0.0.1:8765';
+const published=JSON.parse(fs.readFileSync(path.join(__dirname,'dist/data/newsletter.json')));
 (async()=>{
  const browser=await chromium.launch({headless:true,channel:'msedge'});
  try{
   const page=await browser.newPage({viewport:{width:1440,height:1040}}),errors=[];
   page.on('pageerror',e=>errors.push(e.message));
-  for(const [file,title] of [['newsletter.html','Newsletter'],['newsletter-v357.html','v3.57 deep dive: Amelia makes the headlines'],['newsletter-v355.html','v3.55 deep dive'],['newsletter-atlas-update.html','Guardian Altas update']]){
+  for(const [file,title] of [['newsletter.html','Newsletter'],...published.map(post=>['newsletter-'+post.slug+'.html',post.title])]){
    await page.goto(base+'/'+file);
    assert.equal(await page.locator('h1').innerText(),title);
    assert((await page.locator('#site-sidebar nav h2').allInnerTexts()).includes('NEWSLETTER'));
@@ -20,8 +21,8 @@ const base=process.env.ATLAS_TEST_BASE||'http://127.0.0.1:8765';
    }
    await page.locator('main img').evaluateAll(images=>Promise.all(images.map(i=>i.decode())));
    if(file==='newsletter.html'){
-    assert.equal(await page.locator('.post-card').count(),3);
-    assert.equal(await page.locator('.post-card').first().getAttribute('href'),'newsletter-v357.html');
+    assert.equal(await page.locator('.post-card').count(),published.length);
+    assert.equal(await page.locator('.post-card').first().getAttribute('href'),'newsletter-'+published[0].slug+'.html');
     await page.screenshot({path:path.join(output,'newsletter-desktop.png'),fullPage:true});
    }
    if(file==='newsletter-v357.html'){
@@ -50,6 +51,6 @@ const base=process.env.ATLAS_TEST_BASE||'http://127.0.0.1:8765';
   await page.goto(base+'/visual.html?q=Astoria');
   await page.waitForFunction(()=>document.querySelectorAll('#grid .card').length>0);
   assert.deepEqual(errors,[]);
-  console.log('PASS: newsletter navigation, all three articles, v357 illustrations/links, contents anchors, desktop/mobile layout, source downloads and Astoria searches. Screenshots: '+output);
+  console.log('PASS: newsletter navigation, current published articles, illustrations/links, contents anchors, desktop/mobile layout, source downloads and Astoria searches. Screenshots: '+output);
  }finally{await browser.close()}
 })().catch(e=>{console.error(e);process.exit(1)});
