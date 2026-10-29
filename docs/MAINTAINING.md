@@ -58,10 +58,12 @@ Open `visual.html` for searchable graphic previews, heroes, monsters/bosses, ite
 - 30,758 graphic objects cataloged; 30,684 previews available, including individually cropped atlas icons. Previews are at most 768 pixels; animation atlases are labeled, not presented as assembled characters.
 - Images matched to 700 hero, 5,147 monster, 2,524 NPC and 5,399 item records using asset-name fields. Andras is searchable by her established alias and `demon_slayer`. Other localized aliases are not guessed.
 - 2,031 parsed maps with interactive layers, tile inspection, thumbnails and static artwork coverage. 24 additional map entries are explicitly unavailable (legacy formats or failed decryption).
-- Meshes use stored rotations and original UVs/textures. Lighting, animated characters, particles and runtime changes are not recreated. Event markers are counted but not drawn. Structural mode covers unresolved tiles. Fit map focuses on floor tiles, excluding distant staging objects; those remain in the object selector.
+- Meshes use stored rotations and original UVs/textures. The optional **Game graphics** layer adds original static character poses and supported collectible artwork, with source-derived scale, origins, skins and directional views. The renderer shares depth with scenery. Markers remain separately controllable, including unresolved visual placements; nonvisual targets do not appear in graphics-only mode. Lighting, moving animations, script-driven changes and some attached equipment remain outside this reconstruction. Fit map includes floor variants and playrooms, excluding distant staging props; those remain in the object selector.
 - Map and mesh payloads are gzipped and require a browser with DecompressionStream support. The published folder is self-contained; no game installation is needed to browse it.
 
 Extraction utilities are in the sibling `guardian-analysis` folder: `export_gallery.py`, `export_atlas_icons.py`, `export_maps.py`, `export_tilesets.py`, `link_visual_records.py`, and `finalize_visual_maps.py` (run last for coverage and thumbnails). These require the original local input files and UnityPy; they are not required for deployment.
+
+The current placement-artwork pipeline is maintained in this repository; see [Map graphics](MAP-GRAPHICS.md). Its compressed map index and PNG poses are self-contained website exports, so visitors do not need Unity, Spine or the original installation. Regenerate them after importing a changed snapshot. They are generated artwork exports, distinct from the immutable original-file Release packs.
 
 
 ## Search and downloads
@@ -101,3 +103,12 @@ Research metadata chunks under `data/research/code` are now `.json.gz` files. `p
 ## Current metadata alongside historical native research
 
 The original compiled-code browser retains its 3.54.0 type/method IDs and disassembly links. Current 3.57.0 types, methods, fields and validated native-address indexes are exported separately under `dist/data/research/metadata-3.57.0/`. These indexes are structural evidence; they do not automatically revalidate the historical behavior reports. String literals, extraction keys, executables and local account settings are excluded from these website exports.
+
+## Hero illustrations
+
+The Explore gallery uses `dist/data/hero-illustrations/index.json` and compact
+transparent previews. Full-resolution PNGs and collection ZIPs are hosted on the
+separate `hero-illustrations-3.57.0` Release. Rebuilding website HTML does not need
+the game files or the Spine runtime. To regenerate the illustrations after a game
+update, follow [Hero illustrations](HERO-ILLUSTRATIONS.md); do not put the full PNG
+collection into the Pages output folder.

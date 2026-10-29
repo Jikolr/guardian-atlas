@@ -66,11 +66,13 @@ In a map, **drag to move**, **scroll or use +/− to zoom**, and choose **Fit ma
 
 Enable **Markers** to inspect decoded placements. Use **Find a placement** to search names and toggle NPCs, enemies, events, camera markers or other markers. Select a search result to zoom directly to it. Marker colors follow the stored layer, and each marker shows its stored name and position; these do not confirm live spawn identities or event behavior. Map links remember the view mode, layers and selected object, but reset the camera to fit.
 
+Enable **Game graphics** to show recovered character poses, coins and star pieces alongside the original scenery. Turn **Markers** off for an artwork view, then choose character, enemy, collectible and object categories. Inactive placements and markers for unresolved artwork have separate switches. Select a picture to inspect its source record, skin, pose and any reconstruction limits. Graphics load only when requested; camera and event targets remain available through the marker controls. [Try the Invader Reporter sequel with graphics enabled](https://jikolr.github.io/guardian-atlas/map-preview.html?map=short_story_invader2&graphics=1&markers=0).
+
 Try [the small ancient dungeon](https://jikolr.github.io/guardian-atlas/map-preview.html?map=ancientdungeon_red_1_1). Choose **Structural layout** if artwork is missing. The artwork count describes coverage, not loading progress. Maps are reconstructions: animations, live events and some decorations are not shown.
 
 ## Read the Newsletter
 
-Open **Newsletter → Latest posts** for **v3.55 deep dive** and **Guardian Altas update**. Articles include source links, interpretation limits and a print/PDF option. The **Ingame datas** group contains the remaining source and data sections; XP & progression and Reports & evidence have been removed from navigation.
+Open **Newsletter → Latest posts** for **v3.57 deep dive: Amelia makes the headlines**, **v3.55 deep dive** and **Guardian Altas update**. Articles include original illustrations, source links, interpretation limits and a print/PDF option. The **Ingame datas** group contains the remaining source and data sections; XP & progression and Reports & evidence have been removed from navigation.
 
 ## Download a picture, a record or a folder
 
@@ -184,3 +186,12 @@ These measures clean current files only. Earlier commits, external release archi
 ## Friends
 
 The Community menu includes Friends, with a thank-you to SoeZ, a Spanish player and Orbital Lift expert who helped build that section. How to use and Story events are no longer linked in site navigation.
+
+## Hero illustrations
+
+Explore includes a searchable **Hero illustrations** gallery with normal forms,
+Myth artwork, ascensions and super costumes from the current capture. View each
+illustration on a checkerboard, light or dark background, then download the
+character, its effects, or the combined artwork as a transparent PNG. Native PNGs
+and collection packs use GitHub Releases; the website keeps compact previews.
+See [the extraction and maintenance guide](docs/HERO-ILLUSTRATIONS.md).

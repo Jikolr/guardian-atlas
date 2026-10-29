@@ -1,0 +1,1053 @@
+{
+  "schemaVersion": 1,
+  "review": "Source: Guardian Tales 3.57.0 native Spine3.8 slot/attachment metadata. Reviewed44 normal-blend candidate rigs against atlas-region contact sheets fx-review-1..4.png in the all-heroes extraction folder. Actual additive/screen blend slots are handled by the renderer; this table only supplements explicit normal-blend overlays. No global name-based classification or background removal is performed.",
+  "illustrations": {
+    "bridge_driver_myth": {
+      "effectSlots": [
+        "fire_Fx",
+        "fire_Fx4",
+        "fire_Fx2",
+        "fire_Fx5",
+        "fire_Fx3",
+        "fire_Fx6",
+        "fire_Fx9",
+        "fire_Fx11",
+        "fire_Fx10",
+        "fire_Fx12"
+      ],
+      "excludeSlots": [],
+      "notes": [
+        "Explicit normal-blend overlay slots reviewed against original atlas regions and slot attachment types; combined artwork retains every slot."
+      ]
+    },
+    "bridge_messenger_myth": {
+      "effectSlots": [
+        "Fx_Add_2"
+      ],
+      "excludeSlots": [],
+      "notes": [
+        "Explicit normal-blend overlay slots reviewed against original atlas regions and slot attachment types; combined artwork retains every slot."
+      ]
+    },
+    "cyborg_monk": {
+      "effectSlots": [
+        "glow2",
+        "eff/FX_ki_floor_a/FX_ki_floor_a_0",
+        "eff/FX_ki_radial_d/FX_ki_radial_d_0",
+        "eff/FX_ki_radial_d/FX_ki_radial_d_4",
+        "eff/FX_ki_radial_d/FX_ki_radial_d_1",
+        "glow4",
+        "glow3"
+      ],
+      "excludeSlots": [],
+      "notes": [
+        "Explicit normal-blend overlay slots reviewed against original atlas regions and slot attachment types; combined artwork retains every slot."
+      ]
+    },
+    "demon_governor": {
+      "effectSlots": [
+        "necklace_glow",
+        "head_flo_glow"
+      ],
+      "excludeSlots": [],
+      "notes": [
+        "Explicit normal-blend overlay slots reviewed against original atlas regions and slot attachment types; combined artwork retains every slot."
+      ]
+    },
+    "fire_harpy_mecha": {
+      "effectSlots": [
+        "wing_L_effect_star9",
+        "wing_L_effect_star12",
+        "wing_L_effect_star14",
+        "wing_L_effect_star15",
+        "wing_L_effect_star13",
+        "wing_L_effect_star16",
+        "wing_L_effect_star10",
+        "wing_L_effect_star11",
+        "wing_L_effect_star17",
+        "wing_L_effect_star20",
+        "wing_L_effect_star18",
+        "wing_L_effect_star19",
+        "wing_L_effect_star21",
+        "wing_L_effect_star24",
+        "wing_L_effect_star22",
+        "wing_L_effect_star23",
+        "wing_L_effect_star",
+        "wing_L_effect_star4",
+        "wing_L_effect_star2",
+        "wing_L_effect_star3",
+        "fire_L1",
+        "fire_L2",
+        "fire_L3",
+        "wing_L_effect_star5",
+        "wing_L_effect_star8",
+        "wing_L_effect_star6",
+        "wing_L_effect_star7",
+        "fire_R1",
+        "fire_R2",
+        "fire_R3"
+      ],
+      "excludeSlots": [],
+      "notes": [
+        "Explicit normal-blend overlay slots reviewed against original atlas regions and slot attachment types; combined artwork retains every slot.",
+        "Retain hair_effect and wing_*3_effect painted mechanical parts; classify separate stars and booster flame sequences as effects."
+      ]
+    },
+    "fire_harpy_myth": {
+      "effectSlots": [
+        "Fire_FX01",
+        "Fire_FX3",
+        "Fire_FX4"
+      ],
+      "excludeSlots": [],
+      "notes": [
+        "Explicit normal-blend overlay slots reviewed against original atlas regions and slot attachment types; combined artwork retains every slot."
+      ]
+    },
+    "future_princess": {
+      "effectSlots": [
+        "weapon_glow23",
+        "weapon_glow25",
+        "weapon_glow2",
+        "weapon_glow5",
+        "weapon_glow8",
+        "weapon_glow11",
+        "weapon_glow17",
+        "weapon_glow14",
+        "weapon_glow20",
+        "weapon_glow3",
+        "weapon_glow6",
+        "weapon_glow9",
+        "weapon_glow12",
+        "weapon_glow18",
+        "weapon_glow15",
+        "weapon_glow21",
+        "weapon_glow4",
+        "weapon_glow7",
+        "weapon_glow10",
+        "weapon_glow13",
+        "weapon_glow19",
+        "weapon_glow16",
+        "weapon_glow22"
+      ],
+      "excludeSlots": [],
+      "notes": [
+        "Explicit normal-blend overlay slots reviewed against original atlas regions and slot attachment types; combined artwork retains every slot."
+      ]
+    },
+    "future_princess_maestra": {
+      "effectSlots": [
+        "big_particle_blight_125",
+        "big_particle_blight_245",
+        "big_particle_blight_486",
+        "big_particle_blight_305",
+        "big_particle_blight_425",
+        "big_particle_blight_215",
+        "big_particle_blight_395",
+        "big_particle_blight_185",
+        "big_particle_blight_365",
+        "big_particle_blight_335",
+        "big_particle_blight_455",
+        "big_particle_blight_155",
+        "big_particle_blight_275",
+        "big_particle_blight_140",
+        "big_particle_blight_260",
+        "big_particle_blight_501",
+        "big_particle_blight_320",
+        "big_particle_blight_440",
+        "big_particle_blight_230",
+        "big_particle_blight_410",
+        "big_particle_blight_200",
+        "big_particle_blight_380",
+        "big_particle_blight_350",
+        "big_particle_blight_470",
+        "big_particle_blight_170",
+        "big_particle_blight_290",
+        "big_particle_blight_130",
+        "big_particle_blight_250",
+        "big_particle_blight_491",
+        "big_particle_blight_310",
+        "big_particle_blight_430",
+        "big_particle_blight_220",
+        "big_particle_blight_400",
+        "big_particle_blight_190",
+        "big_particle_blight_370",
+        "big_particle_blight_340",
+        "big_particle_blight_460",
+        "big_particle_blight_160",
+        "big_particle_blight_280",
+        "big_particle_blight_145",
+        "big_particle_blight_265",
+        "big_particle_blight_506",
+        "big_particle_blight_325",
+        "big_particle_blight_445",
+        "big_particle_blight_235",
+        "big_particle_blight_415",
+        "big_particle_blight_205",
+        "big_particle_blight_385",
+        "big_particle_blight_355",
+        "big_particle_blight_475",
+        "big_particle_blight_175",
+        "big_particle_blight_295",
+        "big_particle_blight_135",
+        "big_particle_blight_255",
+        "big_particle_blight_496",
+        "big_particle_blight_315",
+        "big_particle_blight_435",
+        "big_particle_blight_225",
+        "big_particle_blight_405",
+        "big_particle_blight_195",
+        "big_particle_blight_375",
+        "big_particle_blight_345",
+        "big_particle_blight_465",
+        "big_particle_blight_165",
+        "big_particle_blight_285",
+        "big_particle_blight_150",
+        "big_particle_blight_270",
+        "big_particle_blight_511",
+        "big_particle_blight_330",
+        "big_particle_blight_450",
+        "big_particle_blight_240",
+        "big_particle_blight_420",
+        "big_particle_blight_210",
+        "big_particle_blight_390",
+        "big_particle_blight_360",
+        "big_particle_blight_480",
+        "big_particle_blight_180",
+        "big_particle_blight_300",
+        "big_particle_blight_126",
+        "big_particle_blight_246",
+        "big_particle_blight_487",
+        "big_particle_blight_306",
+        "big_particle_blight_426",
+        "big_particle_blight_216",
+        "big_particle_blight_396",
+        "big_particle_blight_186",
+        "big_particle_blight_366",
+        "big_particle_blight_336",
+        "big_particle_blight_456",
+        "big_particle_blight_156",
+        "big_particle_blight_276",
+        "big_particle_blight_141",
+        "big_particle_blight_261",
+        "big_particle_blight_502",
+        "big_particle_blight_321",
+        "big_particle_blight_441",
+        "big_particle_blight_231",
+        "big_particle_blight_411",
+        "big_particle_blight_201",
+        "big_particle_blight_381",
+        "big_particle_blight_351",
+        "big_particle_blight_471",
+        "big_particle_blight_171",
+        "big_particle_blight_291",
+        "big_particle_blight_131",
+        "big_particle_blight_251",
+        "big_particle_blight_492",
+        "big_particle_blight_311",
+        "big_particle_blight_431",
+        "big_particle_blight_221",
+        "big_particle_blight_401",
+        "big_particle_blight_191",
+        "big_particle_blight_371",
+        "big_particle_blight_341",
+        "big_particle_blight_461",
+        "big_particle_blight_161",
+        "big_particle_blight_281",
+        "big_particle_blight_146",
+        "big_particle_blight_266",
+        "big_particle_blight_507",
+        "big_particle_blight_326",
+        "big_particle_blight_446",
+        "big_particle_blight_236",
+        "big_particle_blight_416",
+        "big_particle_blight_206",
+        "big_particle_blight_386",
+        "big_particle_blight_356",
+        "big_particle_blight_476",
+        "big_particle_blight_176",
+        "big_particle_blight_296",
+        "big_particle_blight_136",
+        "big_particle_blight_256",
+        "big_particle_blight_497",
+        "big_particle_blight_316",
+        "big_particle_blight_436",
+        "big_particle_blight_226",
+        "big_particle_blight_406",
+        "big_particle_blight_196",
+        "big_particle_blight_376",
+        "big_particle_blight_346",
+        "big_particle_blight_466",
+        "big_particle_blight_166",
+        "big_particle_blight_286",
+        "big_particle_blight_151",
+        "big_particle_blight_271",
+        "big_particle_blight_512",
+        "big_particle_blight_331",
+        "big_particle_blight_451",
+        "big_particle_blight_241",
+        "big_particle_blight_421",
+        "big_particle_blight_211",
+        "big_particle_blight_391",
+        "big_particle_blight_361",
+        "big_particle_blight_481",
+        "big_particle_blight_181",
+        "big_particle_blight_301",
+        "big_particle_blight_127",
+        "big_particle_blight_247",
+        "big_particle_blight_488",
+        "big_particle_blight_307",
+        "big_particle_blight_427",
+        "big_particle_blight_217",
+        "big_particle_blight_397",
+        "big_particle_blight_187",
+        "big_particle_blight_367",
+        "big_particle_blight_337",
+        "big_particle_blight_457",
+        "big_particle_blight_157",
+        "big_particle_blight_277",
+        "big_particle_blight_142",
+        "big_particle_blight_262",
+        "big_particle_blight_503",
+        "big_particle_blight_322",
+        "big_particle_blight_442",
+        "big_particle_blight_232",
+        "big_particle_blight_412",
+        "big_particle_blight_202",
+        "big_particle_blight_382",
+        "big_particle_blight_352",
+        "big_particle_blight_472",
+        "big_particle_blight_172",
+        "big_particle_blight_292",
+        "big_particle_blight_132",
+        "big_particle_blight_252",
+        "big_particle_blight_493",
+        "big_particle_blight_312",
+        "big_particle_blight_432",
+        "big_particle_blight_222",
+        "big_particle_blight_402",
+        "big_particle_blight_192",
+        "big_particle_blight_372",
+        "big_particle_blight_342",
+        "big_particle_blight_462",
+        "big_particle_blight_162",
+        "big_particle_blight_282",
+        "big_particle_blight_147",
+        "big_particle_blight_267",
+        "big_particle_blight_508",
+        "big_particle_blight_327",
+        "big_particle_blight_447",
+        "big_particle_blight_237",
+        "big_particle_blight_417",
+        "big_particle_blight_207",
+        "big_particle_blight_387",
+        "big_particle_blight_357",
+        "big_particle_blight_477",
+        "big_particle_blight_177",
+        "big_particle_blight_297",
+        "big_particle_blight_137",
+        "big_particle_blight_257",
+        "big_particle_blight_498",
+        "big_particle_blight_317",
+        "big_particle_blight_437",
+        "big_particle_blight_227",
+        "big_particle_blight_407",
+        "big_particle_blight_197",
+        "big_particle_blight_377",
+        "big_particle_blight_347",
+        "big_particle_blight_467",
+        "big_particle_blight_167",
+        "big_particle_blight_287",
+        "big_particle_blight_152",
+        "big_particle_blight_272",
+        "big_particle_blight_513",
+        "big_particle_blight_332",
+        "big_particle_blight_452",
+        "big_particle_blight_242",
+        "big_particle_blight_422",
+        "big_particle_blight_212",
+        "big_particle_blight_392",
+        "big_particle_blight_362",
+        "big_particle_blight_482",
+        "big_particle_blight_182",
+        "big_particle_blight_302",
+        "big_particle_blight_128",
+        "big_particle_blight_248",
+        "big_particle_blight_489",
+        "big_particle_blight_308",
+        "big_particle_blight_428",
+        "big_particle_blight_218",
+        "big_particle_blight_398",
+        "big_particle_blight_188",
+        "big_particle_blight_368",
+        "big_particle_blight_338",
+        "big_particle_blight_458",
+        "big_particle_blight_158",
+        "big_particle_blight_278",
+        "big_particle_blight_143",
+        "big_particle_blight_263",
+        "big_particle_blight_504",
+        "big_particle_blight_323",
+        "big_particle_blight_443",
+        "big_particle_blight_233",
+        "big_particle_blight_413",
+        "big_particle_blight_203",
+        "big_particle_blight_383",
+        "big_particle_blight_353",
+        "big_particle_blight_473",
+        "big_particle_blight_173",
+        "big_particle_blight_293",
+        "big_particle_blight_133",
+        "big_particle_blight_253",
+        "big_particle_blight_494",
+        "big_particle_blight_313",
+        "big_particle_blight_433",
+        "big_particle_blight_223",
+        "big_particle_blight_403",
+        "big_particle_blight_193",
+        "big_particle_blight_373",
+        "big_particle_blight_343",
+        "big_particle_blight_463",
+        "big_particle_blight_163",
+        "big_particle_blight_283",
+        "big_particle_blight_148",
+        "big_particle_blight_268",
+        "big_particle_blight_509",
+        "big_particle_blight_328",
+        "big_particle_blight_448",
+        "big_particle_blight_238",
+        "big_particle_blight_418",
+        "big_particle_blight_208",
+        "big_particle_blight_388",
+        "big_particle_blight_358",
+        "big_particle_blight_478",
+        "big_particle_blight_178",
+        "big_particle_blight_298",
+        "big_particle_blight_138",
+        "big_particle_blight_258",
+        "big_particle_blight_499",
+        "big_particle_blight_318",
+        "big_particle_blight_438",
+        "big_particle_blight_228",
+        "big_particle_blight_408",
+        "big_particle_blight_198",
+        "big_particle_blight_378",
+        "big_particle_blight_348",
+        "big_particle_blight_468",
+        "big_particle_blight_168",
+        "big_particle_blight_288",
+        "big_particle_blight_153",
+        "big_particle_blight_273",
+        "big_particle_blight_514",
+        "big_particle_blight_333",
+        "big_particle_blight_453",
+        "big_particle_blight_243",
+        "big_particle_blight_423",
+        "big_particle_blight_213",
+        "big_particle_blight_393",
+        "big_particle_blight_363",
+        "big_particle_blight_483",
+        "big_particle_blight_183",
+        "big_particle_blight_303",
+        "big_particle_blight_129",
+        "big_particle_blight_249",
+        "big_particle_blight_490",
+        "big_particle_blight_309",
+        "big_particle_blight_429",
+        "big_particle_blight_219",
+        "big_particle_blight_399",
+        "big_particle_blight_189",
+        "big_particle_blight_369",
+        "big_particle_blight_339",
+        "big_particle_blight_459",
+        "big_particle_blight_159",
+        "big_particle_blight_279",
+        "big_particle_blight_144",
+        "big_particle_blight_264",
+        "big_particle_blight_505",
+        "big_particle_blight_324",
+        "big_particle_blight_444",
+        "big_particle_blight_234",
+        "big_particle_blight_414",
+        "big_particle_blight_204",
+        "big_particle_blight_384",
+        "big_particle_blight_354",
+        "big_particle_blight_474",
+        "big_particle_blight_174",
+        "big_particle_blight_294",
+        "big_particle_blight_134",
+        "big_particle_blight_254",
+        "big_particle_blight_495",
+        "big_particle_blight_314",
+        "big_particle_blight_434",
+        "big_particle_blight_224",
+        "big_particle_blight_404",
+        "big_particle_blight_194",
+        "big_particle_blight_374",
+        "big_particle_blight_344",
+        "big_particle_blight_464",
+        "big_particle_blight_164",
+        "big_particle_blight_284",
+        "big_particle_blight_149",
+        "big_particle_blight_269",
+        "big_particle_blight_510",
+        "big_particle_blight_329",
+        "big_particle_blight_449",
+        "big_particle_blight_239",
+        "big_particle_blight_419",
+        "big_particle_blight_209",
+        "big_particle_blight_389",
+        "big_particle_blight_359",
+        "big_particle_blight_479",
+        "big_particle_blight_179",
+        "big_particle_blight_299",
+        "big_particle_blight_139",
+        "big_particle_blight_259",
+        "big_particle_blight_500",
+        "big_particle_blight_319",
+        "big_particle_blight_439",
+        "big_particle_blight_229",
+        "big_particle_blight_409",
+        "big_particle_blight_199",
+        "big_particle_blight_379",
+        "big_particle_blight_349",
+        "big_particle_blight_469",
+        "big_particle_blight_169",
+        "big_particle_blight_289",
+        "big_particle_blight_154",
+        "big_particle_blight_274",
+        "big_particle_blight_515",
+        "big_particle_blight_334",
+        "big_particle_blight_454",
+        "big_particle_blight_244",
+        "big_particle_blight_424",
+        "big_particle_blight_214",
+        "big_particle_blight_394",
+        "big_particle_blight_364",
+        "big_particle_blight_484",
+        "big_particle_blight_184",
+        "big_particle_blight_304",
+        "particle",
+        "particle2",
+        "particle3",
+        "particle4",
+        "particle5",
+        "particle6",
+        "particle7",
+        "particle8",
+        "particle9",
+        "particle10",
+        "big_particle_wh2",
+        "big_particle_wh11",
+        "big_particle_wh8",
+        "big_particle_wh5",
+        "big_particle_wh4",
+        "big_particle_wh13",
+        "big_particle_wh10",
+        "big_particle_wh7",
+        "big_particle_wh3",
+        "big_particle_wh12",
+        "big_particle_wh9",
+        "big_particle_wh6",
+        "big_particle_gold",
+        "big_particle_gold57",
+        "big_particle_gold38",
+        "big_particle_gold8",
+        "big_particle_gold50",
+        "big_particle_gold31",
+        "big_particle_gold2",
+        "big_particle_gold56",
+        "big_particle_gold37",
+        "big_particle_gold12",
+        "big_particle_gold46",
+        "big_particle_gold27",
+        "big_particle_gold11",
+        "big_particle_gold47",
+        "big_particle_gold28",
+        "big_particle_gold10",
+        "big_particle_gold48",
+        "big_particle_gold29",
+        "big_particle_gold9",
+        "big_particle_gold49",
+        "big_particle_gold30",
+        "big_particle_gold13",
+        "big_particle_gold45",
+        "big_particle_gold26",
+        "big_particle_gold16",
+        "big_particle_gold42",
+        "big_particle_gold23",
+        "big_particle_gold18",
+        "big_particle_gold40",
+        "big_particle_gold21",
+        "big_particle_gold19",
+        "big_particle_gold39",
+        "big_particle_gold20",
+        "big_particle_gold17",
+        "big_particle_gold41",
+        "big_particle_gold22",
+        "big_particle_gold14",
+        "big_particle_gold44",
+        "big_particle_gold25",
+        "big_particle_gold15",
+        "big_particle_gold43",
+        "big_particle_gold24",
+        "big_particle_gold3",
+        "big_particle_gold55",
+        "big_particle_gold36",
+        "big_particle_gold4",
+        "big_particle_gold54",
+        "big_particle_gold35",
+        "big_particle_gold5",
+        "big_particle_gold53",
+        "big_particle_gold34",
+        "big_particle_gold6",
+        "big_particle_gold52",
+        "big_particle_gold33",
+        "big_particle_gold7",
+        "big_particle_gold51",
+        "big_particle_gold32"
+      ],
+      "excludeSlots": [],
+      "notes": [
+        "Explicit normal-blend overlay slots reviewed against original atlas regions and slot attachment types; combined artwork retains every slot."
+      ]
+    },
+    "gnome_doctor": {
+      "effectSlots": [
+        "smoke_1",
+        "smoke_4",
+        "smoke",
+        "smoke_3",
+        "smoke_2"
+      ],
+      "excludeSlots": [],
+      "notes": [
+        "Explicit normal-blend overlay slots reviewed against original atlas regions and slot attachment types; combined artwork retains every slot."
+      ]
+    },
+    "gnome_doctor_myth": {
+      "effectSlots": [
+        "noel_fuse_FX_00000"
+      ],
+      "excludeSlots": [],
+      "notes": [
+        "Explicit normal-blend overlay slots reviewed against original atlas regions and slot attachment types; combined artwork retains every slot."
+      ]
+    },
+    "hana": {
+      "effectSlots": [
+        "firefly2"
+      ],
+      "excludeSlots": [],
+      "notes": [
+        "Explicit normal-blend overlay slots reviewed against original atlas regions and slot attachment types; combined artwork retains every slot."
+      ]
+    },
+    "invader_knight_dead_cell": {
+      "effectSlots": [
+        "Fire_dummy",
+        "Fire_dummy2",
+        "Fire_dummy3",
+        "FX_Twincle"
+      ],
+      "excludeSlots": [],
+      "notes": [
+        "Explicit normal-blend overlay slots reviewed against original atlas regions and slot attachment types; combined artwork retains every slot.",
+        "Retain Wing_Fire and Fire_Head_main: these form the character silhouette and flaming head."
+      ]
+    },
+    "invader_knight_myth": {
+      "effectSlots": [
+        "fire_4/Comp 4_0"
+      ],
+      "excludeSlots": [],
+      "notes": [
+        "Explicit normal-blend overlay slots reviewed against original atlas regions and slot attachment types; combined artwork retains every slot."
+      ]
+    },
+    "jade_shaman": {
+      "effectSlots": [
+        "eff_fire",
+        "eff_fire2"
+      ],
+      "excludeSlots": [],
+      "notes": [
+        "Explicit normal-blend overlay slots reviewed against original atlas regions and slot attachment types; combined artwork retains every slot."
+      ]
+    },
+    "mad_scientist_ascent": {
+      "effectSlots": [
+        "water FX/water FX/buuble_FX_00008"
+      ],
+      "excludeSlots": [],
+      "notes": [
+        "Explicit normal-blend overlay slots reviewed against original atlas regions and slot attachment types; combined artwork retains every slot."
+      ]
+    },
+    "mad_scientist_myth": {
+      "effectSlots": [
+        "water FX/water FX/buuble_FX_00008"
+      ],
+      "excludeSlots": [],
+      "notes": [
+        "Explicit normal-blend overlay slots reviewed against original atlas regions and slot attachment types; combined artwork retains every slot."
+      ]
+    },
+    "magical_girl": {
+      "effectSlots": [
+        "D_FX_2",
+        "D_FX_3",
+        "D_FX_1"
+      ],
+      "excludeSlots": [],
+      "notes": [
+        "Explicit normal-blend overlay slots reviewed against original atlas regions and slot attachment types; combined artwork retains every slot."
+      ]
+    },
+    "magical_girl_myth": {
+      "effectSlots": [
+        "FX_Star2",
+        "FX_Star3",
+        "FX_Star",
+        "FX_Star4"
+      ],
+      "excludeSlots": [],
+      "notes": [
+        "Explicit normal-blend overlay slots reviewed against original atlas regions and slot attachment types; combined artwork retains every slot."
+      ]
+    },
+    "ms_chrome": {
+      "effectSlots": [
+        "eyeR_light",
+        "eyeR_light2"
+      ],
+      "excludeSlots": [],
+      "notes": [
+        "Explicit normal-blend overlay slots reviewed against original atlas regions and slot attachment types; combined artwork retains every slot."
+      ]
+    },
+    "ms_student_president": {
+      "effectSlots": [
+        "eff/fire3",
+        "eff/fire2",
+        "eff/fire1",
+        "eff/fire4"
+      ],
+      "excludeSlots": [],
+      "notes": [
+        "Explicit normal-blend overlay slots reviewed against original atlas regions and slot attachment types; combined artwork retains every slot."
+      ]
+    },
+    "necromancer_high_templar": {
+      "effectSlots": [
+        "fx_cold",
+        "fx_dark_rotation",
+        "fx_dark_rotation2"
+      ],
+      "excludeSlots": [],
+      "notes": [
+        "Explicit normal-blend overlay slots reviewed against original atlas regions and slot attachment types; combined artwork retains every slot."
+      ]
+    },
+    "party_mad_panda": {
+      "effectSlots": [
+        "FX_2",
+        "FX_17",
+        "FX_8",
+        "FX_23",
+        "FX_11",
+        "FX_26",
+        "FX_14",
+        "FX_29",
+        "FX_12",
+        "FX_27",
+        "FX_15",
+        "FX_30",
+        "FX_5",
+        "FX_20",
+        "FX_9",
+        "FX_24",
+        "FX_13",
+        "FX_28",
+        "FX_16",
+        "FX_31",
+        "FX_3",
+        "FX_18",
+        "FX_10",
+        "FX_25",
+        "FX_6",
+        "FX_21",
+        "FX_4",
+        "FX_19",
+        "FX_7",
+        "FX_22"
+      ],
+      "excludeSlots": [],
+      "notes": [
+        "Explicit normal-blend overlay slots reviewed against original atlas regions and slot attachment types; combined artwork retains every slot."
+      ]
+    },
+    "pixy_girl": {
+      "effectSlots": [
+        "FX_twink",
+        "FX_twink2",
+        "FX_twink3",
+        "FX_twink4",
+        "FX_twink5"
+      ],
+      "excludeSlots": [],
+      "notes": [
+        "Explicit normal-blend overlay slots reviewed against original atlas regions and slot attachment types; combined artwork retains every slot."
+      ]
+    },
+    "plague_doctor": {
+      "effectSlots": [
+        "wing_eff1_test_RB",
+        "wing_eff1_test_RB2",
+        "wing_eff5_test",
+        "wing_eff5_test2",
+        "wing_eff5_test_R"
+      ],
+      "excludeSlots": [],
+      "notes": [
+        "Explicit normal-blend overlay slots reviewed against original atlas regions and slot attachment types; combined artwork retains every slot."
+      ]
+    },
+    "sea_witch": {
+      "effectSlots": [
+        "smoke"
+      ],
+      "excludeSlots": [],
+      "notes": [
+        "Explicit normal-blend overlay slots reviewed against original atlas regions and slot attachment types; combined artwork retains every slot."
+      ]
+    },
+    "secret_agent": {
+      "effectSlots": [
+        "smoke_2",
+        "smoke_4",
+        "smoke_3",
+        "smoke_1"
+      ],
+      "excludeSlots": [],
+      "notes": [
+        "Explicit normal-blend overlay slots reviewed against original atlas regions and slot attachment types; combined artwork retains every slot."
+      ]
+    },
+    "slime_rimuru": {
+      "effectSlots": [
+        "glow",
+        "glow2"
+      ],
+      "excludeSlots": [],
+      "notes": [
+        "Explicit normal-blend overlay slots reviewed against original atlas regions and slot attachment types; combined artwork retains every slot."
+      ]
+    },
+    "slime_shuna": {
+      "effectSlots": [
+        "fireB_5_1",
+        "fireB_5_11",
+        "fireB_5_18",
+        "fireB_5_6",
+        "fireB_5_12",
+        "fireB_5_19",
+        "fire_5_eff",
+        "fire_5_eff2_2",
+        "fire_5_eff2",
+        "fireB_5_20",
+        "fire_5_eff3",
+        "fireB_5_2",
+        "fireB_5",
+        "fireB_7",
+        "fireB_8",
+        "fireB_5_13",
+        "fireB_5_7",
+        "fireB_5_10",
+        "fireB_5_17",
+        "fireB_5_3",
+        "fireB_5_14",
+        "fireB_5_21",
+        "fireB_5_4",
+        "fireB_5_9",
+        "fireB_5_16",
+        "fireB_5_5",
+        "fireB_5_8",
+        "fireB_5_15"
+      ],
+      "excludeSlots": [],
+      "notes": [
+        "Explicit normal-blend overlay slots reviewed against original atlas regions and slot attachment types; combined artwork retains every slot."
+      ]
+    },
+    "streamer_girl": {
+      "effectSlots": [
+        "bg_fx_3",
+        "bg_fx_1",
+        "bg_fx_8",
+        "bg_fx_5",
+        "bg_fx_6",
+        "bg_fx_7",
+        "bg_fx_4",
+        "bg_fx_9",
+        "bg_fx_10",
+        "bg_fx_11"
+      ],
+      "excludeSlots": [],
+      "notes": [
+        "Explicit normal-blend overlay slots reviewed against original atlas regions and slot attachment types; combined artwork retains every slot."
+      ]
+    },
+    "sunyeo": {
+      "effectSlots": [
+        "Fx1",
+        "Fx4",
+        "Fx5",
+        "Fx6",
+        "Fx7",
+        "Fx8",
+        "Fx10",
+        "Fx11",
+        "Fx12",
+        "Fx13",
+        "Fx14",
+        "Fx15",
+        "Fx16",
+        "Fx17",
+        "Fx9",
+        "Fx18",
+        "Fx19",
+        "Fx20",
+        "Fx21",
+        "Fx3",
+        "Fx22"
+      ],
+      "excludeSlots": [],
+      "notes": [
+        "Explicit normal-blend overlay slots reviewed against original atlas regions and slot attachment types; combined artwork retains every slot."
+      ]
+    },
+    "twins_android": {
+      "effectSlots": [
+        "holo_Fx_4",
+        "holo_Fx_3",
+        "holo_Fx_7",
+        "holo_Fx_5",
+        "holo_Fx_6",
+        "holo_Fx_2",
+        "holo_Fx_1",
+        "particle_10",
+        "particle_11",
+        "particle_9",
+        "particle_6_1",
+        "particle_6",
+        "particle_4",
+        "particle_23",
+        "particle_3",
+        "particle_27",
+        "particle_24",
+        "particle_13",
+        "particle_5",
+        "particle_12",
+        "particle_25",
+        "particle_26",
+        "particle_15",
+        "particle_16",
+        "particle_17",
+        "particle_18",
+        "particle_19",
+        "particle_20",
+        "particle_21",
+        "particle_22",
+        "holo_Fx_ring_3",
+        "holo_Fx_ring_1",
+        "holo_Fx_ring_2"
+      ],
+      "excludeSlots": [],
+      "notes": [
+        "Explicit normal-blend overlay slots reviewed against original atlas regions and slot attachment types; combined artwork retains every slot."
+      ]
+    },
+    "twins_android_myth": {
+      "effectSlots": [
+        "Circle_FX_seq3/Circle_FX_seq300000"
+      ],
+      "excludeSlots": [],
+      "notes": [
+        "Explicit normal-blend overlay slots reviewed against original atlas regions and slot attachment types; combined artwork retains every slot."
+      ]
+    },
+    "villain_redhood": {
+      "effectSlots": [
+        "villain_redhood_effect_03"
+      ],
+      "excludeSlots": [],
+      "notes": [
+        "Explicit normal-blend overlay slots reviewed against original atlas regions and slot attachment types; combined artwork retains every slot."
+      ]
+    },
+    "witch_coco": {
+      "effectSlots": [
+        "witch_coco_ani_effect_02",
+        "witch_coco_ani_effect_03",
+        "witch_coco_ani_effect_04",
+        "witch_coco_ani_effect_05",
+        "witch_coco_ani_effect_09"
+      ],
+      "excludeSlots": [],
+      "notes": [
+        "Explicit normal-blend overlay slots reviewed against original atlas regions and slot attachment types; combined artwork retains every slot."
+      ]
+    },
+    "wyverns_purple_myth": {
+      "effectSlots": [
+        "Thigh_R_Fx_2",
+        "Thigh_R_Fx_3",
+        "Leg_R_Fx_1",
+        "Leg_R_Fx_2",
+        "Leg_R_Fx_3",
+        "Leg_R_Fx_4"
+      ],
+      "excludeSlots": [],
+      "notes": [
+        "Explicit normal-blend overlay slots reviewed against original atlas regions and slot attachment types; combined artwork retains every slot."
+      ]
+    },
+    "fire_harpy": {
+      "effectSlots": [],
+      "excludeSlots": [],
+      "notes": [
+        "Retain leg_R_fire and leg_R_fire_1: they are painted body/leg artwork, not detached overlay effects."
+      ]
+    },
+    "first_bishop_myth": {
+      "effectSlots": [],
+      "excludeSlots": [],
+      "notes": [
+        "Retain normal-blend leg_L_fire meshes as integrated body artwork."
+      ]
+    },
+    "dummy_girl": {
+      "effectSlots": [],
+      "excludeSlots": [],
+      "notes": [
+        "Retain normal-blend clothing trim named GLOW as part of the costume design."
+      ]
+    },
+    "demon_engineer": {
+      "effectSlots": [],
+      "excludeSlots": [],
+      "notes": [
+        "Retain small neck/glasses hardware and reflections named fx as integrated character details."
+      ]
+    },
+    "redhood_ascent": {
+      "effectSlots": [],
+      "excludeSlots": [],
+      "time": 12,
+      "notes": [
+        "Use authored idle at 12 seconds, midway through its 24-second loop, with the complete weapon platform deployed around the hero. At idle 0, the rig parks weapon_lo1 and triangle_missile1/2 around 4,000 units above her; those animated parts enter the illustration around 8 seconds and leave again near 23 seconds. The 12-second pose was visually verified. No parts are excluded or repositioned."
+      ]
+    }
+  }
+}

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Browse Guardian Tales hero illustrations and download original character artwork and effects as transparent PNGs.">
+  <title>Guardian Atlas · Hero illustrations</title>
+  <link rel="stylesheet" href="hero-illustrations.css">
+  <link rel="stylesheet" href="site-nav.css">
+  <script src="hero-illustrations.js" defer></script>
+  <script src="site-nav.js?v=20261029-illustrations" defer></script>
+</head>
+<body>
+  <a class="illustration-skip" href="#illustrations-main">Skip to illustrations</a>
+  <main id="illustrations-main">
+    <p class="eyebrow">THE VISUAL ARCHIVE</p>
+    <h1>Hero illustrations</h1>
+    <p class="intro">The heroes, without the wallpaper. Explore the original game artwork, then save the character or its effects as a transparent PNG.</p>
+    <div id="collection-summary" class="collection-summary" aria-live="polite">Loading the illustration collection…</div>
+    <div id="collection-packs" class="collection-packs" hidden></div>
+    <p class="collection-note">Illustrations use a still pose from the game’s artwork. Preview backgrounds are for viewing only and are never included in downloads. Additive glows are adapted for transparent PNGs; their appearance can vary with the background.</p>
+    <form id="illustration-filters" class="illustration-filters" role="search">
+      <label class="search-field">Find a hero or illustration<input id="illustration-search" type="search" placeholder="Name or game file identifier…" autocomplete="off"></label>
+      <label>Form / variant<select id="illustration-variant"><option value="">All variants</option></select></label>
+      <label>Artwork<select id="illustration-artwork"><option value="">All illustrations</option><option value="effects">Includes effects</option><option value="character">Character only</option></select></label>
+      <button id="illustration-reset" type="button">Reset</button>
+    </form>
+    <div class="results-header"><p id="illustration-count" role="status"></p><span>PNG · transparent background</span></div>
+    <p id="collection-error" class="illustration-error" role="alert" hidden></p>
+    <div id="illustration-grid" class="illustration-grid" aria-busy="true"></div>
+    <p id="illustration-empty" class="empty-state" hidden>No illustrations match these filters. Try a hero name or a shorter file identifier.</p>
+    <nav id="illustration-pagination" class="illustration-pagination" aria-label="Illustration pages" hidden><button id="illustration-previous" type="button">← Previous</button><span id="illustration-page"></span><button id="illustration-next" type="button">Next →</button></nav>
+  </main>
+  <dialog id="illustration-detail" aria-labelledby="detail-title">
+    <div class="detail-heading"><div><p class="eyebrow" id="detail-variant"></p><h2 id="detail-title"></h2></div><button id="detail-close" type="button" aria-label="Close illustration">×</button></div>
+    <div class="detail-layout">
+      <div class="detail-artwork">
+        <fieldset class="preview-backgrounds"><legend>Preview background</legend><label><input type="radio" name="preview-background" value="checker" checked>Checkerboard</label><label><input type="radio" name="preview-background" value="dark">Dark</label><label><input type="radio" name="preview-background" value="light">Light</label></fieldset>
+        <div id="detail-canvas" class="detail-canvas" data-background="checker"><img id="detail-image" alt="" hidden><p id="detail-image-state" role="status">Loading illustration…</p></div>
+        <div class="preview-resolution"><span id="detail-preview-kind">Compact preview</span><button id="detail-full-preview" type="button">Load full-resolution preview</button></div>
+      </div>
+      <div class="detail-information">
+        <label class="detail-view-label">Illustration version<select id="detail-view"></select></label>
+        <p id="detail-size" class="detail-size"></p>
+        <button id="detail-download" class="primary-action" type="button">Download transparent PNG</button>
+        <p id="detail-download-status" role="status"></p>
+        <div id="detail-download-links" class="detail-download-links"></div>
+        <p class="detail-tip">Change the preview background to check the silhouette and translucent effects. The saved image keeps its transparency.</p>
+        <div id="detail-notes" class="detail-notes"></div>
+        <dl class="detail-metadata"><dt>Game identifier</dt><dd id="detail-id"></dd><dt>Source bundle</dt><dd id="detail-source"></dd></dl>
+        <div id="detail-related" class="detail-related"></div>
+        <button id="detail-copy-link" type="button">Copy illustration link</button>
+      </div>
+    </div>
+  </dialog>
+</body>
+</html>
