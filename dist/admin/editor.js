@@ -24,7 +24,7 @@
     name:'newsletter',label:'Newsletters',label_singular:'Newsletter',folder:'newsletter/posts',create:true,delete:true,extension:'json',format:'json',slug:'{{slug}}',summary:'{{title}} · {{date}}',preview_path:'newsletter-{{slug}}.html',fields:[
      {name:'title',label:'Title',widget:'string'},
      {name:'date',label:'Display date',widget:'datetime',format:'YYYY-MM-DD',date_format:'DD/MM/YYYY',time_format:false},
-     {name:'category',label:'Category',widget:'select',options:['Game files','Website news','Guides','Community']},
+     {name:'category',label:'Category',widget:'select',options:['Game files','Patch notes','Website news','Guides','Community']},
      {name:'summary',label:'Article list summary',widget:'text'},
      {name:'cover',label:'Cover image',widget:'image',required:false},
      {name:'published',label:'Show on the site after publishing',widget:'boolean',default:true,hint:'Turn this off and publish to remove the article from the site.'},
